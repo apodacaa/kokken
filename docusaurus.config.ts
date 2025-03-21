@@ -43,7 +43,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/apodacaa/kokken',
+            'https://github.com/apodacaa/kokken/tree/main/',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -60,6 +60,8 @@ const config: Config = {
         path: 'cocktails',
         routeBasePath: 'cocktails',
         sidebarPath: './cocktailSidebar.ts', // Separate sidebar (optional but clean)
+        editUrl:
+            'https://github.com/apodacaa/kokken/tree/main/',
       },
     ],
   ],
@@ -68,10 +70,11 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
+      hideOnScroll: false,
       title: 'Køkken',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        src: 'img/android-chrome-512x512.png',
       },
       items: [
         {
@@ -79,31 +82,22 @@ const config: Config = {
           position: 'left',
           label: 'Recipes',
         },
-        { to: '/cocktails', label: 'Cocktails', position: 'left' }
+        { 
+          to: '/cocktails', 
+          label: 'Cocktails', 
+          position: 'left' 
+        }
       ],
     },
     footer: {
       style: 'dark',
       links: [
         {
-          title: 'Køkken',
-          items: [
-            {
-              label: 'Recipes',
-              to: '/recipes',
-            },
-            {
-              label: 'Cocktails',
-              to: '/cocktails',
-            }
-          ],
-        },
-        {
           title: 'More',
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/apodacaa/kokken',
             },
           ],
         },

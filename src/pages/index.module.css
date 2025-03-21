@@ -3,7 +3,7 @@
  * and scoped locally.
  */
 
-.heroBanner {
+ .heroBanner {
   padding: 4rem 0;
   text-align: center;
   position: relative;
@@ -28,4 +28,39 @@
   align-items: center;
   justify-content: center;
   background-color: var(--ifm-hero-background-color, #3578e5); /* Optional background color */
+}
+
+/* 👇 NEW: Card Grid Styles for Landing Page */
+
+.main {
+  padding: 2rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--ifm-card-background-color, #fff);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: left;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: var(--ifm-global-shadow-lw);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ifm-global-shadow-md);
 }

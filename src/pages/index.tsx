@@ -1,41 +1,38 @@
-import type {ReactNode} from 'react';
+import React, { ReactElement } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
-import HomepageFeatures from '@site/src/components/HomepageFeatures';
-import Heading from '@theme/Heading';
-
 import styles from './index.module.css';
 
-function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
-  return (
-    <header className={clsx('hero hero--primary', styles.fullPageHero)}>
-      <div className="container">
-        <Heading as="h1" className="hero__title">
-          {siteConfig.title}
-        </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <div className={styles.buttons}>
-          <Link
-            className="button button--secondary button--lg"
-            to="/recipes">
-            Let's go!
-          </Link>
-        </div>
-      </div>
-    </header>
-  );
-}
+export default function Home(): ReactElement {
+  const { siteConfig } = useDocusaurusContext();
 
-export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
-      description="Description will go into a meta tag in <head />">
-      <HomepageHeader />
+      title={`Welcome to ${siteConfig.title}`}
+      description="Classics from the bug hole"
+    >
+      <header className={clsx('hero hero--primary', styles.heroBanner)}>
+        <div className="container">
+          <h1 className="hero__title">{siteConfig.title}</h1>
+          <p className="hero__subtitle">{siteConfig.tagline}</p>
+        </div>
+      </header>
+
+      <main className={styles.main}>
+        <h2 className={styles.sectionTitle}>Explore</h2>
+        <div className={styles.cardGrid}>
+          <Link className={styles.card} to="/recipes">
+            <h3>🍽️ Recipes</h3>
+            <p>Explore delicious recipes from the bug hole classics.</p>
+          </Link>
+          <Link className={styles.card} to="/cocktails">
+            <h3>🍸 Cocktails</h3>
+            <p>Discover cocktail recipes and mixology magic.</p>
+          </Link>
+        </div>
+      </main>
     </Layout>
   );
 }
