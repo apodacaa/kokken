@@ -1,0 +1,5 @@
+# Smoked Salmon
+
+## Ingredients
+
+## Instructions

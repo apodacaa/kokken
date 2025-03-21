@@ -1,0 +1,8 @@
+{
+  "label": "Seafood",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "Seafood recipes"
+  }
+}
