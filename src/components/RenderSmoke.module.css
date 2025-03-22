@@ -1,0 +1,31 @@
+.recipe {
+    max-width: 600px;
+    margin: auto;
+    font-family: system-ui, sans-serif;
+    line-height: 1.5;
+  }
+  
+  .recipe-meta {
+    margin-bottom: 1.5rem;
+  }
+  
+  .recipe-meta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .phase {
+    margin-bottom: 1.5rem;
+  }
+  
+  .phase strong {
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 1.5rem 0;
+  }
+  

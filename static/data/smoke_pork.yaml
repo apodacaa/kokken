@@ -1,0 +1,20 @@
+pork:
+  - cut: Pork Shoulder
+    total_weight: "6-8 lbs"
+    phases:
+      - type: Smoke
+        temp: "225-250°F"
+        time: "6-8 hours"
+        done: "200°F"
+      - type: Rest
+        time: "30 min"
+  - cut: Pork Chops
+    total_weight: "1-1.5 lbs each; .5-1 inch thick"
+    phases:
+      - type: Smoke
+        temp: "225-250°F"
+        time: "1-2 hours"
+        done: "150°F"
+      - type: Grill
+        temp: Direct, High
+        time: "4-6 minutes"

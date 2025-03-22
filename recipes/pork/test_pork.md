@@ -1,5 +1,0 @@
-# Test Pork
-
-## Ingredients
-
-## Recipe
