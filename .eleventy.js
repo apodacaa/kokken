@@ -20,6 +20,11 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection("recipes", function (collectionApi) {
       return collectionApi.getFilteredByGlob("content/recipes/*.md");
     });
+
+    eleventyConfig.addCollection("smoke", function (collectionApi) {
+        return collectionApi.getFilteredByGlob("content/smoke/*.md");
+      });
+      
   
     return {
       dir: {
