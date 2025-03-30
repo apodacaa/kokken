@@ -12,29 +12,28 @@
     <article>
       <h1>{{ title }}</h1>
 
-      {% if tags %}
-        <p><strong>Tags:</strong>
-          {% for tag in tags %}
-            <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-          {% endfor %}
-        </p>
+      {% if ingredients and ingredients.items %}
+        <h2>Ingredients</h2>
+        <ul>
+        {% for entry in ingredients.items %}
+        {% if entry is string %}
+          <li>{{ entry }}</li>
+
+        {% elif entry.items %}
+        {% if entry.section %}
+        </ul>
+        <h3>{{ entry.section }}</h3>
+        <ul>
+        {% endif %}
+        {% for item in entry.items %}
+          <li>{{ item }}</li>
+        {% endfor %}
+        {% endif %}
+      {% endfor %}
+      </ul>
       {% endif %}
 
-      {% if ingredients %}
-        <h2>Ingredients</h2>
-        {% for section in ingredients %}
-          {% if section.section %}
-            <h3>{{ section.section }}</h3>
-          {% endif %}
-          {% if section.items %}
-            <ul>
-              {% for item in section.items %}
-                <li>{{ item }}</li>
-              {% endfor %}
-            </ul>
-          {% endif %}
-        {% endfor %}
-      {% endif %}
+
 
       {% if steps %}
         <h2>Steps</h2>
@@ -43,6 +42,11 @@
             <li>{{ step }}</li>
           {% endfor %}
         </ol>
+      {% endif %}
+
+         {% if notes %}
+        <h2>Notes</h2>
+        <p>{{ notes }}</p>
       {% endif %}
 
       {% if references %}
@@ -62,6 +66,15 @@
 
         </ul>
       {% endif %}
+
+    {% if tags %}
+        <p><strong>Tags:</strong>
+          {% for tag in tags %}
+            <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+          {% endfor %}
+        </p>
+      {% endif %}
+
     </article>
   </main>
 </body>
