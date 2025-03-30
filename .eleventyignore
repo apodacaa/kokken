@@ -1,0 +1,11 @@
+README.md
+LICENSE
+netlify.toml
+package.json
+package-lock.json
+node_modules/
+eleventy.config.js
+.gitignore
+.eslintrc
+.tsconfig.json
+.vscode/
