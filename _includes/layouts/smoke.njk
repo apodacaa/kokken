@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <title>{{ title }} | Smoke Guide</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="/assets/styles.css" />
 </head>
 <body>
   {% include "partials/nav.njk" %}
@@ -14,7 +14,7 @@
       <h1>{{ title }}</h1>
 
       {% if ingredient %}
-        <p><strong>Ingredient:</strong> {{ ingredient }}</p>
+        <p>Ingredient: {{ ingredient }}</p>
       {% endif %}
 
       {% if phases %}
@@ -22,7 +22,7 @@
         <ol>
           {% for phase in phases %}
             <li>
-              <strong>{{ phase.name }}</strong><br />
+              {{ phase.name }}<br />
               {% if phase.temperature %}
                 Temp: {{ phase.temperature }}<br />
               {% endif %}
@@ -38,7 +38,7 @@
       {% endif %}
 
       {% if tags %}
-        <p><strong>Tags:</strong>
+        <p>Tags:
           {% for tag in tags %}
             <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
           {% endfor %}
