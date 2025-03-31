@@ -3,5 +3,7 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-  {{ content | safe }}
+  <div class="markdown">
+    {{ content | safe }}
+  </div>
 {% endblock %}

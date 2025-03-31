@@ -2,15 +2,14 @@
   "name": "elev",
   "version": "1.0.0",
   "main": "index.js",
- "scripts": {
-  "dev:eleventy": "npx @11ty/eleventy --serve",
-  "dev:tailwind": "npx @tailwindcss/cli -i ./assets/input.css -o ./assets/styles.css --watch",
-  "dev": "npm-run-all --parallel dev:*",
-
-  "build:eleventy": "npx @11ty/eleventy",
-  "build:tailwind": "npx @tailwindcss/cli -i ./assets/input.css -o ./assets/styles.css --minify",
-  "build": "rm -rf _site && npm-run-all build:*"
-},
+  "scripts": {
+    "dev:eleventy": "npx @11ty/eleventy --serve",
+    "dev:tailwind": "npx @tailwindcss/cli -i ./assets/input.css -o ./assets/styles.css --watch",
+    "dev": "npm-run-all --parallel dev:*",
+    "build:eleventy": "npx @11ty/eleventy",
+    "build:tailwind": "npx @tailwindcss/cli -i ./assets/input.css -o ./assets/styles.css --minify",
+    "build": "rm -rf _site && npm-run-all build:*"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

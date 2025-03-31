@@ -1,13 +1,24 @@
 @import "tailwindcss";
 
+/* Optional: theme vars if you're still using them */
 @theme {
   --color-background: #121212;
   --color-ladybug: #ff1a1a;
   --color-paper: #1a1a1a;
   --color-border: #2c2c2c;
+  --color-text: #f5f5f5;
 }
 
 body {
+  background-color: var(--color-background);
+  color: var(--color-text);
   font-family: system-ui, sans-serif;
-  line-height: 1.6;
+  line-height: 1.5;
 }
+
+/* 💥 This is where you style markdown output manually */
+/* @layer base {
+  .markdown h1,h2 {
+    font-size: 5rem;
+  }
+} */
