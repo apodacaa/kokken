@@ -1,0 +1,18 @@
+{% extends "layouts/base.njk" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<h1>Smoke Guides</h1>
+
+<ul>
+  {% for smoke in collections.smoke %}
+    <li>
+      <a href="{{ smoke.url }}">{{ smoke.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+  
+{% endblock %}
+
