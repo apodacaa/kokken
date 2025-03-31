@@ -3,7 +3,7 @@ title: "All Recipes"
 layout: layouts/home.njk
 ---
 
-# 🧾 All Recipes
+# Recipes
 
 <ul>
   {% for recipe in collections.recipes %}

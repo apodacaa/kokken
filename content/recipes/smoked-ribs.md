@@ -8,14 +8,16 @@ tags:
 layout: "layouts/recipe.njk"
 permalink: "/recipes/{{ slug }}/"
 ingredients:
-  - section: "Dry Rub"
-    items:
-      - "2 oz bug juice"
-      - "5 oz dry gin"
-  - section: "Main"
-    items:
-      - "1 rack of baby back ribs"
-      - "2 cups of water"
+    items: 
+    - "2 oz of rub"
+    - section: "Dry Rub"
+      items:
+        - "2 oz bug juice"
+        - "5 oz dry gin"
+    - section: "Main"
+      items:
+        - "1 rack of baby back ribs"
+        - "2 cups of water"
 steps:
   - "Remove membrane from ribs."
   - "Apply mustard binder and dry rub evenly."
