@@ -1,52 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>{{ title }} | Smoke Guide</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/styles.css" />
-</head>
-<body>
-  {% include "partials/nav.njk" %}
+{% extends "layouts/base.njk" %}
 
-  <main>
-    <article>
-      <h1>{{ title }}</h1>
+{% block title %}{{ title }} | Smoke Guide{% endblock %}
 
-      {% if ingredient %}
-        <p>Ingredient: {{ ingredient }}</p>
-      {% endif %}
+{% block content %}
+<article>
+  <h1>{{ title }}</h1>
 
-      {% if phases %}
-        <h2>Phases</h2>
-        <ol>
-          {% for phase in phases %}
-            <li>
-              {{ phase.name }}<br />
-              {% if phase.temperature %}
-                Temp: {{ phase.temperature }}<br />
-              {% endif %}
-              {% if phase.duration %}
-                Duration: {{ phase.duration }}<br />
-              {% endif %}
-              {% if phase.doneness %}
-                Doneness: {{ phase.doneness }}<br />
-              {% endif %}
-            </li>
-          {% endfor %}
-        </ol>
-      {% endif %}
+  {% if ingredient %}
+    <p>Ingredient: {{ ingredient }}</p>
+  {% endif %}
 
-      {% if tags %}
-        <p>Tags:
-          {% for tag in tags %}
-            <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-          {% endfor %}
-        </p>
-      {% endif %}
+  {% if phases %}
+    <h2>Phases</h2>
+    <ol>
+      {% for phase in phases %}
+        <li>
+          {{ phase.name }}<br />
+          {% if phase.temperature %}
+            Temp: {{ phase.temperature }}<br />
+          {% endif %}
+          {% if phase.duration %}
+            Duration: {{ phase.duration }}<br />
+          {% endif %}
+          {% if phase.doneness %}
+            Doneness: {{ phase.doneness }}<br />
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  {% endif %}
 
-      {{ content | safe }}
-    </article>
-  </main>
-</body>
-</html>
+  {% if tags %}
+    <p>Tags:
+      {% for tag in tags %}
+        <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+  {% endif %}
+
+  {{ content | safe }}
+</article>
+{% endblock %}

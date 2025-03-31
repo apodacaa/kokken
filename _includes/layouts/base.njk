@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-background text-white text-base leading-normal antialiased">
+<head>
+  <meta charset="UTF-8" />
+  <title>{% block title %}{{ title }}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+</head>
+<body class="max-w-screen-sm mx-auto">
+  {% include "partials/nav.njk" %}
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>

@@ -1,41 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Items tagged with {{ tag }}</title>
-  <link rel="stylesheet" href="/assets/styles.css" />
-</head>
-<body>
-  {% include "partials/nav.njk" %}
+{% extends "layouts/base.njk" %}
 
-  <main>
-    <h1>Tag: {{ tag }}</h1>
+{% block title %}Items tagged with {{ tag }}{% endblock %}
 
-    {# Recipes #}
-    <h2>Recipes</h2>
-    <ul>
-      {% for item in collections[tag] %}
-        {% if item.data.layout == "layouts/recipe.njk" %}
-          <li>
-            <a href="{{ item.url }}">{{ item.data.title }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+{% block content %}
+  <h1>Tag: {{ tag }}</h1>
 
-    {# Smoke Guides #}
-    <h2>Smoke Guides</h2>
-    <ul>
-      {% for item in collections[tag] %}
-        {% if item.data.layout == "layouts/smoke.njk" %}
-          <li>
-            <a href="{{ item.url }}">{{ item.data.title }}</a>
-          </li>
-        {% endif %}
-      {% endfor %}
-    </ul>
+  {# Recipes #}
+  <h2>Recipes</h2>
+  <ul>
+    {% for item in collections[tag] %}
+      {% if item.data.layout == "layouts/recipe.njk" %}
+        <li>
+          <a href="{{ item.url }}">{{ item.data.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
 
-    <p><a href="/tags/">← Back to all tags</a></p>
-  </main>
-</body>
-</html>
+  {# Smoke Guides #}
+  <h2>Smoke Guides</h2>
+  <ul>
+    {% for item in collections[tag] %}
+      {% if item.data.layout == "layouts/smoke.njk" %}
+        <li>
+          <a href="{{ item.url }}">{{ item.data.title }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+
+  <p><a href="/tags/">← Back to all tags</a></p>
+{% endblock %}

@@ -1,1 +1,13 @@
 @import "tailwindcss";
+
+@theme {
+  --color-background: #121212;
+  --color-ladybug: #ff1a1a;
+  --color-paper: #1a1a1a;
+  --color-border: #2c2c2c;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+}

@@ -1,81 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>{{ title }} | Recipes</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/assets/styles.css" />
-</head>
-<body>
-   {% include "partials/nav.njk" %}
-  <main>
-    <article>
-      <h1>{{ title }}</h1>
+{% extends "layouts/base.njk" %}
 
-      {% if ingredients and ingredients.items %}
-        <h2>Ingrdedientss</h2>
-        <ul>
-        {% for entry in ingredients.items %}
-        {% if entry is string %}
-          <li>{{ entry }}</li>
+{% block title %}{{ title }} | Recipes{% endblock %}
 
-        {% elif entry.items %}
+{% block content %}
+<article>
+  <h1>{{ title }}</h1>
+
+  {% if ingredients and ingredients.items %}
+    <h2>Ingredients</h2>
+    <ul>
+    {% for entry in ingredients.items %}
+      {% if entry is string %}
+        <li>{{ entry }}</li>
+      {% elif entry.items %}
         {% if entry.section %}
-        </ul>
-        <h3>{{ entry.section }}</h3>
-        <ul>
+          </ul>
+          <h3>{{ entry.section }}</h3>
+          <ul>
         {% endif %}
         {% for item in entry.items %}
           <li>{{ item }}</li>
         {% endfor %}
-        {% endif %}
+      {% endif %}
+    {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if steps %}
+    <h2>Steps</h2>
+    <ol>
+      {% for step in steps %}
+        <li>{{ step }}</li>
       {% endfor %}
-      </ul>
-      {% endif %}
+    </ol>
+  {% endif %}
 
+  {% if notes %}
+    <h2>Notes</h2>
+    <p>{{ notes }}</p>
+  {% endif %}
 
+  {% if references %}
+    <h2>Related Recipes</h2>
+    <ul>
+      {% set referenceBase = {
+        recipe: "/recipes/",
+        smoke: "/smoke/"
+      } %}
+      {% for ref in references %}
+        {% set path = referenceBase[ref.type] or "/" %}
+        <li><a href="{{ path }}{{ ref.slug }}/">{{ ref.title }}</a></li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 
-      {% if steps %}
-        <h2>Steps</h2>
-        <ol>
-          {% for step in steps %}
-            <li>{{ step }}</li>
-          {% endfor %}
-        </ol>
-      {% endif %}
-
-         {% if notes %}
-        <h2>Notes</h2>
-        <p>{{ notes }}</p>
-      {% endif %}
-
-      {% if references %}
-        <h2>Related Recipes</h2>
-        <ul>
-          {% set referenceBase = {
-  
-          recipe: "/recipes/",
-          smoke: "/smoke/"
-          } %}
-
-          {% for ref in references %}
-          {% set path = referenceBase[ref.type] or "/" %}
-            <li><a href="{{ path }}{{ ref.slug }}/">{{ ref.title }}</a></li>
-          {% endfor %}
-
-
-        </ul>
-      {% endif %}
-
-    {% if tags %}
-        <p>Tags:
-          {% for tag in tags %}
-            <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
-          {% endfor %}
-        </p>
-      {% endif %}
-
-    </article>
-  </main>
-</body>
-</html>
+  {% if tags %}
+    <p>Tags:
+      {% for tag in tags %}
+        <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+      {% endfor %}
+    </p>
+  {% endif %}
+</article>
+{% endblock %}
