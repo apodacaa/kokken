@@ -3,63 +3,76 @@
 {% block title %}{{ title }} | Recipes{% endblock %}
 
 {% block content %}
-<article>
-  <h1>{{ title }}</h1>
+<article class="space-y-8">
+
+  <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">{{ title }}</h1>
 
   {% if ingredients and ingredients.items %}
-    <h2>Ingredients</h2>
-    <ul>
-    {% for entry in ingredients.items %}
-      {% if entry is string %}
-        <li>{{ entry }}</li>
-      {% elif entry.items %}
-        {% if entry.section %}
-          </ul>
-          <h3>{{ entry.section }}</h3>
-          <ul>
+  <div>
+    <h2 class="text-lg font-semibold text-white mb-4">Ingredients</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      {% for entry in ingredients.items %}
+        {% if entry is string %}
+          <li>{{ entry }}</li>
+        {% elif entry.items %}
+          {% if entry.section %}
+            </ul>
+            <p class="text-sm font-semibold text-gray-400 mt-4 mb-2 uppercase tracking-wide">{{ entry.section }}</p>
+            <ul class="list-disc pl-5 space-y-1">
+          {% endif %}
+          {% for item in entry.items %}
+            <li>{{ item }}</li>
+          {% endfor %}
         {% endif %}
-        {% for item in entry.items %}
-          <li>{{ item }}</li>
-        {% endfor %}
-      {% endif %}
-    {% endfor %}
+      {% endfor %}
     </ul>
-  {% endif %}
+  </div>
+{% endif %}
+
 
   {% if steps %}
-    <h2>Steps</h2>
-    <ol>
-      {% for step in steps %}
-        <li>{{ step }}</li>
-      {% endfor %}
-    </ol>
+    <div>
+      <h2 class="text-lg font-semibold text-white mb-2">Steps</h2>
+      <ol class="list-decimal pl-5 space-y-2">
+        {% for step in steps %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      </ol>
+    </div>
   {% endif %}
 
   {% if notes %}
-    <h2>Notes</h2>
-    <p>{{ notes }}</p>
+    <div>
+      <h2 class="text-lg font-semibold text-white mb-2">Notes</h2>
+      <p class="text-gray-300">{{ notes }}</p>
+    </div>
   {% endif %}
 
   {% if references %}
-    <h2>Related Recipes</h2>
-    <ul>
-      {% set referenceBase = {
-        recipe: "/recipes/",
-        smoke: "/smoke/"
-      } %}
-      {% for ref in references %}
-        {% set path = referenceBase[ref.type] or "/" %}
-        <li><a href="{{ path }}{{ ref.slug }}/">{{ ref.title }}</a></li>
-      {% endfor %}
-    </ul>
+    <div>
+      <h2 class="text-lg font-semibold text-white mb-2">Related Recipes</h2>
+      <ul class="list-disc pl-5 space-y-1">
+        {% set referenceBase = {
+          recipe: "/recipes/",
+          smoke: "/smoke/"
+        } %}
+        {% for ref in references %}
+          {% set path = referenceBase[ref.type] or "/" %}
+          <li><a href="{{ path }}{{ ref.slug }}/" class="text-ladybug hover:underline">{{ ref.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </div>
   {% endif %}
 
   {% if tags %}
-    <p>Tags:
+    <div class="text-sm text-gray-400 flex flex-wrap gap-2">
       {% for tag in tags %}
-        <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+        <a href="/tags/{{ tag | slug }}/" class="border border-ladybug px-2 py-1 rounded hover:bg-ladybug hover:text-black transition">
+          {{ tag }}
+        </a>
       {% endfor %}
-    </p>
+    </div>
   {% endif %}
+
 </article>
 {% endblock %}

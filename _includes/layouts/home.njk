@@ -4,32 +4,36 @@
 
 {% block content %}
 
-<h2>Recipes</h2>
+<h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">Recipes</h1>
 
-<ul>
+<ul class="list-disc pl-5 mb-6 space-y-1">
   {% for recipe in collections.recipes %}
     <li>
-      <a href="{{ recipe.url }}">{{ recipe.data.title }}</a>
+      <a href="{{ recipe.url }}" class="text-white hover:underline">{{ recipe.data.title }}</a>
     </li>
   {% endfor %}
 </ul>
 
-<h2>Smoke Guides</h2>
+<h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">Smoke Guides</h1>
 
-<ul>
+<ul class="list-disc pl-5 mb-6 space-y-1">
   {% for post in collections.smoke %}
     <li>
-      <a href="{{ post.url }}">{{ post.data.title }}</a>
+      <a href="{{ post.url }}" class="text-white hover:underline">{{ post.data.title }}</a>
     </li>
   {% endfor %}
 </ul>
 
-<h2>Tags</h2>
+<h2 class="text-ladybug text-xl font-semibold mb-2">Tags</h2>
 
-<ul>
+<ul class="list-none flex flex-wrap gap-2 text-sm text-white">
   {% for tag in collections.tagList %}
-    <li><a href="/tags/{{ tag | slug }}/">{{ tag }}</a></li>
+    <li>
+      <a href="/tags/{{ tag | slug }}/" class="border border-ladybug px-2 py-1 rounded hover:bg-ladybug hover:text-black transition">
+        {{ tag }}
+      </a>
+    </li>
   {% endfor %}
 </ul>
-  
+
 {% endblock %}

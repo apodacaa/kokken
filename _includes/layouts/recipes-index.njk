@@ -4,15 +4,14 @@
 
 {% block content %}
 
-<h1>Recipes</h1>
+<h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-4">Recipes</h1>
 
-<ul>
-   {% for recipe in collections.recipes %}
+<ul class="list-disc pl-5 space-y-1">
+  {% for recipe in collections.recipes %}
     <li>
-      <a href="{{ recipe.url }}">{{ recipe.data.title }}</a>
+      <a href="{{ recipe.url }}" class="text-white hover:underline">{{ recipe.data.title }}</a>
     </li>
   {% endfor %}
 </ul>
-  
-{% endblock %}
 
+{% endblock %}

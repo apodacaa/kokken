@@ -1,6 +1,6 @@
 ---
 title: "All Tags"
-layout: layouts/home.njk
+layout: layouts/tags-index.njk
 ---
 
 # Tags

@@ -27,4 +27,5 @@ steps:
 references:
   - slug: "pork-chops"
     title: "Pork chops"
+    type: smoke
 ---

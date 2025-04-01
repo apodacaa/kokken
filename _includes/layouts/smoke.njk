@@ -3,27 +3,28 @@
 {% block title %}{{ title }} | Smoke Guide{% endblock %}
 
 {% block content %}
-<article>
-  <h1>{{ title }}</h1>
+<article class="space-y-8">
+
+  <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">{{ title }}</h1>
 
   {% if ingredient %}
-    <p>Ingredient: {{ ingredient }}</p>
+    <p class="text-white">Ingredient: <span class="font-semibold">{{ ingredient }}</span></p>
   {% endif %}
 
   {% if phases %}
-    <h2>Phases</h2>
-    <ol>
+    <h2 class="text-lg font-semibold text-white mb-2">Phases</h2>
+    <ol class="list-decimal pl-5 space-y-4">
       {% for phase in phases %}
-        <li>
-          {{ phase.name }}<br />
+        <li class="text-white">
+          <div><span class="font-semibold">Phase:</span> {{ phase.name }}</div>
           {% if phase.temperature %}
-            Temp: {{ phase.temperature }}<br />
+            <div><span class="font-semibold">Temp:</span> {{ phase.temperature }}</div>
           {% endif %}
           {% if phase.duration %}
-            Duration: {{ phase.duration }}<br />
+            <div><span class="font-semibold">Duration:</span> {{ phase.duration }}</div>
           {% endif %}
           {% if phase.doneness %}
-            Doneness: {{ phase.doneness }}<br />
+            <div><span class="font-semibold">Doneness:</span> {{ phase.doneness }}</div>
           {% endif %}
         </li>
       {% endfor %}
@@ -31,13 +32,17 @@
   {% endif %}
 
   {% if tags %}
-    <p>Tags:
+    <div class="text-sm text-gray-400 flex flex-wrap gap-2">
       {% for tag in tags %}
-        <a href="/tags/{{ tag | slug }}/" class="tag">{{ tag }}</a>{% if not loop.last %}, {% endif %}
+        <a href="/tags/{{ tag | slug }}/" class="border border-ladybug px-2 py-1 rounded hover:bg-ladybug hover:text-black transition">
+          {{ tag }}
+        </a>
       {% endfor %}
-    </p>
+    </div>
   {% endif %}
 
-  {{ content | safe }}
+  <div class="text-gray-300 space-y-4">
+    {{ content | safe }}
+  </div>
 </article>
 {% endblock %}
