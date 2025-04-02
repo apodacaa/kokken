@@ -8,15 +8,17 @@
   <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">{{ title }}</h1>
 
   {% if ingredient %}
-    <p class="text-white">Ingredient: <span class="font-semibold">{{ ingredient }}</span></p>
+    <p class="text-white">{{ ingredient }}</p>
   {% endif %}
 
   {% if phases %}
-    <h2 class="text-lg font-semibold text-white mb-2">Phases</h2>
-    <ol class="list-decimal pl-5 space-y-4">
+  <h2 class="text-lg font-semibold text-white mb-4">Phases</h2>
+    <ol class="space-y-4">
       {% for phase in phases %}
         <li class="text-white">
-          <div><span class="font-semibold">Phase:</span> {{ phase.name }}</div>
+          <div class="mt-4 mb-2">
+            <span class="text-sm font-semibold text-gray-400 uppercase tracking-wide">{{ phase.name }}</span>
+          </div>
           {% if phase.temperature %}
             <div><span class="font-semibold">Temp:</span> {{ phase.temperature }}</div>
           {% endif %}
