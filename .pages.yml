@@ -1,20 +1,31 @@
-title: Kokken Recipes
+media:
+  input: content/recipes/images
+  output: /recipes/images
 
-# Optional: restrict editing to this folder
-root: content/recipes
-
-collections:
-  - label: Recipes
-    folder: content/recipes
+content:
+  - name: recipes
+    label: Recipes
+    type: collection
+    path: content/recipes
     create: true
-    name: recipe
+    filename: "{title}.md"
     fields:
       - name: title
         label: Title
-        widget: string
+        type: string
+        required: true
       - name: date
         label: Date
-        widget: datetime
+        type: date
+        required: true
+      - name: description
+        label: Description
+        type: text
+      - name: image
+        label: Recipe Image
+        type: image
+        config:
+          maxSize: 2MB
       - name: body
         label: Body
-        widget: markdown
+        type: rich-text
