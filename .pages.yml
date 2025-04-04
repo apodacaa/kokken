@@ -26,10 +26,13 @@ content:
         label: Layout
         type: string
         default: "layouts/recipe.njk"
+        hidden: true
 
       - name: permalink
         label: Permalink
         type: string
+        default: "/recipes/{{ slug }}/"
+        hidden: true
 
       - name: ingredients
         label: Ingredients
