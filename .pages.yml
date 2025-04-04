@@ -1,7 +1,3 @@
-media:
-  input: content/recipes/images
-  output: /recipes/images
-
 content:
   - name: recipes
     label: Recipes
@@ -14,18 +10,3 @@ content:
         label: Title
         type: string
         required: true
-      - name: date
-        label: Date
-        type: date
-        required: true
-      - name: description
-        label: Description
-        type: text
-      - name: image
-        label: Recipe Image
-        type: image
-        config:
-          maxSize: 2MB
-      - name: body
-        label: Body
-        type: rich-text
