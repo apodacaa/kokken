@@ -3,7 +3,6 @@ content:
     label: Recipes
     type: collection
     path: content/recipes
-    create: true
     filename: "{title}.md"
     fields:
       - name: title
