@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: apodacaa/kokken
+  branch: main
+  base_url: https://decap-cms-oauth.netlify.app # or your own OAuth proxy
+
+media_folder: "src/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "posts"
+    label: "Posts"
+    folder: "content/recipes"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }

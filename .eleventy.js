@@ -1,6 +1,7 @@
 module.exports = function (eleventyConfig) {
   // ✅ Passthrough static assets
   eleventyConfig.addPassthroughCopy("assets");
+  eleventyConfig.addPassthroughCopy("admin");
 
   // ✅ Create a collection of all unique tags
   eleventyConfig.addCollection("tagList", function (collectionApi) {
