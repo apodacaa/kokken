@@ -66,3 +66,6 @@ content:
           - name: type
             label: Type
             type: string
+            default: recipes
+            options: 
+              values: [recipes smoke]
