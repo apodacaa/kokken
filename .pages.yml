@@ -3,9 +3,67 @@ content:
     label: Recipes
     type: collection
     path: content/recipes
-    filename: "{title}.md"
+    filename: "{slug}.md"
     fields:
       - name: title
         label: Title
         type: string
         required: true
+
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+
+      - name: tags
+        label: Tags
+        type: list
+        of:
+          type: string
+
+      - name: layout
+        label: Layout Template
+        type: string
+        default: layouts/recipe.njk
+
+      - name: permalink
+        label: Permalink
+        type: string
+        default: "/recipes/{{ slug }}/"
+
+      - name: ingredients
+        label: Ingredients
+        type: list
+        of:
+          type: object
+          fields:
+            - name: section
+              label: Section
+              type: string
+            - name: items
+              label: Items
+              type: list
+              of:
+                type: string
+
+      - name: steps
+        label: Cooking Steps
+        type: list
+        of:
+          type: string
+
+      - name: references
+        label: References
+        type: list
+        of:
+          type: object
+          fields:
+            - name: slug
+              label: Slug
+              type: string
+            - name: title
+              label: Title
+              type: string
+            - name: type
+              label: Type
+              type: string
