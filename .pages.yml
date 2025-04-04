@@ -25,6 +25,7 @@ content:
       - name: layout
         label: Layout
         type: string
+        default: "layouts/recipe.njk"
 
       - name: permalink
         label: Permalink
