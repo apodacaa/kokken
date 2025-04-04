@@ -60,12 +60,15 @@ content:
           - name: slug
             label: Slug
             type: string
+            required: true
           - name: title
             label: Title
             type: string
+            required: true
           - name: type
             label: Type
             type: string
+            required: true
             default: recipes
             options: 
               values: [recipes smoke]
