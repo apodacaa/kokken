@@ -20,6 +20,7 @@ content:
         label: Tags
         type: string
         list: true
+        required: true
 
       - name: layout
         label: Layout
