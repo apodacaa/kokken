@@ -4,6 +4,7 @@ content:
     type: collection
     path: content/recipes
     filename: "{slug}.md"
+    format: yaml-frontmatter
     fields:
       - name: title
         label: Title
@@ -17,53 +18,46 @@ content:
 
       - name: tags
         label: Tags
-        type: list
-        of:
-          type: string
+        type: string
+        list: true
 
       - name: layout
-        label: Layout Template
+        label: Layout
         type: string
-        default: layouts/recipe.njk
 
       - name: permalink
         label: Permalink
         type: string
-        default: "/recipes/{{ slug }}/"
 
       - name: ingredients
         label: Ingredients
-        type: list
-        of:
-          type: object
-          fields:
-            - name: section
-              label: Section
-              type: string
-            - name: items
-              label: Items
-              type: list
-              of:
-                type: string
+        type: object
+        list: true
+        fields:
+          - name: section
+            label: Section
+            type: string
+          - name: items
+            label: Items
+            type: string
+            list: true
 
       - name: steps
-        label: Cooking Steps
-        type: list
-        of:
-          type: string
+        label: Steps
+        type: string
+        list: true
 
       - name: references
         label: References
-        type: list
-        of:
-          type: object
-          fields:
-            - name: slug
-              label: Slug
-              type: string
-            - name: title
-              label: Title
-              type: string
-            - name: type
-              label: Type
-              type: string
+        type: object
+        list: true
+        fields:
+          - name: slug
+            label: Slug
+            type: string
+          - name: title
+            label: Title
+            type: string
+          - name: type
+            label: Type
+            type: string
