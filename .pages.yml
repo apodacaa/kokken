@@ -1,0 +1,20 @@
+title: Kokken Recipes
+
+# Optional: restrict editing to this folder
+root: content/recipes
+
+collections:
+  - label: Recipes
+    folder: content/recipes
+    create: true
+    name: recipe
+    fields:
+      - name: title
+        label: Title
+        widget: string
+      - name: date
+        label: Date
+        widget: datetime
+      - name: body
+        label: Body
+        widget: markdown
