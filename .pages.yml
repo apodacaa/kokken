@@ -54,11 +54,13 @@ content:
             label: Items
             type: string
             list: true
+            required: true
 
       - name: steps
         label: Steps
         type: string
         list: true
+        required: true
 
       - name: references
         label: References
