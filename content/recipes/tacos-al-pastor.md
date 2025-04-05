@@ -23,4 +23,8 @@ ingredients:
       - 1 onion
       - 1/2 chopped Cilantro
       - Lime wedges
+instructions: Do these instructions. Then do these.
+steps:
+  - make the dough
+  - make the pizza
 ---
