@@ -3,7 +3,9 @@ content:
     label: Recipes
     type: collection
     path: content/recipes
-    filename: "{slug}.md"
+    filename: "{primary}.md"
+    view:
+      primary: slug
     format: yaml-frontmatter
     fields:
       - name: title
