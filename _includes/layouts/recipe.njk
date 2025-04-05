@@ -28,18 +28,7 @@
   </div>
 {% endif %}
 
-
-
-  {% if steps %}
-    <div>
-      <h2 class="text-lg font-semibold text-white mb-2">Steps</h2>
-      <ol class="list-decimal pl-5 space-y-2">
-        {% for step in steps %}
-          <li>{{ step }}</li>
-        {% endfor %}
-      </ol>
-    </div>
-  {% endif %}
+  {% include "partials/recipe-steps.njk" %}
 
   {% if notes %}
     <div>

@@ -22,10 +22,13 @@ content:
           message: "Slug must contain only lowercase letters and hyphens (e.g. 'monster-pork-chops')"
 
       - name: tags
-        label: Tags
+        label: "Tags (at least 1 required)"
         type: string
-        list: true
-        required: true
+        list:
+          min: 1
+        pattern:
+          regex: "^[a-z]+$"
+          message: "Tags must be a single word with only lowercase letters (e.g. 'smoke', 'pork')"
 
       - name: layout
         label: Layout
@@ -43,6 +46,7 @@ content:
         label: Ingredients
         type: object
         list: true
+        required: true
         fields:
           - name: section
             label: Section
@@ -50,7 +54,12 @@ content:
           - name: items
             label: Items
             type: string
-            list: true
+            list:
+             min: 1
+
+      - name: instructions
+        label: Instructions
+        type: text
 
       - name: steps
         label: Steps
