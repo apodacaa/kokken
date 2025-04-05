@@ -17,4 +17,10 @@ ingredients:
       - 1/2 tsp ground cumin
       - 1/8 tsp ground cloves
       - 2 lime wedges
+  - section: Toppings
+    items:
+      - 1 pineapple
+      - 1 onion
+      - 1/2 chopped Cilantro
+      - Lime wedges
 ---
