@@ -46,6 +46,7 @@ content:
         label: Ingredients
         type: object
         list: true
+        required: true
         fields:
           - name: section
             label: Section
