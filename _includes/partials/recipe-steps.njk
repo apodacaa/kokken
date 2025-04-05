@@ -1,0 +1,21 @@
+{% if steps %}
+  <div>
+    <h2 class="text-lg font-semibold text-white mb-2">Steps</h2>
+    <ol class="list-decimal pl-5 space-y-2">
+      {% if steps is iterable %}
+        {# steps is an array #}
+        {% for step in steps %}
+          <li>{{ step }}</li>
+        {% endfor %}
+      {% else %}
+        {# steps is a string — split manually using a real newline #}
+        {% set lines = steps | string | trim | split('\n') %}
+        {% for line in lines %}
+          {% if line | trim %}
+            <li>{{ line }}</li>
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    </ol>
+  </div>
+{% endif %}
