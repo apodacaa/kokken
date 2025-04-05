@@ -26,6 +26,9 @@ content:
         type: string
         list: true
         required: true
+        pattern:
+          regex: "^[a-z]+$"
+          message: "Tags must be a single word with only lowercase letters (e.g. 'smoke', 'pork')"
 
       - name: layout
         label: Layout
