@@ -7,9 +7,13 @@ tags:
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 ingredients:
-  - items:
+  - section: Brine
+    items:
       - 5-7 lbs pork shoulder
       - 2 cups water
+  - section: Rub
+    items:
+      - 1 cup salt
 steps:
   - Smoke for 12 hours
   - Rest for 2 hous
