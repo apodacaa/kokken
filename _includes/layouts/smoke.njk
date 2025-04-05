@@ -7,29 +7,33 @@
 
   <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">{{ title }}</h1>
 
-  {% if amount %}
-    <p class="text-white"><span class="font-semibold">Amount:</span> {{ amount }}</p>
-  {% endif %}
+  {% if amount or phases %}
+    <div class="space-y-4">
+      {% if amount %}
+        <p class="text-white"><span class="font-semibold">Amount:</span> {{ amount }}</p>
+      {% endif %}
 
-  {% if phases %}
-    <ol class="space-y-4">
-      {% for phase in phases %}
-        <li class="text-white">
-          <div class="mt-4 mb-2">
-            <span class="text-sm font-semibold text-gray-400 uppercase tracking-wide">{{ phase.name }}</span>
-          </div>
-          {% if phase.temperature %}
-            <div><span class="font-semibold">Temp:</span> {{ phase.temperature }}</div>
-          {% endif %}
-          {% if phase.duration %}
-            <div><span class="font-semibold">Duration:</span> {{ phase.duration }}</div>
-          {% endif %}
-          {% if phase.doneness %}
-            <div><span class="font-semibold">Doneness:</span> {{ phase.doneness }}</div>
-          {% endif %}
-        </li>
-      {% endfor %}
-    </ol>
+      {% if phases %}
+        <ol>
+          {% for phase in phases %}
+            <li class="text-white {% if not loop.first %}mt-4{% endif %}">
+              <div class="mb-2">
+                <span class="text-sm font-semibold text-gray-400 uppercase tracking-wide">{{ phase.name }}</span>
+              </div>
+              {% if phase.temperature %}
+                <div><span class="font-semibold">Temp:</span> {{ phase.temperature }}</div>
+              {% endif %}
+              {% if phase.duration %}
+                <div><span class="font-semibold">Duration:</span> {{ phase.duration }}</div>
+              {% endif %}
+              {% if phase.doneness %}
+                <div><span class="font-semibold">Doneness:</span> {{ phase.doneness }}</div>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ol>
+      {% endif %}
+    </div>
   {% endif %}
 
   {% if tags %}

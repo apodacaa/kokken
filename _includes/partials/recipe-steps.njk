@@ -1,3 +1,10 @@
+{% if instructions %}
+  <div>
+    <h2 class="text-lg font-semibold text-white mb-2">Instructions</h2>
+    <p class="text-gray-300 whitespace-pre-line">{{ instructions }}</p>
+  </div>
+{% endif %}
+
 {% if steps %}
   <div>
     <h2 class="text-lg font-semibold text-white mb-2">Steps</h2>
