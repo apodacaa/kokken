@@ -23,6 +23,4 @@ ingredients:
       - 1 onion
       - 1/2 chopped Cilantro
       - Lime wedges
-steps:
-  - bake it
 ---
