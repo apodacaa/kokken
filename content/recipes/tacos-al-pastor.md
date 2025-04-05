@@ -23,6 +23,8 @@ ingredients:
       - 1 onion
       - 1/2 chopped Cilantro
       - Lime wedges
-steps:
-  - mix it up
+steps: |-
+  1. Toast the chiles.
+  2. Add the garlic.
+  3. Mend the stitches.
 ---
