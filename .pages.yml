@@ -59,7 +59,9 @@ content:
 
       - name: steps
         label: Steps
-        type: text
+        type: string
+        list:
+          min: 1
 
       - name: references
         label: References
