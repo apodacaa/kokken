@@ -26,7 +26,6 @@ content:
         type: string
         list:
           min: 1
-        description: "Include at least 1 tag"
         pattern:
           regex: "^[a-z]+$"
           message: "Tags must be a single word with only lowercase letters (e.g. 'smoke', 'pork')"
