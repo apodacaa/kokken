@@ -24,8 +24,8 @@ content:
       - name: tags
         label: Tags
         type: string
-        list: true
-        required: true
+        list:
+          min: 1
         pattern:
           regex: "^[a-z]+$"
           message: "Tags must be a single word with only lowercase letters (e.g. 'smoke', 'pork')"
@@ -54,14 +54,14 @@ content:
           - name: items
             label: Items
             type: string
-            list: true
-            required: true
+            list:
+             min: 1
 
       - name: steps
         label: Steps
         type: string
-        list: true
-        required: true
+        list:
+          min: 1
 
       - name: references
         label: References
