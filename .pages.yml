@@ -57,11 +57,14 @@ content:
             list:
              min: 1
 
+      - name: instructions
+        label: Instructions
+        type: text
+
       - name: steps
         label: Steps
         type: string
-        list:
-          min: 1
+        list: true
 
       - name: references
         label: References
