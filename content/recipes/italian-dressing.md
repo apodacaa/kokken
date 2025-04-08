@@ -1,12 +1,19 @@
 ---
-title: Italian Dressing
-slug: italian-dressing
+title: Italian Salad
+slug: italian-salad
 tags:
-  - dressing
+  - salad
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 ingredients:
-  - items:
+  - section: Salad
+    items:
+      - 1 Head of iceberg lettuce, washed and torn
+      - Red onions, thinly sliced, salted and pressed
+      - Provolone and/or mozz balls
+      - Roasted red peppers and/or pepperoncini
+  - section: Dressing
+    items:
       - 1/2 cup olive oil
       - 5 tbsp white wine vinegar
       - 1 tbsp mayo
@@ -14,5 +21,5 @@ ingredients:
       - 1 1/2 tsp oregeno
       - 1 garlic clove, grated
       - salt and pepper to taste
-instructions: Mix it up.
+instructions: Toss the salad in the dressing :)
 ---
