@@ -12,5 +12,5 @@ phases:
   - name: "Smoke"
     temperature: "300"
     duration: "1 to 1.5 hours"
-    doneness: "165-170"
+    doneness: "180"
 ---
