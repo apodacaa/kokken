@@ -41,21 +41,21 @@ content:
         type: string
         default: "/recipes/{{ slug }}/"
         hidden: true
-
+        
       - name: ingredients
         label: Ingredients
         type: object
         list: true
-        required: true
         fields:
-          - name: section
-            label: Section
-            type: string
-          - name: items
-            label: Items
-            type: string
-            list:
-             min: 1
+        - name: section
+          label: Section
+          type: string
+          default: "_base_"
+          hidden: true
+        - name: items
+          label: Items
+          type: string
+          list: true
 
       - name: instructions
         label: Instructions
