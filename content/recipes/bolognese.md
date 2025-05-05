@@ -7,7 +7,7 @@ tags:
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 ingredients:
-  - section: _base_
+  - section: Main
     items:
       - 1 onion
       - 2 carrots
