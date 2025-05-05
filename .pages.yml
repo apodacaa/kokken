@@ -57,14 +57,14 @@ content:
           type: string
           list: true
 
-      - name: instructions
-        label: Instructions
-        type: text
-
       - name: steps
         label: Steps
         type: string
         list: true
+
+      - name: notes
+        label: Notes
+        type: text
 
       - name: references
         label: References
