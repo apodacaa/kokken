@@ -7,10 +7,30 @@
 <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-4">Tag: {{ tag }}</h1>
 
 {# Recipes #}
-<h2 class="text-lg font-semibold text-white mb-2">Recipes</h2>
+{% set found = false %}
 <ul class="list-disc pl-5 space-y-1 mb-6">
   {% for item in collections[tag] %}
     {% if item.data.layout == "layouts/recipe.njk" %}
+      {% if not found %}
+        {% set found = true %}
+        <h2 class="text-lg font-semibold text-white mb-2">Recipes</h2>
+      {% endif %}
+      <li>
+        <a href="{{ item.url }}" class="text-white hover:underline">{{ item.data.title }}</a>
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>
+
+{# Cocktails #}
+{% set found = false %}
+<ul class="list-disc pl-5 space-y-1 mb-6">
+  {% for item in collections[tag] %}
+    {% if item.data.layout == "layouts/cocktail.njk" %}
+      {% if not found %}
+        {% set found = true %}
+        <h2 class="text-lg font-semibold text-white mb-2">Cocktails</h2>
+      {% endif %}
       <li>
         <a href="{{ item.url }}" class="text-white hover:underline">{{ item.data.title }}</a>
       </li>
@@ -19,10 +39,14 @@
 </ul>
 
 {# Smoke Guides #}
-<h2 class="text-lg font-semibold text-white mb-2">Smoke Guides</h2>
+{% set found = false %}
 <ul class="list-disc pl-5 space-y-1 mb-6">
   {% for item in collections[tag] %}
     {% if item.data.layout == "layouts/smoke.njk" %}
+      {% if not found %}
+        {% set found = true %}
+        <h2 class="text-lg font-semibold text-white mb-2">Smoke Guides</h2>
+      {% endif %}
       <li>
         <a href="{{ item.url }}" class="text-white hover:underline">{{ item.data.title }}</a>
       </li>

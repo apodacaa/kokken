@@ -1,0 +1,17 @@
+{% extends "layouts/base.njk" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-4">Cocktails</h1>
+
+<ul class="list-disc pl-5 space-y-1">
+  {% for cocktail in collections.cocktails %}
+    <li>
+      <a href="{{ cocktail.url }}" class="text-white hover:underline">{{ cocktail.data.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+{% endblock %}
