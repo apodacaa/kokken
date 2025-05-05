@@ -12,12 +12,12 @@ ingredients:
   - "2 celery stalks"
   - "1 lb ground beef"
   - "1/2 cup dry red wine"
-  - "2 cups beef broth"
-  - "12 oz canned tomatoes"
+  - "1 cups beef broth"
+  - "12 oz canned tomatoes or whole tomatoes"
 steps:
   - "Saute onions, carrots, celery."
   - "Add beef until cooked."
   - "Add wine, broth, tomatoes."
-  - "Simmer until thick."
-notes: "Healthy pinches of salt as you go."
+  - "Simmer until thick (1.5 to 2 hours)."
+notes: "Healthy pinches of salt as you go. You can also use 1/3 ground pork and 2/3 ground beef."
 ---
