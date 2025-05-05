@@ -21,5 +21,7 @@ ingredients:
       - 1 1/2 tsp oregeno
       - 1 garlic clove, grated
       - salt and pepper to taste
-instructions: Toss the salad in the dressing :)
+steps:
+  - Mix dressing.
+  - Toss salad in dressing.
 ---
