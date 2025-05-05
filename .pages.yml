@@ -51,7 +51,7 @@ content:
           label: Section
           type: string
           default: "_base_"
-          hidden: true
+          hidden: false
         - name: items
           label: Items
           type: string
