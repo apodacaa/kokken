@@ -50,7 +50,7 @@ content:
         - name: section
           label: Section
           type: string
-          default: "_base_"
+          default: "Main"
           hidden: false
         - name: items
           label: Items
