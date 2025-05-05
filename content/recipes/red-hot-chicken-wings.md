@@ -8,7 +8,7 @@ tags:
 layout: "layouts/recipe.njk"
 permalink: "/recipes/{{ slug }}/"
 ingredients:
-  - section: Main
+  - section: _main_
     items: 
       - "3 lbs chicken wings (about 24 pieces)"
       - "1/2 cup finely chopped cilantro"

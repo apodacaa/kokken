@@ -2,25 +2,16 @@
 title: Drink 
 slug: drink
 tags:
-  - main
   - gin
+  - vodka
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - section: Main
-    items:
-      - 1 onion
-      - 2 carrots
-      - 2 celery stalks
-      - 1 lb ground beef
-      - 1/2 cup dry red wine
-      - 1 cup beef broth
-      - 12 oz canned tomatoes or whole tomatoes
+  - 1 oz gin
+  - 1 oz vodka
+  - lemon
 steps:
-  - Saute onions, carrots, celery.
-  - Add beef until cooked.
-  - Add wine, broth, tomatoes.
-  - Simmer until thick (1.5 to 2 hours).
-notes: Healthy pinches of salt as you go. Optional to use 1/3 ground pork and
-  2/3 ground beef.
+  - Put ice in cup.
+  - Mix it up.
+notes: Use a straw if you want.
 ---

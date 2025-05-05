@@ -2,26 +2,26 @@
   <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">{{ title }}</h1>
 
   {% if ingredients %}
-    <div>
-      <h2 class="text-lg font-semibold text-white mb-4">Ingredients</h2>
-      <ul class="list-disc pl-5 space-y-1">
-        {% for entry in ingredients %}
-          {% if entry is string %}
-            <li>{{ entry }}</li>
-          {% elif entry.items %}
-            </ul>
-            {% if entry.section %}
-              <p class="text-sm font-semibold text-gray-400 mt-4 mb-2 uppercase tracking-wide">{{ entry.section }}</p>
-            {% endif %}
-            <ul class="list-disc pl-5 space-y-1">
-              {% for item in entry.items %}
-                <li>{{ item }}</li>
-              {% endfor %}
+  <div>
+    <h2 class="text-lg font-semibold text-white mb-4">Ingredients</h2>
+    <ul class="list-disc pl-5 space-y-1">
+      {% for entry in ingredients %}
+        {% if entry is string %}
+          <li>{{ entry }}</li>
+        {% elif entry.items %}
+          </ul>
+          {% if entry.section and entry.section != "_main_" %}
+            <p class="text-sm font-semibold text-gray-400 mt-4 mb-2 uppercase tracking-wide">{{ entry.section }}</p>
           {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
-  {% endif %}
+          <ul class="list-disc pl-5 space-y-1">
+            {% for item in entry.items %}
+              <li>{{ item }}</li>
+            {% endfor %}
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}
 
   {% include "partials/recipe-steps.njk" %}
 
