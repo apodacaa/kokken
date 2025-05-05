@@ -29,10 +29,12 @@ steps:
   - Add rest of sauce ingredients except pork and lime.
   - Simmer for 20 minutes.
   - Blend into puree and strain with fine mesh strainer.
-  - Simmer pork and strained sauce for 1 1/2 to 1 3/4 hours. Pork should be tender but still hold together.
+  - Keep sauce and discard thick stuff.
+  - Simmer pork in strained sauce for 1 1/2 to 1 3/4 hours. Pork should be tender but still hold together.
   - Remove pork.
-  - Discard all but 1/2 cup sauce. Add lime wedges.
-  - Salt pork, brush with 1/4 cup sauce, and sear.
-  - Cut up pork, toss with 1/4 cup sauce.
-  - (Optional) grill pineapple
+  - Discard all but 1/2 cup sauce. Add lime wedges and salt to taste.
+  - Salt pork, brush with 1/4 cup sauce, and sear on both sides.
+  - Cut up pork, toss with 1/2 cup sauce.
+  - Serve with lime, onions, cilantro, and grilled pineapple.
+  - (Optional) Cut pineapple in rounds. Bush with salt and oil and grill.
 ---
