@@ -21,5 +21,6 @@ steps:
   - Add beef until cooked.
   - Add wine, broth, tomatoes.
   - Simmer until thick (1.5 to 2 hours).
-notes: Healthy pinches of salt.
+notes: Healthy pinches of salt as you go. Optional to use 1/3 ground pork and
+  2/3 ground beef.
 ---
