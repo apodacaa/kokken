@@ -23,7 +23,7 @@ content:
           message: "Slug must contain only lowercase letters and hyphens (e.g. 'monster-pork-chops')"
 
       - name: tags
-        label: "Tags (at least 1 required)"
+        label: "Tags"
         type: string
         list:
           min: 1
@@ -117,7 +117,7 @@ content:
           message: "Slug must contain only lowercase letters and hyphens (e.g. 'negroni')"
 
       - name: tags
-        label: "Tags (at least 1 required)"
+        label: "Tags"
         type: string
         list:
           min: 1
