@@ -47,15 +47,15 @@ content:
         type: object
         list: true
         fields:
-        - name: section
-          label: Section
-          type: string
-          default: "Main"
-          hidden: false
-        - name: items
-          label: Items
-          type: string
-          list: true
+          - name: section
+            label: Section
+            type: string
+            default: "Main"
+            hidden: false
+          - name: items
+            label: Items
+            type: string
+            list: true
 
       - name: steps
         label: Steps
@@ -83,10 +83,94 @@ content:
             label: Title
             type: string
             required: true
+
           - name: type
             label: Type
             type: string
             required: true
             default: recipes
-            options: 
-              values: [recipes smoke]
+            options:
+              values: [recipes, smoke]
+
+  - name: cocktails
+    label: Cocktails
+    type: collection
+    path: content/cocktails
+    filename: "{primary}.md"
+    view:
+      primary: slug
+    format: yaml-frontmatter
+    fields:
+      - name: title
+        label: Title
+        type: string
+        required: true
+
+      - name: slug
+        label: Slug
+        type: string
+        required: true
+        pattern:
+          regex: "^[a-z]+(-[a-z]+)*$"
+          message: "Slug must contain only lowercase letters and hyphens (e.g. 'negroni')"
+
+      - name: tags
+        label: "Tags (at least 1 required)"
+        type: string
+        list:
+          min: 1
+        pattern:
+          regex: "^[a-z]+$"
+          message: "Tags must be a single word with only lowercase letters (e.g. 'gin', 'citrus')"
+
+      - name: layout
+        label: Layout
+        type: string
+        default: "layouts/cocktail.njk"
+        hidden: true
+
+      - name: permalink
+        label: Permalink
+        type: string
+        default: "/cocktails/{{ slug }}/"
+        hidden: true
+
+      - name: ingredients
+        label: Ingredients
+        type: string
+        list: true
+
+      - name: steps
+        label: Steps
+        type: string
+        list: true
+
+      - name: notes
+        label: Notes
+        type: text
+
+      - name: references
+        label: References
+        type: object
+        list: true
+        fields:
+          - name: slug
+            label: Slug
+            type: string
+            required: true
+            pattern:
+              regex: "^[a-z]+(-[a-z]+)*$"
+              message: "Slug must contain only lowercase letters and hyphens (e.g. 'simple-syrup')"
+
+          - name: title
+            label: Title
+            type: string
+            required: true
+
+          - name: type
+            label: Type
+            type: string
+            required: true
+            default: cocktails
+            options:
+              values: [cocktails, recipes]
