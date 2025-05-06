@@ -100,7 +100,7 @@ content:
     filename: "{primary}.md"
     view:
       primary: slug
-      fields: [title, slug, tag]
+      fields: [title, slug, tags]
     format: yaml-frontmatter
     fields:
       - name: title
