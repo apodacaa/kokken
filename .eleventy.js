@@ -29,6 +29,11 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("content/smoke/*.md");
   });
 
+   // ✅ Cocktails collection
+   eleventyConfig.addCollection("cocktails", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("content/cocktails/*.md");
+  });
+
   // ✅ Only one return — move to bottom
   return {
     dir: {

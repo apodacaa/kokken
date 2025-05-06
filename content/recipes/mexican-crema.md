@@ -6,7 +6,7 @@ tags:
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 ingredients:
-  - section: Main
+  - section: _main_
     items: 
       - 1 cup cream
       - 2 tbsp buttermilk

@@ -7,7 +7,7 @@ tags:
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 ingredients:
-  - section: Main
+  - section: _main_
     items: 
       - 1 (2 lb) skirt/flank steak, trimmed, pounded 1/4-inch thick and cut with grain into 4 equal steaks
       - 2 tsp salt
