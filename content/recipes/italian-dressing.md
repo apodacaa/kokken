@@ -14,11 +14,11 @@ ingredients:
       - Roasted red peppers and/or pepperoncini
   - section: Dressing
     items:
-      - 1/2 cup olive oil
-      - 5 tbsp white wine vinegar
-      - 1 tbsp mayo
-      - 1 tbsp sugar
-      - 1 1/2 tsp oregeno
+      - 1/2 cup (120 ml) olive oil
+      - 5 tbsp (75 ml) white wine vinegar
+      - 1 tbsp (15 ml) mayo
+      - 1 tbsp (15 ml) sugar
+      - 1 1/2 tsp (7.5 ml) oregeno
       - 1 garlic clove, grated
       - salt and pepper to taste
 steps:

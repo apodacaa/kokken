@@ -9,9 +9,9 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items: 
-      - 1 (2 lb) skirt/flank steak, trimmed, pounded 1/4-inch thick and cut with grain into 4 equal steaks
-      - 2 tsp salt
-      - 3/4 tsp ground cumin
+      - 1 (2 lb/900 g) skirt/flank steak, trimmed, pounded 1/4-inch thick and cut with grain into 4 equal steaks
+      - 2 tsp (10 ml) salt
+      - 3/4 tsp (4 ml) ground cumin
 steps:
   - Pat steak dry.
   - Sprinkle salt and cumin.

@@ -12,10 +12,10 @@ ingredients:
       - 1 onion
       - 2 carrots
       - 2 celery stalks
-      - 1 lb ground beef
-      - 1/2 cup dry red wine
-      - 1 cup beef broth
-      - 12 oz canned tomatoes or whole tomatoes
+      - 1 lb (454 g) ground beef
+      - 1/2 cup (120 ml) dry red wine
+      - 1 cup (240 ml) beef broth
+      - 12 oz (340 g) canned tomatoes or whole tomatoes
 steps:
   - Saute onions, carrots, celery.
   - Add beef until cooked.

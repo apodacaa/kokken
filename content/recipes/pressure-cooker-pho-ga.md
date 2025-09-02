@@ -1,6 +1,6 @@
 ---
-title: 30-Minute Pressure Cooker Pho Ga (Vietnamese Chicken Noodle Soup)
-slug: pressure-cooker-pho-ga
+title: Pho Ga
+slug: pho-ga
 tags:
   - main
   - chicken
@@ -29,7 +29,7 @@ ingredients:
       - 1 small white or yellow onion, thinly sliced
       - 1/2 cup (50 g) thinly sliced scallions
       - 2 cups (32 g) mixed herbs (cilantro, basil, mint)
-      - 2 cups trimmed bean sprouts
+      - 2 cups (480 ml) trimmed bean sprouts
       - Thinly sliced Thai chiles
       - 2 limes, each cut into 4 wedges
       - Hoisin sauce and Sriracha, for serving
@@ -40,4 +40,3 @@ steps:
   - Shred or pull chicken from the drumsticks. Divide noodles and chicken among bowls, ladle over hot broth, and serve with onion, scallions, herbs, bean sprouts, chiles, lime wedges, and sauces at the table.
 notes: Cook 30 mins; Active 20 mins; Serves 4 to 6.
 ---
-
