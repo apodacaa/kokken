@@ -1,9 +1,9 @@
 ---
-title: Indian Butter Shrimp (Stovetop)
+title: Indian Butter Shrimp
 slug: indian-butter-shrimp
 tags:
   - main
-  - seafood
+  - shrimp
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 ingredients:
