@@ -1,0 +1,20 @@
+{% extends "layouts/base.njk" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+
+<h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-4">Grill Guides</h1>
+
+<ul class="list-disc pl-5 space-y-1">
+  {% for grill in collections.grillGuides %}
+    <li>
+      <a href="{{ grill.url }}" class="text-white hover:underline">{{ grill.data.title }}</a>
+    </li>
+  {% endfor %}
+  {% if collections.grillGuides | length == 0 %}
+    <li class="text-gray-400">No grill guides yet.</li>
+  {% endif %}
+</ul>
+
+{% endblock %}

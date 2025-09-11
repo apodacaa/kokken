@@ -1,0 +1,22 @@
+---
+title: Roast Chicken with Schmaltzy Potatoes
+slug: roast-chicken-schmaltzy-potatoes
+tags:
+  - main
+  - chicken
+layout: layouts/recipe.njk
+permalink: /recipes/{{ slug }}/
+ingredients:
+  - section: _main_
+    items:
+      - 1 whole chicken (1.5 kg / 3–3 1/2 lb)
+      - 1 kg (2 lb) potatoes, chunks
+      - 3 tbsp olive oil or schmaltz
+      - 4 cloves garlic, smashed
+      - 2 sprigs rosemary
+      - Salt and pepper
+steps:
+  - Heat oven to 220°C / 425°F. Toss potatoes with oil, garlic, rosemary, salt, and pepper; spread in pan.
+  - Season chicken well; place on top of potatoes.
+  - Roast 60–75 minutes until chicken is 75°C / 165°F. Rest 10 minutes before carving.
+---

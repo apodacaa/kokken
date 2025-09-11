@@ -1,0 +1,39 @@
+{% extends "layouts/base.njk" %}
+
+{% block title %}{{ title }} | Grill Guide{% endblock %}
+
+{% block content %}
+<article class="space-y-8">
+
+  <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">{{ title }}</h1>
+
+  <div class="space-y-2">
+    {% if gas %}
+      <div class="text-white"><span class="font-semibold">Gas Grill:</span> {{ gas }}</div>
+    {% endif %}
+    {% if charcoal %}
+      <div class="text-white"><span class="font-semibold">Charcoal Grill:</span> {{ charcoal }}</div>
+    {% endif %}
+    {% if done %}
+      <div class="text-white"><span class="font-semibold">Done Temp:</span> {{ done }}</div>
+    {% endif %}
+  </div>
+
+  {% if tags %}
+    <div class="text-sm text-gray-400 flex flex-wrap gap-2">
+      {% for tag in tags %}
+        <a href="/tags/{{ tag | slug }}/" class="border border-ladybug px-2 py-1 rounded hover:bg-ladybug hover:text-black transition">
+          {{ tag }}
+        </a>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if content %}
+  <div class="text-gray-300 space-y-4">
+    {{ content | safe }}
+  </div>
+  {% endif %}
+</article>
+{% endblock %}
+

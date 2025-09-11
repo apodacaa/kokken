@@ -1,0 +1,23 @@
+---
+title: Vietnamese Fresh Spring Rolls
+slug: vietnamese-fresh-spring-rolls
+tags:
+  - main
+  - snack
+  - seafood
+  - vegetarian
+layout: layouts/recipe.njk
+permalink: /recipes/{{ slug }}/
+ingredients:
+  - section: _main_
+    items:
+      - 8–10 rice paper wrappers
+      - 200 g (7 oz) shrimp or tofu, cooked
+      - 1 cup rice vermicelli, cooked
+      - Lettuce, cucumber, herbs (mint, cilantro)
+      - Peanut dipping sauce or nuoc cham
+steps:
+  - Dip wrapper in warm water to soften. Layer lettuce, herbs, vermicelli, and shrimp/tofu.
+  - Roll tightly, tucking in sides. Repeat.
+  - Serve with peanut sauce or nuoc cham.
+---
