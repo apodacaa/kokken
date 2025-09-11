@@ -3,6 +3,7 @@ title: Southside
 slug: southside
 tags:
   - gin
+  - mint
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

@@ -2,7 +2,6 @@
 title: "Pork Chops (thick)"
 slug: "pork-chops"
 tags:
-  - main
   - pork
   - smoke
   - grill

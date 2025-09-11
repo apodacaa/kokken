@@ -39,7 +39,8 @@
         {% set referenceBase = {
           recipe: "/recipes/",
           smoke: "/smoke/",
-          cocktail: "/cocktails/"
+          cocktail: "/cocktails/",
+          grill: "/grill/"
         } %}
         {% for ref in references %}
           {% set path = referenceBase[ref.type] or "/" %}

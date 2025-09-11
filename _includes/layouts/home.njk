@@ -27,11 +27,24 @@
 <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">Smoke Guides</h1>
 
 <ul class="list-disc pl-5 mb-6 space-y-1">
-  {% for post in collections.smoke %}
+  {% for post in collections.smokeGuides %}
     <li>
       <a href="{{ post.url }}" class="text-white hover:underline">{{ post.data.title }}</a>
     </li>
   {% endfor %}
+</ul>
+
+<h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">Grill Guides</h1>
+
+<ul class="list-disc pl-5 mb-6 space-y-1">
+  {% for post in collections.grillGuides %}
+    <li>
+      <a href="{{ post.url }}" class="text-white hover:underline">{{ post.data.title }}</a>
+    </li>
+  {% endfor %}
+  {% if collections.grillGuides | length == 0 %}
+    <li class="text-gray-400">No grill guides yet.</li>
+  {% endif %}
 </ul>
 
 <h2 class="text-ladybug text-xl font-semibold mb-2">Tags</h2>
