@@ -9,16 +9,16 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 700 g (1 1/2 lb) chicken thighs, chunks
-      - 150 g (2/3 cup) yogurt
-      - 1 tbsp grated ginger
+      - 1 1/2 lb (700 g) chicken thighs, chunks
+      - 2/3 cup (150 g) yogurt
+      - 1 tbsp (15 ml) grated ginger
       - 2 cloves garlic, minced
-      - 2 tsp garam masala
-      - 2 tsp paprika
-      - 2 tbsp butter
+      - 2 tsp (10 ml) garam masala
+      - 2 tsp (10 ml) paprika
+      - 2 tbsp (30 ml) butter
       - 1 onion, chopped
-      - 400 g (14 oz) canned tomatoes
-      - 150 ml (2/3 cup) cream
+      - 14 oz (400 g) canned tomatoes
+      - 2/3 cup (150 ml) cream
       - Salt, cilantro
 steps:
   - Marinate chicken with yogurt, ginger, garlic, and spices (1 hour+); broil or pan-sear until charred.

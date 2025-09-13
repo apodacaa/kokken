@@ -9,16 +9,16 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 400 g (14 oz) paneer, cubed
+      - 14 oz (400 g) paneer, cubed
       - 2 tbsp oil or ghee
       - 1 onion, chopped
       - 2 cloves garlic, minced
       - 1 tbsp grated ginger
       - 1 green chili, chopped
-      - 500 g (1 lb) spinach (fresh or frozen)
+      - 1 lb (500 g) spinach (fresh or frozen)
       - 1 tsp garam masala
       - 1/2 tsp cumin
-      - 150 ml (2/3 cup) cream or yogurt
+      - 2/3 cup (150 ml) cream or yogurt
       - Salt
 steps:
   - Brown paneer in 1 tbsp oil; set aside.

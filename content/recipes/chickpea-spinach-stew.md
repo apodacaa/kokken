@@ -13,9 +13,9 @@ ingredients:
       - 2 tbsp olive oil
       - 1 onion, chopped
       - 2 cloves garlic, minced
-      - 400 g (14 oz) canned tomatoes
+      - 14 oz (400 g) canned tomatoes
       - 2 cans (800 g / 28 oz) chickpeas, drained
-      - 150 g (5 oz) spinach
+      - 5 oz (150 g) spinach
       - 1 tsp smoked paprika
       - Salt, pepper, lemon
 steps:

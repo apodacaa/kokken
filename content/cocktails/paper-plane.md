@@ -8,10 +8,10 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 3 cl (1 oz) bourbon
-  - 3 cl (1 oz) Aperol
-  - 3 cl (1 oz) Amaro Nonino
-  - 3 cl (1 oz) lemon juice
+  - 1 oz (3 cl) bourbon
+  - 1 oz (3 cl) Aperol
+  - 1 oz (3 cl) Amaro Nonino
+  - 1 oz (3 cl) lemon juice
 steps:
   - Shake with ice until chilled.
   - Strain into a coupe.

@@ -12,8 +12,8 @@ ingredients:
     items:
       - 1 tbsp oil
       - 2–3 tbsp green curry paste
-      - 400 ml (14 oz) coconut milk
-      - 500 g (1 lb) chicken thigh, sliced
+      - 14 oz (400 ml) coconut milk
+      - 1 lb (500 g) chicken thigh, sliced
       - 1 cup mixed vegetables (bell pepper, zucchini, green beans)
       - 1 tbsp fish sauce
       - 1 tsp sugar

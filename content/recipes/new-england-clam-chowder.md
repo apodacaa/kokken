@@ -10,14 +10,14 @@ ingredients:
   - section: _main_
     items:
       - 2 tbsp butter
-      - 100 g (3 1/2 oz) bacon, diced
+      - 3 1/2 oz (100 g) bacon, diced
       - 1 onion, chopped
       - 2 celery stalks, chopped
       - 2 tbsp flour
-      - 500 ml (2 cups) clam juice or fish stock
-      - 500 ml (2 cups) milk or half-and-half
-      - 400 g (14 oz) potatoes, diced
-      - 400 g (14 oz) canned clams, drained
+      - 2 cups (500 ml) clam juice or fish stock
+      - 2 cups (500 ml) milk or half-and-half
+      - 14 oz (400 g) potatoes, diced
+      - 14 oz (400 g) canned clams, drained
       - Salt, pepper, thyme
 steps:
   - Cook bacon in butter; add onion and celery; soften.

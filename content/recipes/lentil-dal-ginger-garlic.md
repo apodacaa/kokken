@@ -11,8 +11,8 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 200 g (1 cup) red lentils, rinsed
-      - 1 L (4 cups) water or stock
+      - 1 cup (200 g) red lentils, rinsed
+      - 4 cups (1 L) water or stock
       - 2 tbsp ghee or oil
       - 1 onion, chopped
       - 2 cloves garlic, minced

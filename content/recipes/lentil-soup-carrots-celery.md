@@ -15,7 +15,7 @@ ingredients:
       - 2 carrots, diced
       - 2 celery stalks, diced
       - 2 cloves garlic, minced
-      - 250 g (1 1/4 cups) brown or green lentils, rinsed
+      - 1 1/4 cups (250 g) brown or green lentils, rinsed
       - 1.2 L (5 cups) vegetable stock
       - 1 tsp cumin
       - Salt, pepper, lemon

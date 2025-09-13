@@ -14,8 +14,8 @@ ingredients:
       - 1 onion, chopped
       - 1 kg (2.2 lb) butternut squash, cubed
       - 1 tsp curry powder
-      - 800 ml (3 1/3 cups) vegetable stock
-      - 400 ml (14 oz) coconut milk
+      - 3 1/3 cups (800 ml) vegetable stock
+      - 14 oz (400 ml) coconut milk
       - Salt, lime
 steps:
   - Sauté onion in oil; add squash and curry; cook 2 minutes.

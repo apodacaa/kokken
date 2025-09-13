@@ -9,7 +9,7 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: Satay
     items:
-      - 600 g (1 1/3 lb) chicken breast or thigh, strips
+      - 1 1/3 lb (600 g) chicken breast or thigh, strips
       - 2 tbsp soy sauce
       - 1 tbsp fish sauce
       - 1 tbsp brown sugar
@@ -18,7 +18,7 @@ ingredients:
   - section: Peanut Sauce
     items:
       - 3 tbsp peanut butter
-      - 150 ml (2/3 cup) coconut milk
+      - 2/3 cup (150 ml) coconut milk
       - 1 tbsp soy sauce
       - 1 tsp sugar
       - 1 tsp lime juice

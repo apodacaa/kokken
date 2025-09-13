@@ -9,7 +9,7 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 500 g (1 lb) chicken thigh, sliced
+      - 1 lb (500 g) chicken thigh, sliced
       - 2 stalks lemongrass, minced (tender part)
       - 2 cloves garlic, minced
       - 1 tbsp fish sauce

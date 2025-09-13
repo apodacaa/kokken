@@ -7,8 +7,8 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 7.5 cl (2 1/2 oz) gin
-  - 1.5 cl (1/2 oz) dry vermouth
+  - 2 1/2 oz (7.5 cl) gin
+  - 1/2 oz (1.5 cl) dry vermouth
 steps:
   - Stir with ice until very cold.
   - Strain into a chilled coupe.

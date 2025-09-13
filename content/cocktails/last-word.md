@@ -8,10 +8,10 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 2.25 cl (3/4 oz) gin
-  - 2.25 cl (3/4 oz) green Chartreuse
-  - 2.25 cl (3/4 oz) maraschino liqueur
-  - 2.25 cl (3/4 oz) lime juice
+  - 3/4 oz (2.25 cl) gin
+  - 3/4 oz (2.25 cl) green Chartreuse
+  - 3/4 oz (2.25 cl) maraschino liqueur
+  - 3/4 oz (2.25 cl) lime juice
 steps:
   - Shake with ice until chilled.
   - Strain into a coupe.

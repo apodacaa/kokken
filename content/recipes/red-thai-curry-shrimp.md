@@ -13,8 +13,8 @@ ingredients:
     items:
       - 1 tbsp oil
       - 2 tbsp red curry paste
-      - 400 ml (14 oz) coconut milk
-      - 500 g (1 lb) shrimp, peeled
+      - 14 oz (400 ml) coconut milk
+      - 1 lb (500 g) shrimp, peeled
       - 1 red bell pepper, sliced
       - 1 tbsp fish sauce
       - 1 tsp sugar

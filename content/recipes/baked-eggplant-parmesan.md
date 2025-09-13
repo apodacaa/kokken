@@ -12,9 +12,9 @@ ingredients:
       - 2 eggplants, sliced
       - 2 cups breadcrumbs
       - 2 eggs, beaten
-      - 700 ml (24 oz) marinara
-      - 200 g (2 cups) mozzarella, shredded
-      - 50 g (1/2 cup) Parmesan, grated
+      - 24 oz (700 ml) marinara
+      - 2 cups (200 g) mozzarella, shredded
+      - 1/2 cup (50 g) Parmesan, grated
 steps:
   - Dip eggplant slices in beaten egg, then breadcrumbs; bake at 200°C / 400°F for 20 minutes until golden.
   - Layer marinara, baked eggplant, mozzarella, and Parmesan in a baking dish.

@@ -8,7 +8,7 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 6 cl (2 oz) rye whiskey
+  - 2 oz (6 cl) rye whiskey
   - 1 sugar cube
   - 3 dashes Peychaud’s bitters
   - Absinthe rinse

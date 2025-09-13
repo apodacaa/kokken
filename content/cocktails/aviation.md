@@ -8,10 +8,10 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 4.5 cl (1 1/2 oz) gin
-  - 1.5 cl (1/2 oz) maraschino liqueur
-  - 0.75 cl (1/4 oz) crème de violette
-  - 1.5 cl (1/2 oz) lemon juice
+  - 1 1/2 oz (4.5 cl) gin
+  - 1/2 oz (1.5 cl) maraschino liqueur
+  - 1/4 oz (0.75 cl) crème de violette
+  - 1/2 oz (1.5 cl) lemon juice
 steps:
   - Shake with ice until chilled.
   - Strain into a coupe.

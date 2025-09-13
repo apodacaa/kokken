@@ -14,9 +14,9 @@ ingredients:
       - 2 carrots, diced
       - 2 celery stalks, diced
       - 2 tbsp flour
-      - 500 ml (2 cups) chicken stock
-      - 500 g (1 lb) cooked chicken, cubed
-      - 150 g (1 cup) peas
+      - 2 cups (500 ml) chicken stock
+      - 1 lb (500 g) cooked chicken, cubed
+      - 1 cup (150 g) peas
       - 1 sheet puff pastry
       - Salt and pepper
 steps:

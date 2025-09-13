@@ -9,16 +9,16 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: Meatloaf
     items:
-      - 700 g (1 1/2 lb) ground beef
+      - 1 1/2 lb (700 g) ground beef
       - 1 onion, finely chopped
       - 1 egg
-      - 80 g (1 cup) breadcrumbs
-      - 60 ml (1/4 cup) milk
+      - 1 cup (80 g) breadcrumbs
+      - 1/4 cup (60 ml) milk
       - 1 tbsp Worcestershire sauce
       - 1 tsp salt, 1/2 tsp pepper
   - section: Glaze
     items:
-      - 120 ml (1/2 cup) ketchup
+      - 1/2 cup (120 ml) ketchup
       - 1 tbsp brown sugar
       - 1 tsp mustard
 steps:

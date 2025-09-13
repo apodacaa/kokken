@@ -16,7 +16,7 @@ ingredients:
       - 2 cloves garlic, minced
       - 1 tsp cumin
       - 1 tsp paprika
-      - 400 g (14 oz) canned tomatoes
+      - 14 oz (400 g) canned tomatoes
       - 4–6 eggs
       - Salt, parsley
 steps:

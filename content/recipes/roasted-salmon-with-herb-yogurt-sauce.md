@@ -11,7 +11,7 @@ ingredients:
     items:
       - 4 salmon fillets
       - 2 tbsp olive oil
-      - 200 g (3/4 cup) yogurt
+      - 3/4 cup (200 g) yogurt
       - 2 tbsp dill, chopped
       - 1 tbsp lemon juice
 steps:

@@ -16,8 +16,8 @@ ingredients:
       - 1 onion, chopped
       - 2 carrots, chunks
       - 2 cloves garlic, minced
-      - 500 ml (2 cups) red wine
-      - 500 ml (2 cups) beef stock
+      - 2 cups (500 ml) red wine
+      - 2 cups (500 ml) beef stock
       - 2 bay leaves, thyme
       - Salt and pepper
 steps:

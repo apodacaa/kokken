@@ -7,9 +7,9 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 6 cl (2 oz) bourbon
+  - 2 oz (6 cl) bourbon
   - 10 mint leaves
-  - 1 cl (1/3 oz) simple syrup
+  - 1/3 oz (1 cl) simple syrup
 steps:
   - Muddle mint leaves with simple syrup in a julep cup.
   - Add bourbon and crushed ice; stir to frost the cup.

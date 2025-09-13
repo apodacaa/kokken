@@ -7,7 +7,7 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 6 cl (2 oz) whisky
+  - 2 oz (6 cl) whisky
   - Soda water to top
 steps:
   - Build in a tall glass with ice.

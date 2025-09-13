@@ -16,8 +16,8 @@ ingredients:
       - 1 tsp cumin
       - 1 tsp garlic powder
       - 1 tsp salt
-      - 250 ml (1 cup) BBQ sauce
-      - 60 ml (1/4 cup) apple cider vinegar
+      - 1 cup (250 ml) BBQ sauce
+      - 1/4 cup (60 ml) apple cider vinegar
       - Buns, coleslaw
 steps:
   - Rub pork with spices and salt; place over onions in slow cooker.

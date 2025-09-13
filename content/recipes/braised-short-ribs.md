@@ -15,8 +15,8 @@ ingredients:
       - 2 carrots, chopped
       - 3 cloves garlic, minced
       - 2 tbsp tomato paste
-      - 500 ml (2 cups) red wine
-      - 500 ml (2 cups) beef stock
+      - 2 cups (500 ml) red wine
+      - 2 cups (500 ml) beef stock
       - 2 sprigs rosemary, 2 sprigs thyme
       - Salt and pepper
 steps:

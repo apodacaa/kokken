@@ -10,12 +10,12 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 300 g (10 oz) noodles (udon/lo mein/spaghetti)
-      - 2 tbsp sesame oil
-      - 2 tbsp soy sauce
-      - 1 tbsp rice vinegar
-      - 1 tbsp honey or sugar
-      - 1 tbsp grated ginger
+      - 10 oz (300 g) noodles (udon/lo mein/spaghetti)
+      - 2 tbsp (30 ml) sesame oil
+      - 2 tbsp (30 ml) soy sauce
+      - 1 tbsp (15 ml) rice vinegar
+      - 1 tbsp (15 ml) honey or sugar
+      - 1 tbsp (15 ml) grated ginger
       - 2 cloves garlic, minced
       - 2 cups mixed veg (carrot, pepper, broccoli)
       - Sesame seeds, scallions

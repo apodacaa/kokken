@@ -7,9 +7,9 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 6 cl (2 oz) gin
-  - 2 cl (2/3 oz) lemon juice
-  - 2 cl (2/3 oz) honey syrup
+  - 2 oz (6 cl) gin
+  - 2/3 oz (2 cl) lemon juice
+  - 2/3 oz (2 cl) honey syrup
 steps:
   - Shake with ice until chilled.
   - Strain into a coupe.

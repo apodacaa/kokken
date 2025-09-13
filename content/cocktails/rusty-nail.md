@@ -7,8 +7,8 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 4.5 cl (1 1/2 oz) Scotch whisky
-  - 2.5 cl (3/4 oz) Drambuie
+  - 1 1/2 oz (4.5 cl) Scotch whisky
+  - 3/4 oz (2.5 cl) Drambuie
 steps:
   - Build in a rocks glass with ice.
   - Garnish with lemon twist (optional).

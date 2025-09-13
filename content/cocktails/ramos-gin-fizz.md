@@ -9,11 +9,11 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 6 cl (2 oz) gin
-  - 1.5 cl (1/2 oz) lemon juice
-  - 1.5 cl (1/2 oz) lime juice
-  - 3 cl (1 oz) simple syrup
-  - 6 cl (2 oz) cream
+  - 2 oz (6 cl) gin
+  - 1/2 oz (1.5 cl) lemon juice
+  - 1/2 oz (1.5 cl) lime juice
+  - 1 oz (3 cl) simple syrup
+  - 2 oz (6 cl) cream
   - 1 egg white
   - 2 dashes orange flower water
   - Soda water to top

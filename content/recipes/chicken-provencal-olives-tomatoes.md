@@ -11,8 +11,8 @@ ingredients:
     items:
       - 4 chicken thighs
       - 1 onion, sliced
-      - 400 g (14 oz) tomatoes (canned or fresh)
-      - 100 g (1/2 cup) olives
+      - 14 oz (400 g) tomatoes (canned or fresh)
+      - 1/2 cup (100 g) olives
       - 2 cloves garlic, minced
 steps:
   - Brown chicken in a little oil; remove and set aside.

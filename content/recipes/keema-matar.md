@@ -9,14 +9,14 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 700 g (1 1/2 lb) ground lamb
+      - 1 1/2 lb (700 g) ground lamb
       - 1 onion, chopped
       - 2 cloves garlic & 1 tbsp ginger, minced
       - 2 tsp garam masala
       - 1 tsp ground cumin
       - 1 tsp paprika
-      - 400 g (14 oz) canned tomatoes
-      - 150 g (1 cup) peas
+      - 14 oz (400 g) canned tomatoes
+      - 1 cup (150 g) peas
       - Salt, cilantro
 steps:
   - Brown lamb; drain excess fat. Add onion, garlic, and ginger; sauté 3–4 minutes.

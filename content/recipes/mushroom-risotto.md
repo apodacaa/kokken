@@ -9,12 +9,12 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 300 g (1 1/2 cups) arborio rice
-      - 200 g (7 oz) mushrooms, sliced
+      - 1 1/2 cups (300 g) arborio rice
+      - 7 oz (200 g) mushrooms, sliced
       - 1 onion, chopped
       - 1 L (4 cups) stock, warmed
-      - 100 ml (1/2 cup) white wine
-      - 50 g (1/2 cup) Parmesan, grated
+      - 1/2 cup (100 ml) white wine
+      - 1/2 cup (50 g) Parmesan, grated
 steps:
   - Sauté onion and mushrooms in a little oil until softened.
   - Add rice and toast 1 minute; deglaze with wine and stir until absorbed.

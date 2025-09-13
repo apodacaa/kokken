@@ -9,15 +9,15 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 400 ml (14 oz) coconut milk
-      - 400 ml (1 3/4 cups) chicken stock
+      - 14 oz (400 ml) coconut milk
+      - 1 3/4 cups (400 ml) chicken stock
       - 2 slices galangal (or ginger)
       - 2 kaffir lime leaves (optional)
       - 1 stalk lemongrass, bruised
-      - 300 g (10 oz) chicken, thinly sliced
-      - 200 g (7 oz) mushrooms, sliced
-      - 2 tbsp fish sauce
-      - 2 tbsp lime juice
+      - 10 oz (300 g) chicken, thinly sliced
+      - 7 oz (200 g) mushrooms, sliced
+      - 2 tbsp (30 ml) fish sauce
+      - 2 tbsp (30 ml) lime juice
       - Thai chilies to taste
       - Cilantro
 steps:

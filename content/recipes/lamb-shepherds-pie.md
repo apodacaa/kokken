@@ -9,17 +9,17 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 800 g (1 3/4 lb) ground lamb
+      - 1 3/4 lb (800 g) ground lamb
       - 1 onion, diced
       - 2 carrots, diced
       - 2 cloves garlic, minced
       - 2 tbsp tomato paste
-      - 250 ml (1 cup) beef stock
+      - 1 cup (250 ml) beef stock
       - 1 tsp Worcestershire sauce
       - 1 tsp thyme
-      - 900 g (2 lb) potatoes, peeled
-      - 100 ml (1/2 cup) milk
-      - 50 g (4 tbsp) butter
+      - 2 lb (900 g) potatoes, peeled
+      - 1/2 cup (100 ml) milk
+      - 4 tbsp (50 g) butter
 steps:
   - Boil potatoes in salted water until tender; drain and mash with butter and milk.
   - Sauté onion and carrot in a little oil until softened; add garlic and cook 1 minute.

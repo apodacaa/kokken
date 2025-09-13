@@ -10,9 +10,9 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 3 cl (1 oz) rye whiskey
-  - 3 cl (1 oz) cognac
-  - 3 cl (1 oz) sweet vermouth
+  - 1 oz (3 cl) rye whiskey
+  - 1 oz (3 cl) cognac
+  - 1 oz (3 cl) sweet vermouth
   - 1 barspoon Bénédictine
   - 2 dashes Peychaud’s bitters
   - 2 dashes Angostura bitters

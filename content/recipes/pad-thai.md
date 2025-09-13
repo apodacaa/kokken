@@ -11,10 +11,10 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 200 g (7 oz) rice noodles
+      - 7 oz (200 g) rice noodles
       - 2 tbsp oil
       - 2 eggs, lightly beaten
-      - 200 g (7 oz) shrimp or chicken
+      - 7 oz (200 g) shrimp or chicken
       - 2 cloves garlic, minced
       - 3 tbsp fish sauce
       - 1 tbsp tamarind paste

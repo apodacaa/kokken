@@ -12,13 +12,13 @@ ingredients:
     items:
       - 2 cups cooked grains (quinoa, farro, or rice)
       - Assorted vegetables (sweet potato, broccoli, chickpeas)
-      - 2 tbsp olive oil
+      - 2 tbsp (30 ml) olive oil
       - Salt and pepper
   - section: Tahini Dressing
     items:
-      - 3 tbsp tahini
-      - 1 tbsp lemon juice
-      - 1 tsp maple syrup
+      - 3 tbsp (45 ml) tahini
+      - 1 tbsp (15 ml) lemon juice
+      - 1 tsp (5 ml) maple syrup
       - Water to loosen
       - Salt
 steps:

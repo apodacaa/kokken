@@ -10,12 +10,12 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 400 g (14 oz) elbow macaroni
-      - 3 tbsp butter
-      - 3 tbsp flour
-      - 750 ml (3 cups) milk
-      - 200 g (2 cups) cheddar, grated
-      - 100 g (1 cup) Gruyère, grated
+      - 14 oz (400 g) elbow macaroni
+      - 3 tbsp (45 ml) butter
+      - 3 tbsp (45 ml) flour
+      - 3 cups (750 ml) milk
+      - 2 cups (200 g) cheddar, grated
+      - 1 cup (100 g) Gruyère, grated
       - Salt, pepper, pinch nutmeg
 steps:
   - Cook pasta until al dente; drain.

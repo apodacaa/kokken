@@ -15,7 +15,7 @@ ingredients:
       - 2 cloves garlic, minced
       - 1 tsp cumin seeds
       - 2 potatoes, diced & boiled
-      - 150 g (1 cup) peas
+      - 1 cup (150 g) peas
       - 1 tsp garam masala
       - 1 tsp ground coriander
       - Salt

@@ -12,7 +12,7 @@ ingredients:
   - section: _main_
     items:
       - 8–10 rice paper wrappers
-      - 200 g (7 oz) shrimp or tofu, cooked
+      - 7 oz (200 g) shrimp or tofu, cooked
       - 1 cup rice vermicelli, cooked
       - Lettuce, cucumber, herbs (mint, cilantro)
       - Peanut dipping sauce or nuoc cham

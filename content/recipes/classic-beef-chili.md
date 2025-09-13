@@ -13,13 +13,13 @@ ingredients:
       - 1 tbsp oil
       - 1 onion, chopped
       - 2 cloves garlic, minced
-      - 700 g (1 1/2 lb) ground beef
+      - 1 1/2 lb (700 g) ground beef
       - 2 tbsp chili powder
       - 1 tsp cumin
       - 1 tsp smoked paprika
-      - 400 g (14 oz) tomatoes
-      - 400 g (14 oz) kidney beans, drained
-      - 250 ml (1 cup) beef stock
+      - 14 oz (400 g) tomatoes
+      - 14 oz (400 g) kidney beans, drained
+      - 1 cup (250 ml) beef stock
       - Salt, sugar to balance, lime
 steps:
   - Sauté onion and garlic; add beef and brown.

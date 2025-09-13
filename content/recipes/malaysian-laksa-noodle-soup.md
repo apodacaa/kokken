@@ -12,10 +12,10 @@ ingredients:
     items:
       - 1 tbsp oil
       - 2–3 tbsp laksa paste
-      - 400 ml (14 oz) coconut milk
-      - 500 ml (2 cups) chicken or veg stock
-      - 200 g (7 oz) shrimp or chicken
-      - 200 g (7 oz) rice noodles
+      - 14 oz (400 ml) coconut milk
+      - 2 cups (500 ml) chicken or veg stock
+      - 7 oz (200 g) shrimp or chicken
+      - 7 oz (200 g) rice noodles
       - Bean sprouts, lime, cilantro
 steps:
   - Fry laksa paste in oil; add coconut milk and stock; simmer 10 minutes.

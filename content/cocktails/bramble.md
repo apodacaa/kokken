@@ -7,10 +7,10 @@ tags:
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 5 cl (1 3/4 oz) gin
-  - 2.5 cl (3/4 oz) lemon juice
-  - 1.5 cl (1/2 oz) simple syrup
-  - 1.5 cl (1/2 oz) crème de mûre
+  - 1 3/4 oz (5 cl) gin
+  - 3/4 oz (2.5 cl) lemon juice
+  - 1/2 oz (1.5 cl) simple syrup
+  - 1/2 oz (1.5 cl) crème de mûre
 steps:
   - Shake first three with ice and strain over crushed ice.
   - Drizzle crème de mûre over the top.

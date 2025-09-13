@@ -10,7 +10,7 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 500 g (1 lb) ground pork
+      - 1 lb (500 g) ground pork
       - 4 cloves garlic, minced
       - 2–3 red Thai chilies, sliced
       - 1 tbsp vegetable oil

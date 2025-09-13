@@ -11,7 +11,7 @@ ingredients:
   - section: _main_
     items:
       - 3 nori sheets
-      - 2 cups sushi rice, cooked & seasoned
+      - 2 cups (400 g) sushi rice, cooked & seasoned
       - Cucumber, carrot, avocado, bell pepper (matchsticks)
       - Soy sauce, wasabi, pickled ginger
 steps:

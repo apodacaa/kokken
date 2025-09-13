@@ -10,8 +10,8 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 500 g (1 lb) spaghetti
-      - 500 g (1 lb) cherry tomatoes
+      - 1 lb (500 g) spaghetti
+      - 1 lb (500 g) cherry tomatoes
       - 4 cloves garlic, sliced
       - 4 tbsp olive oil
       - Fresh basil
