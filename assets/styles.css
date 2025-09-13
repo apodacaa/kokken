@@ -610,14 +610,19 @@
       width: calc(var(--spacing) * 80);
     }
   }
-  .md\:w-auto {
+  .md\:w-full {
     @media (width >= 48rem) {
-      width: auto;
+      width: 100%;
     }
   }
   .md\:flex-row {
     @media (width >= 48rem) {
       flex-direction: row;
+    }
+  }
+  .md\:justify-between {
+    @media (width >= 48rem) {
+      justify-content: space-between;
     }
   }
   .md\:gap-4 {
