@@ -1,17 +1,17 @@
-<div class="flex items-center justify-between gap-4 mb-4">
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 mb-4">
   <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight">
     <a href="/" class="hover:underline">Køkken</a>
   </h1>
-  <form action="/search/" method="get" class="flex-shrink-0" id="site-search-form">
+  <form action="/search/" method="get" class="w-full sm:w-auto" id="site-search-form">
     <label for="q" class="sr-only">Search</label>
     <div class="flex gap-2 items-center">
-      <div class="relative">
+      <div class="relative w-full sm:w-auto">
         <input
           id="q"
           name="q"
           type="search"
           placeholder="Search... "
-          class="w-56 md:w-80 bg-black/30 text-white placeholder-gray-400 border border-gray-700 focus:border-ladybug focus:outline-none rounded px-3 py-2 transition"
+          class="w-full md:w-80 bg-black/30 text-white placeholder-gray-400 border border-gray-700 focus:border-ladybug focus:outline-none rounded px-3 py-2 transition"
           autocomplete="off"
         />
         <div id="search-suggestions" class="hidden absolute left-0 right-0 mt-2 bg-black/90 border border-gray-700 rounded shadow-lg overflow-hidden"></div>
@@ -22,7 +22,10 @@
 </div>
 
 <nav class="mb-8">
-  <ul class="flex w-full justify-between flex-wrap gap-4 text-sm text-white">
+  <button type="button" id="nav-toggle" class="md:hidden px-3 py-2 border border-gray-700 rounded text-sm text-white mb-3" aria-controls="site-primary-nav" aria-expanded="false">
+    Menu
+  </button>
+  <ul id="site-primary-nav" class="hidden md:flex flex-col md:flex-row gap-2 md:gap-4 text-sm text-white w-full md:w-auto">
     <li><a href="/" class="hover:text-ladybug transition">Home</a></li>
     <li><a href="/recipes/" class="hover:text-ladybug transition">Recipes</a></li>
     <li><a href="/cocktails/" class="hover:text-ladybug transition">Cocktails</a></li>
@@ -31,3 +34,21 @@
     <li><a href="/tags/" class="hover:text-ladybug transition">Tags</a></li>
   </ul>
 </nav>
+
+<script>
+  (function(){
+    var btn = document.getElementById('nav-toggle');
+    var list = document.getElementById('site-primary-nav');
+    if (!btn || !list) return;
+    btn.addEventListener('click', function(){
+      var isHidden = list.classList.contains('hidden');
+      if (isHidden) {
+        list.classList.remove('hidden');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        list.classList.add('hidden');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  })();
+  </script>
