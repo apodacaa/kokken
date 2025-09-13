@@ -11,10 +11,10 @@ ingredients:
     items:
       - 1 1/2 lb (700 g) ground lamb
       - 1 onion, chopped
-      - 2 cloves garlic & 1 tbsp ginger, minced
-      - 2 tsp garam masala
-      - 1 tsp ground cumin
-      - 1 tsp paprika
+      - 2 cloves garlic & 1 tbsp (15 ml) ginger, minced
+      - 2 tsp (10 ml) garam masala
+      - 1 tsp (5 ml) ground cumin
+      - 1 tsp (5 ml) paprika
       - 14 oz (400 g) canned tomatoes
       - 1 cup (150 g) peas
       - Salt, cilantro

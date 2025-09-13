@@ -13,12 +13,12 @@ ingredients:
     items:
       - 1 cup (200 g) red lentils, rinsed
       - 4 cups (1 L) water or stock
-      - 2 tbsp ghee or oil
+      - 2 tbsp (30 ml) ghee or oil
       - 1 onion, chopped
       - 2 cloves garlic, minced
-      - 1 tbsp grated ginger
-      - 1 tsp cumin seeds
-      - 1/2 tsp turmeric
+      - 1 tbsp (15 ml) grated ginger
+      - 1 tsp (5 ml) cumin seeds
+      - 1/2 tsp (2.5 ml) turmeric
       - Salt, cilantro
 steps:
   - Simmer lentils in water until tender, 15–20 minutes.

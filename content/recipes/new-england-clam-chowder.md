@@ -9,11 +9,11 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 2 tbsp butter
+      - 2 tbsp (30 ml) butter
       - 3 1/2 oz (100 g) bacon, diced
       - 1 onion, chopped
       - 2 celery stalks, chopped
-      - 2 tbsp flour
+      - 2 tbsp (30 ml) flour
       - 2 cups (500 ml) clam juice or fish stock
       - 2 cups (500 ml) milk or half-and-half
       - 14 oz (400 g) potatoes, diced

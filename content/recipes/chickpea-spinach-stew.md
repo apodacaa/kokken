@@ -10,13 +10,13 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 2 tbsp olive oil
+      - 2 tbsp (30 ml) olive oil
       - 1 onion, chopped
       - 2 cloves garlic, minced
       - 14 oz (400 g) canned tomatoes
       - 2 cans (800 g / 28 oz) chickpeas, drained
       - 5 oz (150 g) spinach
-      - 1 tsp smoked paprika
+      - 1 tsp (5 ml) smoked paprika
       - Salt, pepper, lemon
 steps:
   - Sauté onion and garlic; add paprika.

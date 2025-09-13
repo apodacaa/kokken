@@ -10,11 +10,11 @@ ingredients:
   - section: _main_
     items:
       - 4 salmon fillets
-      - 2 tbsp olive oil
+      - 2 tbsp (30 ml) olive oil
       - 3/4 cup (200 g) yogurt
-      - 2 tbsp dill, chopped
-      - 1 tbsp lemon juice
+      - 2 tbsp (30 ml) dill, chopped
+      - 1 tbsp (15 ml) lemon juice
 steps:
-  - Roast salmon at 200°C / 400°F for 12–15 minutes until just cooked.
+  - Roast salmon at 400°F (200°C) for 12–15 minutes until just cooked.
   - Mix yogurt, dill, and lemon juice; season with salt. Serve with salmon.
 ---

@@ -11,7 +11,7 @@ ingredients:
     items:
       - 1/4 cup (60 ml) plain whole-milk yogurt
       - 2 tsp (10 ml) ground cumin
-      - 2 tsp (10 ml) paprika (or hot paprika for more heat, or mix 1 1/2 tsp paprika + 1/2 tsp chili powder for smoky spice)
+      - 2 tsp (10 ml) paprika (or hot paprika for more heat, or mix 1 1/2 tsp (7.5 ml) paprika + 1/2 tsp (2.5 ml) chili powder for smoky spice)
       - 2 tsp (10 ml) garam masala
       - 2 tsp (10 ml) fresh lime juice
       - 1 1/2 tsp (7.5 ml) kosher salt

@@ -12,15 +12,15 @@ ingredients:
   - section: _main_
     items:
       - 7 oz (200 g) rice noodles
-      - 2 tbsp oil
+      - 2 tbsp (30 ml) oil
       - 2 eggs, lightly beaten
       - 7 oz (200 g) shrimp or chicken
       - 2 cloves garlic, minced
-      - 3 tbsp fish sauce
-      - 1 tbsp tamarind paste
-      - 1 tbsp sugar
+      - 3 tbsp (45 ml) fish sauce
+      - 1 tbsp (15 ml) tamarind paste
+      - 1 tbsp (15 ml) sugar
       - 1 cup bean sprouts
-      - 2 tbsp crushed peanuts
+      - 2 tbsp (30 ml) crushed peanuts
       - Lime wedges, chives
 steps:
   - Soak noodles in warm water until pliable; drain.

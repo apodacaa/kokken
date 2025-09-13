@@ -11,14 +11,14 @@ ingredients:
     items:
       - 1 1/2 lb (700 g) boneless chicken thighs, chunks
       - 2/3 cup (150 g) plain yogurt
-      - 2 tbsp lemon juice
-      - 1 tbsp garam masala
-      - 2 tsp ground cumin
-      - 2 tsp paprika
-      - 3 tbsp butter
+      - 2 tbsp (30 ml) lemon juice
+      - 1 tbsp (15 ml) garam masala
+      - 2 tsp (10 ml) ground cumin
+      - 2 tsp (10 ml) paprika
+      - 3 tbsp (45 ml) butter
       - 1 onion, finely chopped
       - 2 cloves garlic, minced
-      - 1 tbsp grated ginger
+      - 1 tbsp (15 ml) grated ginger
       - 14 oz (400 g) canned tomatoes
       - 1 cup (250 ml) cream
       - Salt, cilantro

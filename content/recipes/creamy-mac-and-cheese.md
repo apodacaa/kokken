@@ -20,5 +20,5 @@ ingredients:
 steps:
   - Cook pasta until al dente; drain.
   - Melt butter; whisk in flour 1 minute; gradually whisk in milk until smooth.
-  - Stir in cheeses to melt; season. Combine with pasta. Bake at 190°C / 375°F for 15–20 minutes if desired.
+  - Stir in cheeses to melt; season. Combine with pasta. Bake at 375°F (190°C) for 15–20 minutes if desired.
 ---

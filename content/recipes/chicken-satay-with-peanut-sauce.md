@@ -10,18 +10,18 @@ ingredients:
   - section: Satay
     items:
       - 1 1/3 lb (600 g) chicken breast or thigh, strips
-      - 2 tbsp soy sauce
-      - 1 tbsp fish sauce
-      - 1 tbsp brown sugar
-      - 1 tsp curry powder
-      - 1 tbsp oil
+      - 2 tbsp (30 ml) soy sauce
+      - 1 tbsp (15 ml) fish sauce
+      - 1 tbsp (15 ml) brown sugar
+      - 1 tsp (5 ml) curry powder
+      - 1 tbsp (15 ml) oil
   - section: Peanut Sauce
     items:
-      - 3 tbsp peanut butter
+      - 3 tbsp (45 ml) peanut butter
       - 2/3 cup (150 ml) coconut milk
-      - 1 tbsp soy sauce
-      - 1 tsp sugar
-      - 1 tsp lime juice
+      - 1 tbsp (15 ml) soy sauce
+      - 1 tsp (5 ml) sugar
+      - 1 tsp (5 ml) lime juice
       - Chili to taste
 steps:
   - Marinate chicken with soy, fish sauce, sugar, curry powder, and oil (30 minutes). Thread onto skewers.

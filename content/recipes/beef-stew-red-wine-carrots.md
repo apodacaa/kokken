@@ -11,8 +11,8 @@ ingredients:
   - section: _main_
     items:
       - 1 kg (2.2 lb) beef chuck, cubes
-      - 2 tbsp flour
-      - 2 tbsp oil
+      - 2 tbsp (30 ml) flour
+      - 2 tbsp (30 ml) oil
       - 1 onion, chopped
       - 2 carrots, chunks
       - 2 cloves garlic, minced

@@ -8,10 +8,9 @@ layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:
   - name: "Smoke"
-    temperature: "225°F"
+    temperature: "225°F (107°C)"
     duration: "45–60 min"
-    doneness: "145°F"
+    doneness: "145°F (63°C)"
     wood: "Alder, Cherry"
 ---
-
 

@@ -9,10 +9,9 @@ permalink: "/smoke/{{ slug }}/"
 amount: "1–2 lb"
 phases:
   - name: "Smoke"
-    temperature: "180–200°F"
+    temperature: "180–200°F (82–93°C)"
     duration: "1–2 hr"
-    doneness: "140°F"
+    doneness: "140°F (60°C)"
     wood: "Alder, Apple"
 ---
-
 

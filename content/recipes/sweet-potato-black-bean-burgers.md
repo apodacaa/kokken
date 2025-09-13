@@ -21,6 +21,6 @@ ingredients:
       - Buns and fixings
 steps:
   - Mash sweet potato and beans; mix with breadcrumbs and spices; season.
-  - Form patties; pan-sear in a little oil 3–4 minutes per side or bake at 200°C / 400°F for 20 minutes.
+  - Form patties; pan-sear in a little oil 3–4 minutes per side or bake at 400°F (200°C) for 20 minutes.
   - Serve on buns with your favorite toppings.
 ---

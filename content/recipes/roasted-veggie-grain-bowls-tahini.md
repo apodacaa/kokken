@@ -22,7 +22,7 @@ ingredients:
       - Water to loosen
       - Salt
 steps:
-  - Roast veg at 220°C / 425°F tossed with oil, salt, and pepper until browned.
+  - Roast veg at 425°F (220°C) tossed with oil, salt, and pepper until browned.
   - Whisk dressing ingredients smooth.
   - Serve bowls with grains, roasted veg, and drizzle of tahini dressing.
 ---

@@ -13,9 +13,9 @@ ingredients:
       - 1 lb (500 g) spaghetti
       - 1 lb (500 g) cherry tomatoes
       - 4 cloves garlic, sliced
-      - 4 tbsp olive oil
+      - 4 tbsp (60 ml) olive oil
       - Fresh basil
 steps:
-  - Toss cherry tomatoes and sliced garlic with olive oil; roast at 200°C / 400°F for 20 minutes.
+  - Toss cherry tomatoes and sliced garlic with olive oil; roast at 400°F (200°C) for 20 minutes.
   - Cook pasta in salted water until al dente; drain, then toss with roasted tomatoes, garlic, and torn basil.
 ---

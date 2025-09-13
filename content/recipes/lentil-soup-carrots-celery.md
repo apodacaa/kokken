@@ -10,14 +10,14 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 2 tbsp olive oil
+      - 2 tbsp (30 ml) olive oil
       - 1 onion, chopped
       - 2 carrots, diced
       - 2 celery stalks, diced
       - 2 cloves garlic, minced
       - 1 1/4 cups (250 g) brown or green lentils, rinsed
       - 1.2 L (5 cups) vegetable stock
-      - 1 tsp cumin
+      - 1 tsp (5 ml) cumin
       - Salt, pepper, lemon
 steps:
   - Sauté onion, carrots, and celery in oil; add garlic.

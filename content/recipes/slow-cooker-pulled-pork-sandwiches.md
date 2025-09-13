@@ -12,10 +12,10 @@ ingredients:
     items:
       - 1.8–2.3 kg (4–5 lb) pork shoulder
       - 1 onion, sliced
-      - 2 tsp paprika
-      - 1 tsp cumin
-      - 1 tsp garlic powder
-      - 1 tsp salt
+      - 2 tsp (10 ml) paprika
+      - 1 tsp (5 ml) cumin
+      - 1 tsp (5 ml) garlic powder
+      - 1 tsp (5 ml) salt
       - 1 cup (250 ml) BBQ sauce
       - 1/4 cup (60 ml) apple cider vinegar
       - Buns, coleslaw

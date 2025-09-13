@@ -10,12 +10,12 @@ permalink: /recipes/{{ slug }}/
 ingredients:
   - section: _main_
     items:
-      - 2 tbsp olive oil
+      - 2 tbsp (30 ml) olive oil
       - 1 onion, sliced
       - 1 red bell pepper, sliced
       - 2 cloves garlic, minced
-      - 1 tsp cumin
-      - 1 tsp paprika
+      - 1 tsp (5 ml) cumin
+      - 1 tsp (5 ml) paprika
       - 14 oz (400 g) canned tomatoes
       - 4–6 eggs
       - Salt, parsley

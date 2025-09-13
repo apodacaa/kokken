@@ -16,7 +16,7 @@ ingredients:
       - 2 sprigs rosemary
       - Salt and pepper
 steps:
-  - Heat oven to 220°C / 425°F. Toss potatoes with oil, garlic, rosemary, salt, and pepper; spread in pan.
+  - Heat oven to 425°F (220°C). Toss potatoes with oil, garlic, rosemary, salt, and pepper; spread in pan.
   - Season chicken well; place on top of potatoes.
-  - Roast 60–75 minutes until chicken is 75°C / 165°F. Rest 10 minutes before carving.
+  - Roast 60–75 minutes until chicken is 165°F (74°C). Rest 10 minutes before carving.
 ---
