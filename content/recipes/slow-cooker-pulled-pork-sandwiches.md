@@ -7,6 +7,13 @@ tags:
   - slow cooker
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Zinfandel – bold fruit
+    - Malbec – smoky, rich
+  beer:
+    - Pale Ale – crisp bitterness
+    - Brown Ale – caramel depth
 ingredients:
   - section: _main_
     items:

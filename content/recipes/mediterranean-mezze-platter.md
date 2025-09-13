@@ -7,6 +7,13 @@ tags:
   - snack
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Assyrtiko – Greek white with briny freshness
+    - Rosé – versatile & refreshing
+  beer:
+    - Blonde Ale – easy-drinking
+    - Saison – herbal & dry
 ingredients:
   - section: Components
     items:

@@ -6,6 +6,13 @@ tags:
   - lamb
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Rioja Reserva – oak, spice
+    - Cabernet Sauvignon – bold tannins for lamb
+  beer:
+    - ESB – balanced malt/bitterness
+    - Stout – roasted depth
 ingredients:
   - section: _main_
     items:

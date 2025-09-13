@@ -6,6 +6,13 @@ tags:
   - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Provence Rosé – herbal & dry
+    - Côtes du Rhône – peppery blend
+  beer:
+    - Saison – rustic & herbal
+    - Amber Ale – caramel malt
 ingredients:
   - section: _main_
     items:

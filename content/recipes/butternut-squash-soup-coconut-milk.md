@@ -7,6 +7,13 @@ tags:
   - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Viognier – aromatic stone fruit matches sweetness
+    - Chenin Blanc – versatile, with good acidity
+  beer:
+    - Belgian Witbier – citrusy & spiced
+    - Hazy IPA – tropical notes complement coconut
 ingredients:
   - section: _main_
     items:

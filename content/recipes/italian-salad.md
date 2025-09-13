@@ -5,6 +5,13 @@ tags:
   - salad
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Pinot Grigio – crisp & fresh
+    - Verdicchio – herbal, light-bodied
+  beer:
+    - Pilsner – refreshing
+    - Saison – peppery lift
 ingredients:
   - section: Salad
     items:

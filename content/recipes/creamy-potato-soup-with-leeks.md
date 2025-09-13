@@ -6,6 +6,13 @@ tags:
   - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Pinot Grigio – crisp & neutral
+    - Muscadet – minerally, refreshing
+  beer:
+    - Kölsch – light & clean
+    - Wheat Beer – citrusy lift
 ingredients:
   - section: _main_
     items:

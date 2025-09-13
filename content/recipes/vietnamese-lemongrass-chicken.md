@@ -6,6 +6,13 @@ tags:
   - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Riesling (off-dry) – acidity balances lemongrass
+    - Grüner Veltliner – peppery freshness
+  beer:
+    - Pilsner – crisp
+    - Saison – herbal, dry
 ingredients:
   - section: _main_
     items:

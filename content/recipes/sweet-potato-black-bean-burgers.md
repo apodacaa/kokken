@@ -7,6 +7,13 @@ tags:
   - burgers
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Garnacha – fruity & earthy
+    - Zinfandel – bold & juicy
+  beer:
+    - Amber Ale – malt sweetness
+    - Brown Ale – nutty depth
 ingredients:
   - section: Patties
     items:

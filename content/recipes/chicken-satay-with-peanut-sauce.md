@@ -6,6 +6,13 @@ tags:
   - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Gewürztraminer – aromatic, slightly sweet
+    - Pinot Gris – texture + spice-friendly
+  beer:
+    - Belgian Witbier – citrus & spice
+    - Amber Ale – caramel malt with peanuts
 ingredients:
   - section: Satay
     items:

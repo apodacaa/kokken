@@ -6,6 +6,13 @@ tags:
   - lamb
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Syrah – smoky, savory
+    - Grenache – fruity, spicy red
+  beer:
+    - Brown Ale – nutty
+    - Belgian Dubbel – dried fruit complexity
 ingredients:
   - section: Kofta
     items:

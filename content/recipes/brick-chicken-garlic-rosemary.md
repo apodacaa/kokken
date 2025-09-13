@@ -6,6 +6,13 @@ tags:
   - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Chardonnay (oak-aged) – buttery notes with roasted chicken
+    - White Rhône Blend – herbal & round
+  beer:
+    - Belgian Saison – peppery & herbal
+    - Pale Ale – bright bitterness to cut fat
 ingredients:
   - section: _main_
     items:

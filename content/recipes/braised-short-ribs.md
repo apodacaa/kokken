@@ -6,6 +6,13 @@ tags:
   - beef
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Malbec – bold fruit and body match richness
+    - Bordeaux Blend – structure for slow-braised meat
+  beer:
+    - Imperial Stout – roasted, bold
+    - Barleywine – sweet malt backbone balances richness
 ingredients:
   - section: _main_
     items:

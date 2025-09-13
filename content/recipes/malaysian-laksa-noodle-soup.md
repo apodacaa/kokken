@@ -7,6 +7,13 @@ tags:
   - seafood
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Chenin Blanc – tropical acidity
+    - Riesling – balances spice & coconut
+  beer:
+    - Belgian Witbier – citrus & spice
+    - Hazy IPA – tropical hops
 ingredients:
   - section: _main_
     items:

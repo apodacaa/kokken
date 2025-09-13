@@ -32,6 +32,36 @@
     </div>
   {% endif %}
 
+  {# Pairings (support both 'pairings' and common typo 'parings') #}
+  {% if pairings or parings %}
+    {% set p = pairings or parings %}
+    <div>
+      <h2 class="text-lg font-semibold text-white mb-2">Pairings</h2>
+      <ul class="list-disc pl-5 space-y-1">
+        {% if p.wine %}
+          <li>
+            <span class="font-semibold">Wine:</span>
+            {% if p.wine is string %}
+              {{ p.wine }}
+            {% else %}
+              {{ p.wine | join('; ') }}
+            {% endif %}
+          </li>
+        {% endif %}
+        {% if p.beer %}
+          <li>
+            <span class="font-semibold">Beer:</span>
+            {% if p.beer is string %}
+              {{ p.beer }}
+            {% else %}
+              {{ p.beer | join('; ') }}
+            {% endif %}
+          </li>
+        {% endif %}
+      </ul>
+    </div>
+  {% endif %}
+
   {% if references %}
     <div>
       <h2 class="text-lg font-semibold text-white mb-2">Related Recipes</h2>

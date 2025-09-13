@@ -6,6 +6,13 @@ tags:
   - beef
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Cabernet Franc – earthy, herbal
+    - Zinfandel – bold & fruity
+  beer:
+    - Porter – caramelized notes
+    - Amber Ale – malty depth
 ingredients:
   - section: Meatloaf
     items:

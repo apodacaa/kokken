@@ -6,6 +6,13 @@ tags:
   - main
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Tempranillo – smoky, rustic red
+    - Zinfandel – jammy fruit balances char
+  beer:
+    - Mexican Amber Lager – toasty, crisp
+    - IPA – hoppy bitterness contrasts marinade
 ingredients:
   - section: _main_
     items: 

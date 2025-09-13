@@ -6,6 +6,13 @@ tags:
   - seafood
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Chardonnay (unoaked) – crisp
+    - Muscadet – saline, mineral
+  beer:
+    - Kölsch – delicate
+    - Pale Ale – citrusy bitterness
 ingredients:
   - section: _main_
     items:

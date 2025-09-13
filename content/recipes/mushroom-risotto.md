@@ -6,6 +6,13 @@ tags:
   - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Pinot Noir – earthy, light
+    - Chardonnay (unoaked) – crisp & balanced
+  beer:
+    - Brown Ale – nutty
+    - Porter – roasted depth with mushrooms
 ingredients:
   - section: _main_
     items:

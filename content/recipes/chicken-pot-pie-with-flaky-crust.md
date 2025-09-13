@@ -6,6 +6,13 @@ tags:
   - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Chardonnay (unoaked) – bright acidity
+    - Pinot Noir – light red with earthy tones
+  beer:
+    - Golden Ale – malty backbone
+    - Brown Ale – nutty, warming
 ingredients:
   - section: _main_
     items:

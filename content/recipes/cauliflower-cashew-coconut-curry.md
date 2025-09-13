@@ -7,6 +7,13 @@ tags:
   - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Gewürztraminer – aromatic spice-friendly
+    - Dry Riesling – acidity cuts richness
+  beer:
+    - Hazy IPA – tropical hops match coconut
+    - Belgian Tripel – fruity, spicy complexity
 ingredients:
   - section: _main_
     items:

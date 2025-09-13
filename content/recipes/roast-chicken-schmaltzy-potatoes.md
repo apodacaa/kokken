@@ -6,6 +6,13 @@ tags:
   - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - White Burgundy – complex Chardonnay
+    - Pinot Noir – light, earthy
+  beer:
+    - Belgian Tripel – fruity, strong
+    - Saison – herbal
 ingredients:
   - section: _main_
     items:

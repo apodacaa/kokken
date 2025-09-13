@@ -7,6 +7,13 @@ tags:
   - curry
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Off-dry Riesling – sweetness balances heat
+    - Grüner Veltliner – peppery & herbal
+  beer:
+    - Belgian Witbier – coriander & citrus
+    - Pale Ale – hops match green curry
 ingredients:
   - section: _main_
     items:

@@ -7,6 +7,13 @@ tags:
   - smoke
 layout: "layouts/recipe.njk"
 permalink: "/recipes/{{ slug }}/"
+pairings:
+  wine:
+    - Zinfandel – big & bold
+    - Syrah – smoky & peppery
+  beer:
+    - IPA – hops cut fat
+    - Doppelbock – malty richness
 ingredients:
   - section: "Pork and Brine"
     items:

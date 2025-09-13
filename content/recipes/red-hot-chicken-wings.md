@@ -7,6 +7,13 @@ tags:
   - smoke
 layout: "layouts/recipe.njk"
 permalink: "/recipes/{{ slug }}/"
+pairings:
+  wine:
+    - Off-dry Riesling – tames spice
+    - Sparkling Rosé – refreshing bubbles
+  beer:
+    - IPA – hops match heat
+    - Wheat Beer – cooling citrus
 ingredients:
   - section: _main_
     items: 

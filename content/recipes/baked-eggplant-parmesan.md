@@ -6,6 +6,13 @@ tags:
   - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Chianti Classico – acidity balances tomato & cheese
+    - Barbera d’Asti – juicy, food-friendly red
+  beer:
+    - Amber Ale – malty sweetness pairs with tomato
+    - Belgian Dubbel – dried fruit & spice echo herbs
 ingredients:
   - section: _main_
     items:

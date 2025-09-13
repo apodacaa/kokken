@@ -6,6 +6,13 @@ tags:
   - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Gewürztraminer – aromatic
+    - Riesling – off-dry
+  beer:
+    - Pale Ale – bitterness cuts cream
+    - Hefeweizen – fruity
 ingredients:
   - section: _main_
     items:

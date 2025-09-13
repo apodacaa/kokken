@@ -7,6 +7,13 @@ tags:
   - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Merlot – soft, smooth
+    - Gamay – fruity, light red
+  beer:
+    - Amber Ale – caramel malt
+    - Kölsch – delicate & clean
 ingredients:
   - section: _main_
     items:

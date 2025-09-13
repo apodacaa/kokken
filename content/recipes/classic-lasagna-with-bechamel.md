@@ -7,6 +7,13 @@ tags:
   - pasta
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Barbera – acidity balances layers
+    - Chianti – classic Italian pairing
+  beer:
+    - Vienna Lager – toasty malt
+    - Brown Ale – depth & nuttiness
 ingredients:
   - section: _main_
     items:

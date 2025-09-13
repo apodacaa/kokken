@@ -5,6 +5,13 @@ tags:
   - sauce
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Riesling – acidity & sweetness
+    - Sauvignon Blanc – citrusy
+  beer:
+    - Pilsner – crisp
+    - Wheat Beer – soft citrus
 ingredients:
   - section: _main_
     items:

@@ -6,6 +6,13 @@ tags:
   - main
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Tempranillo – smoky, rustic
+    - Garnacha – juicy, fruity
+  beer:
+    - Mexican Amber Lager – toasty
+    - IPA – hops balance spice
 ingredients:
   - section: Pork and Sauce
     items:

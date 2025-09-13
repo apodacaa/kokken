@@ -7,6 +7,13 @@ tags:
   - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Chenin Blanc – acidity + slight fruitiness balance spice
+    - Gamay – light red, earthy & juicy
+  beer:
+    - Pale Ale – hops complement spice
+    - Amber Lager – malty depth with chickpeas
 ingredients:
   - section: _main_
     items:

@@ -7,6 +7,13 @@ tags:
   - grill
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Cabernet Sauvignon – bold tannins
+    - Malbec – smoky & rich
+  beer:
+    - Dark Lager – roasted malt
+    - IPA – hoppy bitterness
 ingredients:
   - section: _main_
     items:

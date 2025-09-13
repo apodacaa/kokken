@@ -8,6 +8,13 @@ tags:
   - soup
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Gewürztraminer – spice match
+    - Chenin Blanc – acidity balances lentils
+  beer:
+    - Pilsner – crisp counterpoint
+    - Wheat Beer – soft citrus with spice
 ingredients:
   - section: _main_
     items:

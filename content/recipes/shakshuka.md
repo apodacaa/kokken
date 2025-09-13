@@ -7,6 +7,13 @@ tags:
   - eggs
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Grenache – fruity, spicy
+    - Syrah – peppery depth
+  beer:
+    - Wheat Beer – citrus & light
+    - Saison – herbal, dry
 ingredients:
   - section: _main_
     items:

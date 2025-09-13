@@ -7,6 +7,13 @@ tags:
   - snack
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Brut Champagne – dry sparkling
+    - Albariño – saline, citrusy
+  beer:
+    - Japanese Lager (dry, clean)
+    - Saison – herbal & dry
 ingredients:
   - section: _main_
     items:

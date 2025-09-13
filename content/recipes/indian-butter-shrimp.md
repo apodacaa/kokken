@@ -6,6 +6,13 @@ tags:
   - shrimp
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Torrontés – floral, aromatic
+    - Riesling – balances cream & spice
+  beer:
+    - Wheat Beer – soft & citrusy
+    - Amber Ale – caramel malt for depth
 ingredients:
   - section: Marinade
     items:

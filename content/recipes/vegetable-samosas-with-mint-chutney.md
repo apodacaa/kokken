@@ -7,6 +7,13 @@ tags:
   - snack
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Sparkling Rosé – refreshing
+    - Chenin Blanc – fruity & acidic
+  beer:
+    - Pale Ale – citrus hops
+    - Amber Lager – malt sweetness
 ingredients:
   - section: Filling
     items:

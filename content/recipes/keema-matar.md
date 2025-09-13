@@ -6,6 +6,13 @@ tags:
   - lamb
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Shiraz – peppery, bold
+    - Tempranillo – earthy & rustic
+  beer:
+    - Amber Ale – balances spice
+    - Brown Ale – nutty with lamb
 ingredients:
   - section: _main_
     items:

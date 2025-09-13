@@ -5,6 +5,13 @@ tags:
   - sauce
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Sauvignon Blanc – citrusy
+    - Albariño – saline & fresh
+  beer:
+    - Mexican Lager – crisp
+    - Pale Ale – hoppy balance
 ingredients:
   - section: _main_
     items: 

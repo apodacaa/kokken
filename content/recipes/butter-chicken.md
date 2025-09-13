@@ -6,6 +6,13 @@ tags:
   - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Off-dry Riesling – sweetness tames spice
+    - Viognier – floral, stone fruit complements creaminess
+  beer:
+    - Creamy Hefeweizen – banana/clove balance spice
+    - Pale Ale – crisp bitterness refreshes palate
 ingredients:
   - section: _main_
     items:

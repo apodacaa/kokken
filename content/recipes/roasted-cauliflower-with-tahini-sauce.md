@@ -7,6 +7,13 @@ tags:
   - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Sauvignon Blanc – crisp & herbal
+    - Chenin Blanc – fruity, acidic
+  beer:
+    - Pale Ale – citrusy hops
+    - Amber Lager – toasty
 ingredients:
   - section: _main_
     items:

@@ -6,6 +6,13 @@ tags:
   - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Côtes du Rhône – peppery Grenache/Syrah
+    - Provence Rosé – dry & herbal
+  beer:
+    - Biere de Garde – rustic French style
+    - Belgian Blonde – light spice & fruit
 ingredients:
   - section: _main_
     items:

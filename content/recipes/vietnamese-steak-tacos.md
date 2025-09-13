@@ -6,6 +6,13 @@ tags:
   - beef
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Malbec – smoky, bold
+    - Syrah – peppery, rich
+  beer:
+    - Mexican Amber Lager – toasty malt
+    - Pale Ale – hoppy freshness
 ingredients:
   - section: _main_
     items:
@@ -24,4 +31,3 @@ references:
     title: Prik Nam Pla
     type: recipe
 ---
-

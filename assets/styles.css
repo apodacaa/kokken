@@ -281,6 +281,9 @@
   .w-56 {
     width: calc(var(--spacing) * 56);
   }
+  .w-full {
+    width: 100%;
+  }
   .max-w-prose {
     max-width: 65ch;
   }

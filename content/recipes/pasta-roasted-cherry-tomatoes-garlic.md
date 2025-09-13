@@ -7,6 +7,13 @@ tags:
   - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Sangiovese – acidity lifts tomato
+    - Grenache – juicy & fruity
+  beer:
+    - Pale Ale – citrus hops
+    - Amber Ale – caramel depth
 ingredients:
   - section: _main_
     items:

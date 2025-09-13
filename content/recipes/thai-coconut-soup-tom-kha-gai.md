@@ -6,6 +6,13 @@ tags:
   - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Gewürztraminer – aromatic
+    - Riesling – off-dry, balances spice
+  beer:
+    - Belgian Witbier – citrus & spice
+    - Saison – herbal lift
 ingredients:
   - section: _main_
     items:

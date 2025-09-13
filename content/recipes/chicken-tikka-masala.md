@@ -6,6 +6,13 @@ tags:
   - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Sparkling Rosé – bubbles cut richness
+    - Riesling (off-dry) – sweetness tempers spice
+  beer:
+    - IPA – bitterness cuts cream
+    - Hefeweizen – fruity & light
 ingredients:
   - section: _main_
     items:

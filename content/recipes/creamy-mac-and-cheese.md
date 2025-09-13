@@ -7,6 +7,13 @@ tags:
   - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Oaked Chardonnay – richness mirrors cheese
+    - Chenin Blanc – fresh acidity
+  beer:
+    - Helles Lager – crisp & light
+    - Pale Ale – bitterness offsets creaminess
 ingredients:
   - section: _main_
     items:

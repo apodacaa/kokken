@@ -7,6 +7,13 @@ tags:
   - bowls
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Chenin Blanc – versatile
+    - Sauvignon Blanc – herbal freshness
+  beer:
+    - Amber Lager – malt depth
+    - Saison – herbal, dry
 ingredients:
   - section: Components
     items:

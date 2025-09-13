@@ -7,6 +7,13 @@ tags:
   - spicy
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Dry Riesling – acidity vs heat
+    - Grüner Veltliner – peppery, herbal
+  beer:
+    - Pilsner – crisp
+    - IPA – hops cut spice
 ingredients:
   - section: _main_
     items:

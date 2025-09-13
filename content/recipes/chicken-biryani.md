@@ -7,6 +7,13 @@ tags:
   - rice
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Dry Rosé – refreshing with spices
+    - Riesling – off-dry, balances heat
+  beer:
+    - Pilsner – crisp, palate-cleansing
+    - Belgian Saison – herbal & effervescent
 ingredients:
   - section: _main_
     items:

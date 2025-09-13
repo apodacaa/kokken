@@ -7,6 +7,13 @@ tags:
   - stew
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Cabernet Sauvignon – tannins stand up to beef
+    - Syrah – smoky, peppery depth complements stew
+  beer:
+    - Robust Porter – roasted malt complements seared beef
+    - Doppelbock – malty sweetness balances savory broth
 ingredients:
   - section: _main_
     items:

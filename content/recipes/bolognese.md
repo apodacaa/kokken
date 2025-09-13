@@ -6,6 +6,13 @@ tags:
   - beef
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Sangiovese (Chianti) – acidity balances tomato
+    - Dolcetto – fruity red without heavy tannins
+  beer:
+    - Brown Ale – nutty, malty depth
+    - Märzen – toasty, balanced backbone
 ingredients:
   - section: _main_
     items:

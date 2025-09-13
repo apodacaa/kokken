@@ -6,6 +6,13 @@ tags:
   - fish
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Pinot Noir – light red
+    - Dry Rosé – refreshing
+  beer:
+    - Kölsch – clean
+    - Belgian Blonde – fruity & smooth
 ingredients:
   - section: _main_
     items:

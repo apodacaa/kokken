@@ -7,6 +7,13 @@ tags:
   - chili
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Zinfandel – ripe fruit & spice
+    - Syrah – smoky, peppery
+  beer:
+    - American Stout – roasted notes
+    - IPA – bitterness balances spice
 ingredients:
   - section: _main_
     items:

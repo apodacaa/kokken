@@ -8,6 +8,13 @@ tags:
   - curry
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Albariño – saline & citrus
+    - Riesling – off-dry, balances spice
+  beer:
+    - Belgian Witbier – citrus & spice
+    - Pale Ale – hops cut richness
 ingredients:
   - section: _main_
     items:

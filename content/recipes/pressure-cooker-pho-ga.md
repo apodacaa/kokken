@@ -7,6 +7,13 @@ tags:
   - pressure cooker
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Grüner Veltliner – peppery freshness
+    - Riesling – crisp & aromatic
+  beer:
+    - Pilsner – refreshing
+    - Saison – herbal
 ingredients:
   - section: Broth
     items:

@@ -7,6 +7,13 @@ tags:
   - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Pinot Gris – texture, citrus
+    - Albariño – fresh, saline
+  beer:
+    - Pilsner – crisp
+    - Hazy IPA – tropical hops
 ingredients:
   - section: _main_
     items:

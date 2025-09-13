@@ -8,6 +8,13 @@ tags:
   - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Riesling Kabinett – sweet/acid balance
+    - Chenin Blanc – acidity & fruit
+  beer:
+    - Wheat Beer – soft, citrusy
+    - Pale Ale – hops balance tamarind
 ingredients:
   - section: _main_
     items:

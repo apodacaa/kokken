@@ -7,6 +7,13 @@ tags:
   - tacos
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Sauvignon Blanc – citrus/herbal lift cuts richness
+    - Albariño – saline freshness enhances lime/avocado
+  beer:
+    - Mexican Amber Lager – crisp with toasty malt
+    - Hazy IPA – tropical hops brighten avocado & beans
 ingredients:
   - section: Filling
     items:

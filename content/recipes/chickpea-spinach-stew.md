@@ -7,6 +7,13 @@ tags:
   - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
+pairings:
+  wine:
+    - Garnacha – earthy, juicy red
+    - Tempranillo Joven – fresh, easy-drinking
+  beer:
+    - Belgian Dubbel – caramel depth
+    - Brown Ale – nutty complement
 ingredients:
   - section: _main_
     items:
