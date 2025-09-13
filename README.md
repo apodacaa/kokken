@@ -7,7 +7,7 @@ Køkken is an Eleventy‑powered cooking notebook for recipes, cocktails, and gr
   - Serves Eleventy at `http://localhost:8080` and watches content/layouts.
   - Watches Tailwind input and rebuilds `assets/styles.css` on change.
 - Build for production: `npm run build` (outputs static site to `_site/`).
-- Preview the build: `npx serve _site` (or any static server) and open the printed URL.
+- Preview the build: `npm run preview` (serves `_site/` at `http://localhost:5000`).
 
 Edits under `content/` and `_includes/` hot‑reload in dev. The nav, indexes, and tag pages are generated from Eleventy collections and will update automatically when you add or rename files.
 

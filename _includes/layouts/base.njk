@@ -13,5 +13,82 @@
   <main>
     {% block content %}{% endblock %}
   </main>
+  <script>
+    (function () {
+      var resultsEl = document.getElementById('search-results');
+      var form = document.getElementById('site-search-form');
+      var input = document.getElementById('q');
+      if (!resultsEl && form && input) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          var q = (input.value || '').trim();
+          var url = location.origin + '/search/' + (q ? ('?q=' + encodeURIComponent(q)) : '');
+          window.location.assign(url);
+        });
+      }
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+  <script>
+    (function () {
+      var appId = '{{ publicEnv.ALGOLIA_APP_ID }}';
+      var apiKey = '{{ publicEnv.ALGOLIA_SEARCH_KEY }}';
+      var indexName = '{{ publicEnv.ALGOLIA_INDEX }}';
+      var input = document.getElementById('q');
+      if (!input || !appId || !apiKey || !indexName || typeof algoliasearch === 'undefined') return;
+
+      // Create an overlay panel attached to body so it never shifts layout
+      var panel = document.createElement('div');
+      panel.id = 'search-suggestions-overlay';
+      panel.className = 'hidden fixed z-50 bg-black/90 border border-gray-700 rounded shadow-lg overflow-auto max-h-72';
+      document.body.appendChild(panel);
+
+      function positionPanel() {
+        var rect = input.getBoundingClientRect();
+        panel.style.left = rect.left + 'px';
+        panel.style.top = (rect.bottom + 8) + 'px';
+        panel.style.width = rect.width + 'px';
+      }
+
+      var client = algoliasearch(appId, apiKey);
+      var index = client.initIndex(indexName);
+      var latest = '';
+      var debounce;
+
+      function clearPanel() { panel.innerHTML = ''; panel.classList.add('hidden'); }
+      function showPanel() { positionPanel(); panel.classList.remove('hidden'); }
+      function itemTemplate(hit) {
+        var title = hit.title || (hit.data && hit.data.title) || 'Untitled';
+        var url = hit.url || '#';
+        var secondary = hit.excerpt || hit.summary || '';
+        return '<a href="' + url + '" class="block px-3 py-2 hover:bg-black/60">'
+             +   '<div class="text-ladybug font-semibold">' + title + '</div>'
+             +   (secondary ? '<div class="text-xs text-gray-400">' + secondary + '</div>' : '')
+             + '</a>';
+      }
+
+      input.addEventListener('input', function (e) {
+        var q = (e.target.value || '').trim();
+        if (q.length < 2) { clearPanel(); return; }
+        latest = q;
+        clearTimeout(debounce);
+        debounce = setTimeout(function () {
+          index.search(q, { hitsPerPage: 6 }).then(function (res) {
+            if (latest !== q || !res.hits || !res.hits.length) { clearPanel(); return; }
+            panel.innerHTML = res.hits.map(itemTemplate).join('');
+            showPanel();
+          }).catch(function () { clearPanel(); });
+        }, 140);
+      });
+
+      input.addEventListener('focus', function () { if (panel.innerHTML) showPanel(); });
+      input.addEventListener('keydown', function (e) { if (e.key === 'Escape') clearPanel(); });
+      document.addEventListener('click', function (e) {
+        if (!panel.contains(e.target) && e.target !== input) clearPanel();
+      });
+      window.addEventListener('resize', function () { if (!panel.classList.contains('hidden')) positionPanel(); });
+      window.addEventListener('scroll', function () { if (!panel.classList.contains('hidden')) positionPanel(); }, true);
+    })();
+  </script>
 </body>
 </html>

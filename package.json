@@ -8,7 +8,8 @@
     "dev": "npm-run-all --parallel dev:*",
     "build:eleventy": "npx @11ty/eleventy",
     "build:tailwind": "npx @tailwindcss/cli -i ./assets/input.css -o ./assets/styles.css --minify",
-    "build": "rm -rf _site && npm-run-all build:*"
+    "build": "rm -rf _site && npm-run-all build:*",
+    "preview": "npm run build && npx serve _site -l 5000"
   },
   "keywords": [],
   "author": "",
