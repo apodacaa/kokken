@@ -40,6 +40,13 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => (a.data.title || "").localeCompare(b.data.title || ""));
   });
 
+  // ✅ Expose public env (safe for client)
+  eleventyConfig.addGlobalData("publicEnv", {
+    ALGOLIA_APP_ID: process.env.PUBLIC_ALGOLIA_APP_ID || "UUYQQVOA4D",
+    ALGOLIA_SEARCH_KEY: process.env.PUBLIC_ALGOLIA_SEARCH_KEY || "f0fecd5f7f5d6d1fd261068ec1c7981c",
+    ALGOLIA_INDEX: process.env.PUBLIC_ALGOLIA_INDEX || "kokken_pages_dev_uuyqqvoa4d_pages",
+  });
+
    // ✅ Cocktails collection (sorted alphabetically by title)
    eleventyConfig.addCollection("cocktails", function (collectionApi) {
     return collectionApi

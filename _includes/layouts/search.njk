@@ -1,0 +1,80 @@
+{% extends "layouts/base.njk" %}
+
+{% block title %}Search{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css">
+{% endblock %}
+
+{% block content %}
+  <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-4">Search</h1>
+
+  <div id="search-results" class="space-y-2"></div>
+  <div id="search-pagination" class="mt-6"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
+  <script>
+    (function() {
+      const appId = '{{ publicEnv.ALGOLIA_APP_ID }}';
+      const apiKey = '{{ publicEnv.ALGOLIA_SEARCH_KEY }}';
+      const indexName = '{{ publicEnv.ALGOLIA_INDEX }}';
+
+      if (!appId || !apiKey || !indexName) {
+        document.getElementById('search-results').innerHTML = '<p class="text-yellow-400">Search is not configured. Set PUBLIC_ALGOLIA_APP_ID, PUBLIC_ALGOLIA_SEARCH_KEY, and PUBLIC_ALGOLIA_INDEX.</p>';
+        return;
+      }
+
+      const searchClient = algoliasearch(appId, apiKey);
+
+      const params = new URLSearchParams(window.location.search);
+      const initialQuery = params.get('q') || '';
+
+      const search = instantsearch({
+        indexName,
+        searchClient,
+        routing: true,
+        initialUiState: { [indexName]: { query: initialQuery } },
+      });
+
+      // Bind the existing nav input as a custom search box
+      const customSearchBox = instantsearch.connectors.connectSearchBox((renderOptions, isFirstRender) => {
+        const { query, refine } = renderOptions;
+        const input = document.getElementById('q');
+        const form = input && input.form;
+        if (!input) return;
+        if (isFirstRender) {
+          if (form) form.addEventListener('submit', (e) => e.preventDefault());
+          input.addEventListener('input', (e) => refine(e.target.value));
+        }
+        input.value = query || '';
+      });
+
+      search.addWidgets([
+        customSearchBox({}),
+        instantsearch.widgets.hits({
+          container: '#search-results',
+          templates: {
+            item(hit) {
+              const title = hit.title || (hit.data && hit.data.title) || 'Untitled';
+              const url = hit.url || '#';
+              const secondary = hit.excerpt || hit.summary || '';
+              const tertiary = Array.isArray(hit.tags) ? hit.tags.join(', ') : (hit.section || '');
+              return `
+                <article class="space-y-1">
+                  <h2 class="text-white text-base font-semibold"><a href="${url}" class="text-ladybug hover:underline">${title}</a></h2>
+                  ${secondary ? `<p class="text-sm text-gray-300">${secondary}</p>` : ''}
+                  ${tertiary ? `<p class="text-xs text-gray-500">${tertiary}</p>` : ''}
+                </article>
+              `;
+            }
+          }
+        }),
+        instantsearch.widgets.pagination({ container: '#search-pagination' })
+      ]);
+
+      search.start();
+    })();
+  </script>
+{% endblock %}
+
