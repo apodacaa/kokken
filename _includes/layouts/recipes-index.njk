@@ -4,9 +4,9 @@
 
 {% block content %}
 
-<h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-4">Recipes</h1>
+<h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">Recipes</h1>
 
-<ul class="list-disc pl-5 space-y-1">
+<ul class="list-disc pl-5 mb-6 space-y-1">
   {% for recipe in collections.recipes %}
     <li>
       <a href="{{ recipe.url }}" class="text-white hover:underline">{{ recipe.data.title }}</a>
