@@ -8,6 +8,9 @@
   <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">{{ title }}</h1>
 
   <div class="space-y-2">
+    {% if amount %}
+      <div class="text-white"><span class="font-semibold">Amount:</span> {{ amount }}</div>
+    {% endif %}
     {% if gas %}
       <div class="text-white"><span class="font-semibold">Gas Grill:</span> {{ gas }}</div>
     {% endif %}
@@ -36,4 +39,3 @@
   {% endif %}
 </article>
 {% endblock %}
-

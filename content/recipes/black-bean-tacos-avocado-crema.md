@@ -28,10 +28,11 @@ ingredients:
       - 1/4 cup (60 ml) yogurt
       - 1 tbsp (15 ml) lime juice
       - Salt
-  - section: To Serve
+  - section: Toppings
     items:
-      - Corn tortillas
-      - Toppings: cabbage, salsa, cilantro
+      - Cabbage
+      - Salsa
+      - Cilantro
 steps:
   - Sauté onion and garlic; add beans and cumin; mash slightly; season.
   - Blend avocado, yogurt, lime, and salt.
