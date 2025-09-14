@@ -5,6 +5,8 @@ tags:
   - whiskey
   - coffee
   - cream
+  - brown sugar
+  - irish whiskey
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
@@ -13,6 +15,6 @@ ingredients:
   - 1/2 oz (1.5 cl) brown sugar syrup
   - Fresh cream to float
 steps:
-  - Build in a warm glass: whiskey, hot coffee, brown sugar syrup.
+  - whiskey, hot coffee, brown sugar syrup.
   - Lightly whip cream and float on top.
 ---

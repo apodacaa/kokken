@@ -1,0 +1,87 @@
+---
+permalink: /search/index.json
+eleventyExcludeFromCollections: true
+---
+[
+{%- set first = true -%}
+{%- for item in collections.all -%}
+  {%- if 'content/' in item.inputPath and 'content/grill/' not in item.inputPath and 'content/smoke/' not in item.inputPath -%}
+    {%- if not first -%},
+    {%- endif -%}
+    {%- set ingredientsText -%}
+      {%- if item.data.ingredients -%}
+        {%- for group in item.data.ingredients -%}
+          {%- if group.items -%}
+            {%- for ing in group.items -%}
+{{ ing }} {% endfor -%}
+          {%- else -%}
+{{ group }} {% endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endset -%}
+    {%- set stepsText -%}
+      {%- if item.data.steps -%}
+        {%- for s in item.data.steps -%}
+{{ s }} {% endfor -%}
+      {%- endif -%}
+    {%- endset -%}
+    {%- set pairingsText -%}
+      {%- if item.data.pairings -%}
+        {%- for key, arr in item.data.pairings -%}
+          {%- for p in arr -%}
+{{ p }} {% endfor -%}
+        {%- endfor -%}
+      {%- endif -%}
+    {%- endset -%}
+    {
+      "title": {{ (item.data.title or 'Untitled') | json | safe }},
+      "url": {{ (item.url or '#') | json | safe }},
+      "excerpt": {{ (item.templateContent | striptags | replace('\n',' ') | replace('  ',' ') | truncate(280, true, '…')) | json | safe }},
+      "ingredients": {{ (ingredientsText | striptags | replace('\n',' ') | replace('  ',' ') | trim) | json | safe }},
+      "ingredients_list": [
+        {%- if item.data.ingredients -%}
+          {%- set firstIng = true -%}
+          {%- for group in item.data.ingredients -%}
+            {%- if group.items -%}
+              {%- for ing in group.items -%}
+                {%- if not firstIng -%},{%- endif -%}
+                {{ ing | json | safe }}
+                {%- set firstIng = false -%}
+              {%- endfor -%}
+            {%- else -%}
+              {%- if not firstIng -%},{%- endif -%}
+              {{ group | json | safe }}
+              {%- set firstIng = false -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endif -%}
+      ],
+      "steps": {{ (stepsText | striptags | replace('\n',' ') | replace('  ',' ') | trim) | json | safe }},
+      "steps_list": [
+        {%- if item.data.steps -%}
+          {%- set firstStep = true -%}
+          {%- for s in item.data.steps -%}
+            {%- if not firstStep -%},{%- endif -%}
+            {{ s | json | safe }}
+            {%- set firstStep = false -%}
+          {%- endfor -%}
+        {%- endif -%}
+      ],
+      "pairings": {{ (pairingsText | striptags | replace('\n',' ') | replace('  ',' ') | trim) | json | safe }},
+      "pairings_list": [
+        {%- if item.data.pairings -%}
+          {%- set firstPair = true -%}
+          {%- for key, arr in item.data.pairings -%}
+            {%- for p in arr -%}
+              {%- if not firstPair -%},{%- endif -%}
+              {{ p | json | safe }}
+              {%- set firstPair = false -%}
+            {%- endfor -%}
+          {%- endfor -%}
+        {%- endif -%}
+      ]
+    }
+    {%- set first = false -%}
+  {%- endif -%}
+{%- endfor -%}
+]

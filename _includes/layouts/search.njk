@@ -3,78 +3,151 @@
 {% block title %}Search{% endblock %}
 
 {% block head %}
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@8/themes/satellite-min.css">
 {% endblock %}
 
 {% block content %}
   <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-4">Search</h1>
 
   <div id="search-results" class="space-y-2"></div>
-  <div id="search-pagination" class="mt-6"></div>
-
-  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4"></script>
   <script>
-    (function() {
-      const appId = '{{ publicEnv.ALGOLIA_APP_ID }}';
-      const apiKey = '{{ publicEnv.ALGOLIA_SEARCH_KEY }}';
-      const indexName = '{{ publicEnv.ALGOLIA_INDEX }}';
+    (function () {
+      var resultsEl = document.getElementById('search-results');
+      if (!resultsEl || !window.fetch) return;
 
-      if (!appId || !apiKey || !indexName) {
-        document.getElementById('search-results').innerHTML = '<p class="text-yellow-400">Search is not configured. Set PUBLIC_ALGOLIA_APP_ID, PUBLIC_ALGOLIA_SEARCH_KEY, and PUBLIC_ALGOLIA_INDEX.</p>';
-        return;
+      var params = new URLSearchParams(window.location.search);
+      var initialQuery = (params.get('q') || '').trim();
+
+      function escapeHtml(s) { return (s||'').replace(/[&<>"']/g, function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c];}); }
+      function parseQuery(q) {
+        var whole = false; var t = (q||'').trim();
+        if ((t.startsWith('"') && t.endsWith('"')) || (t.startsWith("'") && t.endsWith("'"))) {
+          whole = true; t = t.slice(1, -1).trim();
+        }
+        return { term: t, wholeWord: whole };
+      }
+      function contains(text, term, wholeWord) {
+        var hay = (text||'');
+        if (!term) return false;
+        if (!wholeWord) return hay.toLowerCase().includes(term.toLowerCase());
+        try {
+          var re = new RegExp('\\b' + term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\b', 'i');
+          return re.test(hay);
+        } catch (_) { return hay.toLowerCase().includes(term.toLowerCase()); }
+      }
+      function highlight(text, term, wholeWord) {
+        var safe = escapeHtml(text || '');
+        if (!term) return safe;
+        try {
+          var esc = term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+          var pattern = wholeWord ? '(\\b' + esc + '\\b)' : '(' + esc + ')';
+          var re = new RegExp(pattern, 'ig');
+          return safe.replace(re, '<mark class="bg-yellow-500/30">$1</mark>');
+        } catch (_) { return safe; }
+      }
+      function snippetAround(text, term, radius, wholeWord) {
+        var t = (text||'');
+        var idx = -1;
+        if (term) {
+          if (wholeWord) {
+            try {
+              var re = new RegExp('\\b' + term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\b', 'i');
+              var m = re.exec(t);
+              idx = m ? m.index : -1;
+            } catch (_) { idx = t.toLowerCase().indexOf(term.toLowerCase()); }
+          } else {
+            idx = t.toLowerCase().indexOf(term.toLowerCase());
+          }
+        }
+        if (idx < 0) return escapeHtml(t.slice(0, Math.min(160, t.length)));
+        var start = Math.max(0, idx - (radius||70));
+        var end = Math.min(t.length, idx + term.length + (radius||70));
+        var pre = start > 0 ? '…' : '';
+        var post = end < t.length ? '…' : '';
+        return pre + highlight(t.slice(start, end), term, wholeWord) + post;
+      }
+      function findContexts(doc, term, wholeWord) {
+        var contexts = [];
+        var ingList = Array.isArray(doc.ingredients_list) ? doc.ingredients_list : [];
+        var ingMatch = ingList.find(function (i) { return contains(i, term, wholeWord); });
+        if (ingMatch) contexts.push({ label: 'Ingredient', html: highlight(ingMatch, term, wholeWord) });
+        var stepList = Array.isArray(doc.steps_list) ? doc.steps_list : [];
+        var stepMatch = stepList.find(function (s) { return contains(s, term, wholeWord); });
+        if (stepMatch) contexts.push({ label: 'Step', html: highlight(stepMatch, term, wholeWord) });
+        var pairList = Array.isArray(doc.pairings_list) ? doc.pairings_list : [];
+        var pairMatch = pairList.find(function (p) { return contains(p, term, wholeWord); });
+        if (pairMatch) contexts.push({ label: 'Pairing', html: highlight(pairMatch, term, wholeWord) });
+        if (contains(doc.excerpt||'', term, wholeWord)) contexts.push({ label: 'Excerpt', html: snippetAround(doc.excerpt, term, 80, wholeWord) });
+        return contexts;
+      }
+      function renderResults(q, docs) {
+        if (!q) {
+          resultsEl.innerHTML = '<p class="text-gray-400">Type in the search box to find recipes and guides.</p>';
+          return;
+        }
+        var parsed = parseQuery(q);
+        var term = parsed.term;
+        var wholeWord = parsed.wholeWord;
+        var scored = [];
+        for (var i = 0; i < docs.length; i++) {
+          var doc = docs[i];
+          var inTitle = contains(doc.title || '', term, wholeWord);
+          var inExcerpt = contains(doc.excerpt || '', term, wholeWord);
+          var inIngredients = contains(doc.ingredients || '', term, wholeWord);
+          var inSteps = contains(doc.steps || '', term, wholeWord);
+          var inPairings = contains(doc.pairings || '', term, wholeWord);
+          if (inTitle || inExcerpt || inIngredients || inSteps || inPairings) {
+            var score = 0;
+            if (inIngredients) score += 3;
+            if (inSteps) score += 2;
+            if (inPairings) score += 2;
+            if (inTitle) score += 1;
+            if (inExcerpt) score += 1;
+            scored.push({ doc: doc, score: score });
+          }
+        }
+        scored.sort(function (a, b) { return b.score - a.score; });
+        var matches = scored.map(function (x) { return x.doc; });
+        if (!matches.length) {
+          resultsEl.innerHTML = '<p class="text-gray-400">No results for <span class="text-white">' + q.replace(/</g,'&lt;') + '</span>.</p>';
+          return;
+        }
+        resultsEl.innerHTML = matches.map(function (hit) {
+          var title = hit.title || 'Untitled';
+          var url = hit.url || '#';
+          var ctxs = findContexts(hit, term, wholeWord).slice(0, 2); // show up to two reasons
+          var ctxHtml = ctxs.map(function(c){
+            return '<p class="text-sm text-gray-300">' + '<span class="text-gray-500 uppercase">' + c.label + ':</span> ' + c.html + '</p>';
+          }).join('');
+          return (
+            '<article class="space-y-1">'
+            + '<h2 class="text-white text-base font-semibold"><a href="' + url + '" class="text-ladybug hover:underline">' + highlight(title, term, wholeWord) + '</a></h2>'
+            + ctxHtml
+            + '</article>'
+          );
+        }).join('');
       }
 
-      const searchClient = algoliasearch(appId, apiKey);
+      function loadAndRender(q) {
+        fetch('/search/index.json').then(function (r) { return r.json(); }).then(function (docs) {
+          renderResults(q, Array.isArray(docs) ? docs : []);
+        }).catch(function () {
+          resultsEl.innerHTML = '<p class="text-yellow-400">Search is unavailable right now.</p>';
+        });
+      }
 
-      const params = new URLSearchParams(window.location.search);
-      const initialQuery = params.get('q') || '';
+      // Bind nav input to update results live on the search page
+      var input = document.getElementById('q');
+      if (input) {
+        input.value = initialQuery;
+        var debounce;
+        input.addEventListener('input', function (e) {
+          var q = (e.target.value || '').trim();
+          clearTimeout(debounce);
+          debounce = setTimeout(function () { loadAndRender(q); }, 140);
+        });
+      }
 
-      const search = instantsearch({
-        indexName,
-        searchClient,
-        routing: true,
-        initialUiState: { [indexName]: { query: initialQuery } },
-      });
-
-      // Bind the existing nav input as a custom search box
-      const customSearchBox = instantsearch.connectors.connectSearchBox((renderOptions, isFirstRender) => {
-        const { query, refine } = renderOptions;
-        const input = document.getElementById('q');
-        const form = input && input.form;
-        if (!input) return;
-        if (isFirstRender) {
-          if (form) form.addEventListener('submit', (e) => e.preventDefault());
-          input.addEventListener('input', (e) => refine(e.target.value));
-        }
-        input.value = query || '';
-      });
-
-      search.addWidgets([
-        customSearchBox({}),
-        instantsearch.widgets.hits({
-          container: '#search-results',
-          templates: {
-            item(hit) {
-              const title = hit.title || (hit.data && hit.data.title) || 'Untitled';
-              const url = hit.url || '#';
-              const secondary = hit.excerpt || hit.summary || '';
-              const tertiary = Array.isArray(hit.tags) ? hit.tags.join(', ') : (hit.section || '');
-              return `
-                <article class="space-y-1">
-                  <h2 class="text-white text-base font-semibold"><a href="${url}" class="text-ladybug hover:underline">${title}</a></h2>
-                  ${secondary ? `<p class="text-sm text-gray-300">${secondary}</p>` : ''}
-                  ${tertiary ? `<p class="text-xs text-gray-500">${tertiary}</p>` : ''}
-                </article>
-              `;
-            }
-          }
-        }),
-        instantsearch.widgets.pagination({ container: '#search-pagination' })
-      ]);
-
-      search.start();
+      loadAndRender(initialQuery);
     })();
   </script>
 {% endblock %}
-

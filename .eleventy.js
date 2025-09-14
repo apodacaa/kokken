@@ -40,12 +40,7 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => (a.data.title || "").localeCompare(b.data.title || ""));
   });
 
-  // ✅ Expose public env (safe for client)
-  eleventyConfig.addGlobalData("publicEnv", {
-    ALGOLIA_APP_ID: process.env.PUBLIC_ALGOLIA_APP_ID || "UUYQQVOA4D",
-    ALGOLIA_SEARCH_KEY: process.env.PUBLIC_ALGOLIA_SEARCH_KEY || "f0fecd5f7f5d6d1fd261068ec1c7981c",
-    ALGOLIA_INDEX: process.env.PUBLIC_ALGOLIA_INDEX || "kokken_pages_dev_uuyqqvoa4d_pages",
-  });
+  // (search) No external env needed; client loads a static JSON index.
 
    // ✅ Cocktails collection (sorted alphabetically by title)
    eleventyConfig.addCollection("cocktails", function (collectionApi) {
@@ -58,6 +53,11 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter("byTitle", function(arr) {
     if (!Array.isArray(arr)) return arr;
     return arr.slice().sort((a, b) => (a.data && a.data.title ? a.data.title : "").localeCompare(b.data && b.data.title ? b.data.title : ""));
+  });
+
+  // ✅ Nunjucks JSON stringify filter for JSON outputs
+  eleventyConfig.addNunjucksFilter("json", function (value) {
+    try { return JSON.stringify(value); } catch (e) { return 'null'; }
   });
 
   // ✅ Only one return — move to bottom

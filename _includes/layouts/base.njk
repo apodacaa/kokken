@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <title>{% block title %}{{ title }}{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="algolia-site-verification" content="8A1B6C0C31F81EC6" />
   <link rel="stylesheet" href="/assets/styles.css" />
   {% block head %}{% endblock %}
 </head>
@@ -28,14 +27,11 @@
       }
     })();
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4/dist/algoliasearch-lite.umd.js"></script>
   <script>
     (function () {
-      var appId = '{{ publicEnv.ALGOLIA_APP_ID }}';
-      var apiKey = '{{ publicEnv.ALGOLIA_SEARCH_KEY }}';
-      var indexName = '{{ publicEnv.ALGOLIA_INDEX }}';
       var input = document.getElementById('q');
-      if (!input || !appId || !apiKey || !indexName || typeof algoliasearch === 'undefined') return;
+      var onSearchPage = !!document.getElementById('search-results');
+      if (!input || !window.fetch || onSearchPage) return;
 
       // Create an overlay panel attached to body so it never shifts layout
       var panel = document.createElement('div');
@@ -50,21 +46,123 @@
         panel.style.width = rect.width + 'px';
       }
 
-      var client = algoliasearch(appId, apiKey);
-      var index = client.initIndex(indexName);
       var latest = '';
       var debounce;
+      var indexData = null;
+      var loading = false;
 
       function clearPanel() { panel.innerHTML = ''; panel.classList.add('hidden'); }
       function showPanel() { positionPanel(); panel.classList.remove('hidden'); }
-      function itemTemplate(hit) {
-        var title = hit.title || (hit.data && hit.data.title) || 'Untitled';
-        var url = hit.url || '#';
-        var secondary = hit.excerpt || hit.summary || '';
+      function escapeHtml(s) { return (s||'').replace(/[&<>"']/g, function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c];}); }
+      function parseQuery(q) {
+        var whole = false; var t = (q||'').trim();
+        if ((t.startsWith('"') && t.endsWith('"')) || (t.startsWith("'") && t.endsWith("'"))) {
+          whole = true; t = t.slice(1, -1).trim();
+        }
+        return { term: t, wholeWord: whole };
+      }
+      function contains(text, term, wholeWord) {
+        var hay = (text||'');
+        if (!term) return false;
+        if (!wholeWord) return hay.toLowerCase().includes(term.toLowerCase());
+        try {
+          var re = new RegExp('\\b' + term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\b', 'i');
+          return re.test(hay);
+        } catch (_) { return hay.toLowerCase().includes(term.toLowerCase()); }
+      }
+      function highlight(text, term, wholeWord) {
+        var safe = escapeHtml(text || '');
+        if (!term) return safe;
+        try {
+          var esc = term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+          var pattern = wholeWord ? '(\\b' + esc + '\\b)' : '(' + esc + ')';
+          var re = new RegExp(pattern, 'ig');
+          return safe.replace(re, '<mark class="bg-yellow-500/30">$1</mark>');
+        } catch (_) { return safe; }
+      }
+      function snippetAround(text, term, radius, wholeWord) {
+        var t = (text||'');
+        var idx = -1;
+        if (term) {
+          if (wholeWord) {
+            try {
+              var re = new RegExp('\\b' + term.replace(/[.*+?^${}()|[\]\\]/g,'\\$&') + '\\b', 'i');
+              var m = re.exec(t);
+              idx = m ? m.index : -1;
+            } catch (_) { idx = t.toLowerCase().indexOf(term.toLowerCase()); }
+          } else {
+            idx = t.toLowerCase().indexOf(term.toLowerCase());
+          }
+        }
+        if (idx < 0) return escapeHtml(t.slice(0, Math.min(120, t.length)));
+        var start = Math.max(0, idx - (radius||50));
+        var end = Math.min(t.length, idx + term.length + (radius||50));
+        var pre = start > 0 ? '…' : '';
+        var post = end < t.length ? '…' : '';
+        return pre + highlight(t.slice(start, end), term, wholeWord) + post;
+      }
+      function findContexts(doc, term, wholeWord) {
+        var contexts = [];
+        var ingList = Array.isArray(doc.ingredients_list) ? doc.ingredients_list : [];
+        var ingMatch = ingList.find(function (i) { return contains(i, term, wholeWord); });
+        if (ingMatch) contexts.push({ label: 'Ingredient', html: highlight(ingMatch, term, wholeWord) });
+        var stepList = Array.isArray(doc.steps_list) ? doc.steps_list : [];
+        var stepMatch = stepList.find(function (s) { return contains(s, term, wholeWord); });
+        if (stepMatch) contexts.push({ label: 'Step', html: highlight(stepMatch, term, wholeWord) });
+        var pairList = Array.isArray(doc.pairings_list) ? doc.pairings_list : [];
+        var pairMatch = pairList.find(function (p) { return contains(p, term, wholeWord); });
+        if (pairMatch) contexts.push({ label: 'Pairing', html: highlight(pairMatch, term, wholeWord) });
+        if (contains(doc.excerpt||'', term, wholeWord)) contexts.push({ label: 'Excerpt', html: snippetAround(doc.excerpt, term, 60, wholeWord) });
+        return contexts;
+      }
+      function itemTemplate(doc, term, wholeWord) {
+        var title = doc.title || 'Untitled';
+        var url = doc.url || '#';
+        var ctxs = findContexts(doc, term, wholeWord);
+        // Keep suggestions compact: show up to one context line, prefer Ingredient then Step
+        var chosen = ctxs.find(function(c){ return c.label === 'Ingredient'; }) || ctxs.find(function(c){ return c.label === 'Step'; }) || ctxs[0];
+        var ctxHtml = chosen ? '<div class="text-xs text-gray-400">' + '<span class="text-gray-500 uppercase">' + chosen.label + ':</span> ' + chosen.html + '</div>' : '';
         return '<a href="' + url + '" class="block px-3 py-2 hover:bg-black/60">'
-             +   '<div class="text-ladybug font-semibold">' + title + '</div>'
-             +   (secondary ? '<div class="text-xs text-gray-400">' + secondary + '</div>' : '')
+             +   '<div class="text-ladybug font-semibold">' + highlight(title, term, wholeWord) + '</div>'
+             +   ctxHtml
              + '</a>';
+      }
+
+      function loadIndex(callback) {
+        if (indexData) return callback();
+        if (loading) return; // simplistic guard
+        loading = true;
+        fetch('/search/index.json').then(function (r) { return r.json(); }).then(function (json) {
+          indexData = Array.isArray(json) ? json : [];
+          loading = false;
+          callback();
+        }).catch(function () { loading = false; });
+      }
+
+      function queryIndex(q) {
+        var parsed = parseQuery(q);
+        var term = parsed.term;
+        var wholeWord = parsed.wholeWord;
+        var scored = [];
+        for (var i = 0; i < indexData.length; i++) {
+          var doc = indexData[i];
+          var inTitle = contains(doc.title || '', term, wholeWord);
+          var inExcerpt = contains(doc.excerpt || '', term, wholeWord);
+          var inIngredients = contains(doc.ingredients || '', term, wholeWord);
+          var inSteps = contains(doc.steps || '', term, wholeWord);
+          var inPairings = contains(doc.pairings || '', term, wholeWord);
+          if (inTitle || inExcerpt || inIngredients || inSteps || inPairings) {
+            var score = 0;
+            if (inIngredients) score += 3;
+            if (inSteps) score += 2;
+            if (inPairings) score += 2;
+            if (inTitle) score += 1;
+            if (inExcerpt) score += 1;
+            scored.push({ doc: doc, score: score });
+          }
+        }
+        scored.sort(function (a, b) { return b.score - a.score; });
+        return scored.slice(0, 6).map(function (x) { return x.doc; });
       }
 
       input.addEventListener('input', function (e) {
@@ -73,11 +171,14 @@
         latest = q;
         clearTimeout(debounce);
         debounce = setTimeout(function () {
-          index.search(q, { hitsPerPage: 6 }).then(function (res) {
-            if (latest !== q || !res.hits || !res.hits.length) { clearPanel(); return; }
-            panel.innerHTML = res.hits.map(itemTemplate).join('');
+          loadIndex(function () {
+            if (latest !== q) return;
+            var results = queryIndex(q);
+            if (!results.length) { clearPanel(); return; }
+            var parsed = parseQuery(q);
+            panel.innerHTML = results.map(function (doc) { return itemTemplate(doc, parsed.term, parsed.wholeWord); }).join('');
             showPanel();
-          }).catch(function () { clearPanel(); });
+          });
         }, 140);
       });
 
