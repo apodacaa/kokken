@@ -31,7 +31,9 @@
     <li><a href="/cocktails/" class="hover:text-ladybug transition">Cocktails</a></li>
     <li><a href="/grill/" class="hover:text-ladybug transition">Grill Guides</a></li>
     <li><a href="/smoke/" class="hover:text-ladybug transition">Smoke Guides</a></li>
-    <li><a href="/tags/" class="hover:text-ladybug transition">Tags</a></li>
+    {% if site.features.tags %}
+      <li><a href="/tags/" class="hover:text-ladybug transition">Tags</a></li>
+    {% endif %}
   </ul>
 </nav>
 

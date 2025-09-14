@@ -52,6 +52,9 @@ function extractFromIngredients(ings) {
 module.exports = {
   eleventyComputed: {
     tags: (data) => {
+      if (!(data.site && data.site.features && data.site.features.tags)) {
+        return [];
+      }
       const ings = Array.isArray(data.ingredients) ? data.ingredients : [];
       const tags = Array.from(extractFromIngredients(ings));
       // Dedupe + normalize again just in case
@@ -62,4 +65,3 @@ module.exports = {
     }
   }
 };
-

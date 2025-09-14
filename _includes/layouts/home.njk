@@ -47,23 +47,25 @@
   {% endif %}
 </ul>
 
-<h2 class="text-ladybug text-xl font-semibold mb-2">Popular Tags</h2>
+{% if site.features.tags %}
+  <h2 class="text-ladybug text-xl font-semibold mb-2">Popular Tags</h2>
 
-<ul class="list-none flex flex-wrap gap-2 text-sm text-white">
-  {% set top = collections.tagsWithCounts.slice(0, 12) %}
-  {% for item in top %}
-    <li>
-      <a href="/tags/{{ item.tag | slug }}/" class="border border-ladybug px-2 py-1 rounded hover:bg-ladybug hover:text-black transition inline-flex items-center gap-1">
-        <span>{{ item.tag }}</span>
-        <span class="text-gray-400">({{ item.count }})</span>
-      </a>
-    </li>
-  {% endfor %}
-  {% if top | length == 0 %}
-    <li class="text-gray-400">No tags to show.</li>
-  {% endif %}
-</ul>
+  <ul class="list-none flex flex-wrap gap-2 text-sm text-white">
+    {% set top = collections.tagsWithCounts.slice(0, 12) %}
+    {% for item in top %}
+      <li>
+        <a href="/tags/{{ item.tag | slug }}/" class="border border-ladybug px-2 py-1 rounded hover:bg-ladybug hover:text-black transition inline-flex items-center gap-1">
+          <span>{{ item.tag }}</span>
+          <span class="text-gray-400">({{ item.count }})</span>
+        </a>
+      </li>
+    {% endfor %}
+    {% if top | length == 0 %}
+      <li class="text-gray-400">No tags to show.</li>
+    {% endif %}
+  </ul>
 
-<p class="mt-2 text-sm"><a href="/tags/" class="text-ladybug hover:underline">Browse all tags →</a></p>
+  <p class="mt-2 text-sm"><a href="/tags/" class="text-ladybug hover:underline">Browse all tags →</a></p>
+{% endif %}
 
 {% endblock %}

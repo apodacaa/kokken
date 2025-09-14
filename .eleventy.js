@@ -2,27 +2,27 @@ module.exports = function (eleventyConfig) {
   // ✅ Passthrough static assets
   eleventyConfig.addPassthroughCopy("assets");
 
-  // ✅ Create a collection of all unique tags
+  // ✅ Create a collection of all unique tags (guarded by feature flag)
   eleventyConfig.addCollection("tagList", function (collectionApi) {
+    const enabled = collectionApi.getAll().some(i => i.data && i.data.site && i.data.site.features && i.data.site.features.tags);
+    if (!enabled) return [];
     let tagSet = new Set();
-
     collectionApi.getAll().forEach(item => {
-      let tags = item.data.tags;
-
-      // Only include tags from recipes and cocktails
+      const tags = item.data && Array.isArray(item.data.tags) ? item.data.tags : [];
       const layout = item.data && item.data.layout;
-      if ((layout === 'layouts/recipe.njk' || layout === 'layouts/cocktail.njk') && Array.isArray(tags)) {
+      if (layout === 'layouts/recipe.njk' || layout === 'layouts/cocktail.njk') {
         tags
           .filter(tag => tag !== "all" && tag !== "recipes")
           .forEach(tag => tagSet.add(tag));
       }
     });
-
     return [...tagSet].sort();
   });
 
-  // ✅ Build a map of tag -> items using computed tags
+  // ✅ Build a map of tag -> items using computed tags (guarded)
   eleventyConfig.addCollection("tagsMap", function (collectionApi) {
+    const enabled = collectionApi.getAll().some(i => i.data && i.data.site && i.data.site.features && i.data.site.features.tags);
+    if (!enabled) return {};
     /** @type {Record<string, any[]>} */
     const map = {};
     collectionApi.getAll().forEach(item => {
@@ -39,8 +39,10 @@ module.exports = function (eleventyConfig) {
     return map;
   });
 
-  // ✅ Tag counts (sorted by count desc, then alpha)
+  // ✅ Tag counts (sorted by count desc, then alpha) — guarded
   eleventyConfig.addCollection("tagsWithCounts", function (collectionApi) {
+    const enabled = collectionApi.getAll().some(i => i.data && i.data.site && i.data.site.features && i.data.site.features.tags);
+    if (!enabled) return [];
     const map = {};
     collectionApi.getAll().forEach(item => {
       const layout = item.data && item.data.layout;

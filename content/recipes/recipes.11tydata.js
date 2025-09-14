@@ -125,6 +125,9 @@ function dedupePreserveOrder(arr) {
 module.exports = {
   eleventyComputed: {
     tags: (data) => {
+      if (!(data.site && data.site.features && data.site.features.tags)) {
+        return [];
+      }
       // Computed-only: ignore any explicit tags in front matter.
       const wine = Array.from(extractWineTags(data));
       const ing = Array.from(extractIngredientTags(data));

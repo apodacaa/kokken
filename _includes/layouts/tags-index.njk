@@ -8,34 +8,57 @@
 
 <input id="tagFilter" type="text" placeholder="Filter tags..." class="mb-4 w-full md:w-80 border border-ladybug bg-transparent text-white px-2 py-1 rounded text-sm placeholder-gray-400" />
 
-<ul id="tagList" class="list-none flex flex-wrap gap-2 text-sm text-white">
-  {% for item in collections.tagsWithCounts %}
-    <li data-name="{{ item.tag }}">
-      <a href="/tags/{{ item.tag | slug }}/" class="border border-ladybug px-2 py-1 rounded hover:bg-ladybug hover:text-black transition inline-flex items-center gap-1">
-        <span>{{ item.tag }}</span>
-        <span class="text-gray-400">({{ item.count }})</span>
+<div id="tagList">
+  {% set tags = collections.tagList %}
+  {% set current = '' %}
+  {% for tag in tags %}
+    {% set up = tag | upper %}
+    {% set letter = up[0] %}
+    {% if letter != current %}
+      {% if not loop.first %}
+        </ul>
+      {% endif %}
+      <h2 class="text-sm text-gray-400 uppercase tracking-wide mt-4 mb-2">{{ letter }}</h2>
+      <ul class="list-none flex flex-wrap gap-2 text-sm text-white">
+      {% set current = letter %}
+    {% endif %}
+    <li data-name="{{ tag }}">
+      <a href="/tags/{{ tag | slug }}/" class="border border-ladybug px-2 py-1 rounded hover:bg-ladybug hover:text-black transition">
+        {{ tag }}
       </a>
     </li>
+    {% if loop.last %}
+      </ul>
+    {% endif %}
   {% endfor %}
-  {% if collections.tagsWithCounts | length == 0 %}
-    <li class="text-gray-400">No tags yet.</li>
+  {% if tags | length == 0 %}
+    <p class="text-gray-400">No tags yet.</p>
   {% endif %}
-  
-</ul>
+</div>
 
 <script>
   (function(){
     const input = document.getElementById('tagFilter');
-    const list = document.getElementById('tagList');
-    if (!input || !list) return;
-    function normalize(s){ return (s||'').toLowerCase().trim(); }
-    input.addEventListener('input', function(){
-      const q = normalize(this.value);
-      for (const li of list.children) {
-        const name = normalize(li.getAttribute('data-name'));
+    const container = document.getElementById('tagList');
+    if (!input || !container) return;
+    function norm(s){ return (s||'').toLowerCase().trim(); }
+    function applyFilter(q){
+      const lis = container.querySelectorAll('li[data-name]');
+      const groups = container.querySelectorAll('h2 + ul');
+      lis.forEach(li => {
+        const name = norm(li.getAttribute('data-name'));
         li.style.display = (!q || name.includes(q)) ? '' : 'none';
-      }
-    });
+      });
+      // Hide letter headings whose lists have no visible items
+      groups.forEach(ul => {
+        const visible = Array.from(ul.children).some(li => li.style.display !== 'none');
+        const heading = ul.previousElementSibling;
+        ul.style.display = visible ? '' : 'none';
+        if (heading && heading.tagName === 'H2') heading.style.display = visible ? '' : 'none';
+      });
+    }
+    input.addEventListener('input', function(){ applyFilter(norm(this.value)); });
+    applyFilter('');
   })();
 </script>
 
