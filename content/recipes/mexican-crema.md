@@ -1,8 +1,6 @@
 ---
 title: Mexican Crema (overnight)
 slug: mexican-crema
-tags:
-  - sauce
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

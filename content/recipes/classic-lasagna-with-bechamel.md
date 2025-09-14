@@ -1,10 +1,6 @@
 ---
 title: Classic Lasagna with Bechamel
 slug: classic-lasagna-with-bechamel
-tags:
-  - main
-  - beef
-  - pasta
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

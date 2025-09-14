@@ -1,10 +1,6 @@
 ---
 title: Roasted Cauliflower with Tahini Sauce
 slug: roasted-cauliflower-with-tahini-sauce
-tags:
-  - main
-  - vegetarian
-  - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

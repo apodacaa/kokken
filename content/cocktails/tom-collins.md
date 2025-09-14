@@ -1,9 +1,6 @@
 ---
 title: Tom Collins
 slug: tom-collins
-tags:
-  - gin
-  - soda water
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

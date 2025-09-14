@@ -1,10 +1,6 @@
 ---
 title: Butternut Squash Soup with Coconut Milk
 slug: butternut-squash-soup-coconut-milk
-tags:
-  - soup
-  - vegetarian
-  - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

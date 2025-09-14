@@ -1,10 +1,6 @@
 ---
 title: Pho Ga
 slug: pho-ga
-tags:
-  - main
-  - chicken
-  - pressure cooker
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

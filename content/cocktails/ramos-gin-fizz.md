@@ -1,11 +1,6 @@
 ---
 title: Ramos Gin Fizz
 slug: ramos-gin-fizz
-tags:
-  - gin
-  - egg white
-  - cream
-  - orange flower water
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

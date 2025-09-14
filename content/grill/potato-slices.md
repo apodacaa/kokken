@@ -1,9 +1,6 @@
 ---
 title: "Potato (slices)"
 slug: potato-slices
-tags:
-  - grill
-  - potato
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "1/2 in"

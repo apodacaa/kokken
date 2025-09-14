@@ -1,9 +1,6 @@
 ---
 title: Chicken Satay with Peanut Sauce
 slug: chicken-satay-with-peanut-sauce
-tags:
-  - main
-  - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

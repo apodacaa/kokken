@@ -1,9 +1,6 @@
 ---
 title: Ratatouille
 slug: ratatouille
-tags:
-  - main
-  - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

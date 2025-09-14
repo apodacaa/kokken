@@ -1,8 +1,6 @@
 ---
 title: Simple Syrup
 slug: simple-syrup
-tags:
-  - syrup
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

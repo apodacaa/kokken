@@ -1,10 +1,6 @@
 ---
 title: Boulevardier
 slug: boulevardier
-tags:
-  - whiskey
-  - vermouth
-  - campari
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

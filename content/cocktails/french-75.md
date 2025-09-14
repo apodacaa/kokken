@@ -1,9 +1,6 @@
 ---
 title: French 75
 slug: french-75
-tags:
-  - gin
-  - champagne
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

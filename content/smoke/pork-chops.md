@@ -1,10 +1,6 @@
 ---
 title: "Pork Chops (thick)"
 slug: "pork-chops"
-tags:
-  - pork
-  - smoke
-  - grill
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 amount: "1 to 1.5 lbs each"

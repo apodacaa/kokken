@@ -1,9 +1,6 @@
 ---
 title: "Chicken Pieces (bone-in)"
 slug: chicken-pieces-bone-in
-tags:
-  - grill
-  - chicken
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "3–6 oz"

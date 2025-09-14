@@ -1,9 +1,6 @@
 ---
 title: "Bratwurst (fresh)"
 slug: bratwurst-fresh
-tags:
-  - grill
-  - pork
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "3 oz"

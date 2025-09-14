@@ -1,9 +1,6 @@
 ---
 title: "Pork Ribs (country-style)"
 slug: pork-ribs-country-style
-tags:
-  - grill
-  - pork
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "3–4 lb"

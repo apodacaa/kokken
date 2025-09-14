@@ -1,9 +1,6 @@
 ---
 title: "Pork Shoulder / Boston Butt"
 slug: pork-shoulder-boston-butt
-tags:
-  - smoke
-  - pork
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 amount: "6–10 lb"

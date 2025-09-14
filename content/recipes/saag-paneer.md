@@ -1,9 +1,6 @@
 ---
 title: Saag Paneer
 slug: saag-paneer
-tags:
-  - main
-  - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

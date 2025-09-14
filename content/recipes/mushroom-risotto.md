@@ -1,9 +1,6 @@
 ---
 title: Mushroom Risotto
 slug: mushroom-risotto
-tags:
-  - main
-  - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

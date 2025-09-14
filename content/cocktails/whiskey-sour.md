@@ -1,9 +1,6 @@
 ---
 title: Whiskey Sour
 slug: whiskey-sour
-tags:
-  - bourbon
-  - whiskey
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

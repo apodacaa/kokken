@@ -1,9 +1,6 @@
 ---
 title: "Steak (NY strip, porterhouse, rib-eye, T-bone, filet mignon)"
 slug: steak-ny-strip-porterhouse-rib-eye-t-bone-filet-mignon
-tags:
-  - grill
-  - beef
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "3/4 in"

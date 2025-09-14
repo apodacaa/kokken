@@ -1,10 +1,6 @@
 ---
 title: Chicken Biryani
 slug: chicken-biryani
-tags:
-  - main
-  - chicken
-  - rice
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

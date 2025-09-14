@@ -1,9 +1,6 @@
 ---
 title: Chicken Provencal with Olives & Tomatoes
 slug: chicken-provencal-olives-tomatoes
-tags:
-  - main
-  - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

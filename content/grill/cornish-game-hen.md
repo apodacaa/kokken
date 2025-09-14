@@ -1,9 +1,6 @@
 ---
 title: "Cornish Game Hen"
 slug: cornish-game-hen
-tags:
-  - grill
-  - chicken
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "1 1/2–2 lb"

@@ -1,10 +1,6 @@
 ---
 title: Veggie Sushi Rolls
 slug: veggie-sushi-rolls
-tags:
-  - main
-  - vegetarian
-  - snack
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

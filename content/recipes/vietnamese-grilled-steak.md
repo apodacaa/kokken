@@ -1,10 +1,6 @@
 ---
 title: Vietnamese Grilled Steak
 slug: vietnamese-grilled-steak
-tags:
-  - main
-  - beef
-  - grill
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

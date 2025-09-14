@@ -1,10 +1,6 @@
 ---
 title: Mediterranean Mezze Platter
 slug: mediterranean-mezze-platter
-tags:
-  - main
-  - vegetarian
-  - snack
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,10 +1,6 @@
 ---
 title: Sesame-Ginger Noodles with Vegetables
 slug: sesame-ginger-noodles-vegetables
-tags:
-  - main
-  - noodles
-  - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

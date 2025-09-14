@@ -1,9 +1,6 @@
 ---
 title: "Pork Ribs (baby back/spareribs)"
 slug: pork-ribs-baby-back-spareribs
-tags:
-  - grill
-  - pork
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "3–4 lb"

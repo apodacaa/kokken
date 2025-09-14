@@ -1,9 +1,6 @@
 ---
 title: "Chicken Thigh (boneless)"
 slug: chicken-thigh-boneless
-tags:
-  - grill
-  - chicken
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "4 oz"

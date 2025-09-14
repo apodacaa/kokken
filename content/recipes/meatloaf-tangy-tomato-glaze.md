@@ -1,9 +1,6 @@
 ---
 title: Meatloaf with Tangy Tomato Glaze
 slug: meatloaf-tangy-tomato-glaze
-tags:
-  - main
-  - beef
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

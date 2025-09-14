@@ -1,9 +1,6 @@
 ---
 title: Highball (Whiskey & Soda)
 slug: whiskey-highball
-tags:
-  - whiskey
-  - soda water
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

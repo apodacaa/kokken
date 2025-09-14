@@ -16,6 +16,8 @@
 
       var params = new URLSearchParams(window.location.search);
       var initialQuery = (params.get('q') || '').trim();
+      var indexData = null;
+      var loading = false;
 
       function escapeHtml(s) { return (s||'').replace(/[&<>"']/g, function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[c];}); }
       function parseQuery(q) {
@@ -81,7 +83,11 @@
       }
       function renderResults(q, docs) {
         if (!q) {
-          resultsEl.innerHTML = '<p class="text-gray-400">Type in the search box to find recipes and guides.</p>';
+          resultsEl.innerHTML = '<p class="text-gray-400">Type in search box...</p>';
+          return;
+        }
+        if (q.length < 2) {
+          resultsEl.innerHTML = '<p class="text-gray-400">More characters needed... </p>';
           return;
         }
         var parsed = parseQuery(q);
@@ -127,12 +133,23 @@
         }).join('');
       }
 
-      function loadAndRender(q) {
+      function loadIndex(cb) {
+        if (indexData) { cb(); return; }
+        if (loading) { return; }
+        loading = true;
         fetch('/search/index.json').then(function (r) { return r.json(); }).then(function (docs) {
-          renderResults(q, Array.isArray(docs) ? docs : []);
+          indexData = Array.isArray(docs) ? docs : [];
+          loading = false;
+          cb();
         }).catch(function () {
-          resultsEl.innerHTML = '<p class="text-yellow-400">Search is unavailable right now.</p>';
+          loading = false;
+          // Fail softly; don't show a warning on the page.
         });
+      }
+
+      function loadAndRender(q) {
+        if (!q || q.length < 2) { renderResults(q, []); return; }
+        loadIndex(function () { renderResults(q, indexData || []); });
       }
 
       // Bind nav input to update results live on the search page

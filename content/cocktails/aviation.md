@@ -1,10 +1,6 @@
 ---
 title: Aviation
 slug: aviation
-tags:
-  - gin
-  - maraschino
-  - violette
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

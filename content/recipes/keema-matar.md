@@ -1,9 +1,6 @@
 ---
 title: Keema Matar (Spiced Ground Lamb with Peas)
 slug: keema-matar
-tags:
-  - main
-  - lamb
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,9 +1,6 @@
 ---
 title: "Chicken Quarters/Legs/Thighs"
 slug: chicken-quarters-legs-thighs
-tags:
-  - smoke
-  - chicken
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

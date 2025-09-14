@@ -1,9 +1,6 @@
 ---
 title: Chicken Pot Pie with Flaky Crust
 slug: chicken-pot-pie-with-flaky-crust
-tags:
-  - main
-  - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

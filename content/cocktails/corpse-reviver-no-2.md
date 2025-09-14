@@ -1,11 +1,6 @@
 ---
 title: Corpse Reviver No. 2
 slug: corpse_reviver_no_2
-tags:
-  - gin
-  - lillet
-  - orange liqueur
-  - absinthe
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

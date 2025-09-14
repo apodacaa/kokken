@@ -1,9 +1,6 @@
 ---
 title: Indian Butter Shrimp
 slug: indian-butter-shrimp
-tags:
-  - main
-  - shrimp
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

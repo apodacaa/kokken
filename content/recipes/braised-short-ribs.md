@@ -1,9 +1,6 @@
 ---
 title: Braised Short Ribs
 slug: braised-short-ribs
-tags:
-  - main
-  - beef
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,10 +1,6 @@
 ---
 title: Malaysian Laksa Noodle Soup
 slug: malaysian-laksa-noodle-soup
-tags:
-  - soup
-  - noodles
-  - seafood
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

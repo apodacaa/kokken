@@ -1,9 +1,6 @@
 ---
 title: "Duck (whole)"
 slug: duck-whole
-tags:
-  - smoke
-  - duck
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 amount: "4–6 lb"

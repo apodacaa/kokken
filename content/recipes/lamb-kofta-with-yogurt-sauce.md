@@ -1,9 +1,6 @@
 ---
 title: Lamb Kofta with Yogurt Sauce
 slug: lamb-kofta-with-yogurt-sauce
-tags:
-  - main
-  - lamb
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

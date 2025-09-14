@@ -1,11 +1,6 @@
 ---
 title: Lentil Dal with Ginger & Garlic
 slug: lentil-dal-ginger-garlic
-tags:
-  - main
-  - vegetarian
-  - vegan
-  - soup
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

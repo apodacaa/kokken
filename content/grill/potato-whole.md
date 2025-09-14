@@ -1,9 +1,6 @@
 ---
 title: "Potato (whole)"
 slug: potato-whole
-tags:
-  - grill
-  - potato
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 gas: "45–60 min indirect medium heat"

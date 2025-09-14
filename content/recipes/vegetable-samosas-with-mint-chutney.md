@@ -1,10 +1,6 @@
 ---
 title: Vegetable Samosas with Mint Chutney
 slug: vegetable-samosas-with-mint-chutney
-tags:
-  - main
-  - vegetarian
-  - snack
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,9 +1,6 @@
 ---
 title: "Trout (whole)"
 slug: trout-whole
-tags:
-  - smoke
-  - fish
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 amount: "1–2 lb"

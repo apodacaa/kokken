@@ -1,9 +1,6 @@
 ---
 title: Mint Julep
 slug: mint-julep
-tags:
-  - whiskey
-  - mint
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

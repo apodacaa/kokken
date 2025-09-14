@@ -1,9 +1,6 @@
 ---
 title: "Ham (Fresh)"
 slug: ham-fresh
-tags:
-  - smoke
-  - pork
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 amount: "10–18 lb"

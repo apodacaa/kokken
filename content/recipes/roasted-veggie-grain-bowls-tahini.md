@@ -1,10 +1,6 @@
 ---
 title: Roasted Veggie Grain Bowls with Tahini Dressing
 slug: roasted-veggie-grain-bowls-tahini
-tags:
-  - main
-  - vegetarian
-  - bowls
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

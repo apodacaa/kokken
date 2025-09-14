@@ -1,8 +1,6 @@
 ---
 title: Italian Salad
 slug: italian-salad
-tags:
-  - salad
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

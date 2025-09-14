@@ -1,10 +1,6 @@
 ---
 title: Clover Club
 slug: clover-club
-tags:
-  - gin
-  - raspberry
-  - egg white
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

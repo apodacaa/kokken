@@ -1,9 +1,6 @@
 ---
 title: Brick Chicken with Garlic & Rosemary
 slug: brick-chicken-garlic-rosemary
-tags:
-  - main
-  - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

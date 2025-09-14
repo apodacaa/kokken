@@ -1,11 +1,6 @@
 ---
 title: Pad Thai
 slug: pad-thai
-tags:
-  - main
-  - noodles
-  - shrimp
-  - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

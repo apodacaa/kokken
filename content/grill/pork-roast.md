@@ -1,9 +1,6 @@
 ---
 title: "Pork Roast"
 slug: pork-roast
-tags:
-  - grill
-  - pork
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "4–8 lb"

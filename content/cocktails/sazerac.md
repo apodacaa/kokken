@@ -1,10 +1,6 @@
 ---
 title: Sazerac
 slug: sazerac
-tags:
-  - whiskey
-  - absinthe
-  - bitters
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

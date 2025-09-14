@@ -1,12 +1,6 @@
 ---
 title: Vieux Carré
 slug: vieux-carre
-tags:
-  - whiskey
-  - cognac
-  - vermouth
-  - benedictine
-  - bitters
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

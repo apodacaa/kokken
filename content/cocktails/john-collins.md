@@ -1,8 +1,6 @@
 ---
 title: John Collins
 slug: john-collins
-tags:
-  - whiskey
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

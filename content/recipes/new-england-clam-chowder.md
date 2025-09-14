@@ -1,9 +1,6 @@
 ---
 title: New England Clam Chowder
 slug: new-england-clam-chowder
-tags:
-  - soup
-  - seafood
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

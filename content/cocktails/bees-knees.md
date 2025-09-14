@@ -1,9 +1,6 @@
 ---
 title: Bee’s Knees
 slug: bees-knees
-tags:
-  - gin
-  - honey
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

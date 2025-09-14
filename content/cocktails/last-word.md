@@ -1,10 +1,6 @@
 ---
 title: Last Word
 slug: last-word
-tags:
-  - gin
-  - chartreuse
-  - maraschino
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

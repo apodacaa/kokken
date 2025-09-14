@@ -1,10 +1,6 @@
 ---
 title: Classic Beef Chili
 slug: classic-beef-chili
-tags:
-  - main
-  - beef
-  - chili
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

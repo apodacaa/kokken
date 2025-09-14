@@ -1,10 +1,6 @@
 ---
 title: Negroni
 slug: negroni
-tags:
-  - gin
-  - campari
-  - vermouth
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

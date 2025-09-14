@@ -1,9 +1,6 @@
 ---
 title: Tacos al Pastor
 slug: tacos-al-pastor
-tags:
-  - pork
-  - main
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

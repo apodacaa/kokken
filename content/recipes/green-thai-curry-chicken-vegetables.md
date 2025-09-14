@@ -1,10 +1,6 @@
 ---
 title: Green Thai Curry with Chicken & Vegetables
 slug: green-thai-curry-chicken-vegetables
-tags:
-  - main
-  - chicken
-  - curry
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

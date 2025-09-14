@@ -1,9 +1,6 @@
 ---
 title: "Fish, Fillet/Steak"
 slug: fish-fillet-steak-2
-tags:
-  - grill
-  - fish
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "1/4–1/2 in"

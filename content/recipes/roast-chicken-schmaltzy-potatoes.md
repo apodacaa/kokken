@@ -1,9 +1,6 @@
 ---
 title: Roast Chicken with Schmaltzy Potatoes
 slug: roast-chicken-schmaltzy-potatoes
-tags:
-  - main
-  - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

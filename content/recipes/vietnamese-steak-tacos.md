@@ -1,9 +1,6 @@
 ---
 title: Vietnamese Steak Tacos
 slug: vietnamese-steak-tacos
-tags:
-  - main
-  - beef
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

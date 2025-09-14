@@ -1,9 +1,6 @@
 ---
 title: "Catfish, Halibut, Snapper"
 slug: catfish-halibut-snapper
-tags:
-  - smoke
-  - fish
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

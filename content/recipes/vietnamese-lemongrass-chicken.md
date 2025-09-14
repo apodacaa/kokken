@@ -1,9 +1,6 @@
 ---
 title: Vietnamese Lemongrass Chicken
 slug: vietnamese-lemongrass-chicken
-tags:
-  - main
-  - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,10 +1,6 @@
 ---
 title: Paper Plane
 slug: paper-plane
-tags:
-  - whiskey
-  - aperol
-  - amaro
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

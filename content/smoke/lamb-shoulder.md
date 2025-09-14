@@ -1,9 +1,6 @@
 ---
 title: "Lamb Shoulder"
 slug: lamb-shoulder
-tags:
-  - smoke
-  - lamb
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

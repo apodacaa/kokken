@@ -1,9 +1,6 @@
 ---
 title: "Beef Back Ribs"
 slug: beef-back-ribs
-tags:
-  - smoke
-  - beef
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

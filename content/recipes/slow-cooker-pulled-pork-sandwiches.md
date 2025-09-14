@@ -1,10 +1,6 @@
 ---
 title: Slow Cooker Pulled Pork Sandwiches
 slug: slow-cooker-pulled-pork-sandwiches
-tags:
-  - main
-  - pork
-  - slow cooker
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,9 +1,6 @@
 ---
 title: Chicken Tikka Masala
 slug: chicken-tikka-masala
-tags:
-  - main
-  - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

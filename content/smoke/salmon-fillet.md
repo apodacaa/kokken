@@ -1,9 +1,6 @@
 ---
 title: "Salmon (fillet)"
 slug: salmon-fillet
-tags:
-  - smoke
-  - fish
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 amount: "2–3 lb"

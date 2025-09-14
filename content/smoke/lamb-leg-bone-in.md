@@ -1,9 +1,6 @@
 ---
 title: "Lamb Leg (bone-in)"
 slug: lamb-leg-bone-in
-tags:
-  - smoke
-  - lamb
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 amount: "6–8 lb"

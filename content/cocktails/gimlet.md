@@ -1,8 +1,6 @@
 ---
 title: Gimlet
 slug: gimlet
-tags:
-  - gin
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

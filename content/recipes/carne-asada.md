@@ -1,9 +1,6 @@
 ---
 title: Carne Asada
 slug: carne-asada
-tags:
-  - beef
-  - main
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

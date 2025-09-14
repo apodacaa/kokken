@@ -1,9 +1,6 @@
 ---
 title: "Chicken (whole)"
 slug: chicken-whole
-tags:
-  - smoke
-  - chicken
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 amount: "3–5 lb"

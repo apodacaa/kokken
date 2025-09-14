@@ -1,9 +1,6 @@
 ---
 title: Lamb Shepherd’s Pie
 slug: lamb-shepherds-pie
-tags:
-  - main
-  - lamb
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

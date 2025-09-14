@@ -1,9 +1,6 @@
 ---
 title: Martini (Dry)
 slug: martini-dry
-tags:
-  - gin
-  - vermouth
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

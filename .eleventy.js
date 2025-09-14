@@ -9,7 +9,9 @@ module.exports = function (eleventyConfig) {
     collectionApi.getAll().forEach(item => {
       let tags = item.data.tags;
 
-      if (Array.isArray(tags)) {
+      // Only include tags from recipes and cocktails
+      const layout = item.data && item.data.layout;
+      if ((layout === 'layouts/recipe.njk' || layout === 'layouts/cocktail.njk') && Array.isArray(tags)) {
         tags
           .filter(tag => tag !== "all" && tag !== "recipes")
           .forEach(tag => tagSet.add(tag));
@@ -17,6 +19,40 @@ module.exports = function (eleventyConfig) {
     });
 
     return [...tagSet].sort();
+  });
+
+  // ✅ Build a map of tag -> items using computed tags
+  eleventyConfig.addCollection("tagsMap", function (collectionApi) {
+    /** @type {Record<string, any[]>} */
+    const map = {};
+    collectionApi.getAll().forEach(item => {
+      const layout = item.data && item.data.layout;
+      if (!(layout === 'layouts/recipe.njk' || layout === 'layouts/cocktail.njk')) return;
+      const tags = item.data && Array.isArray(item.data.tags) ? item.data.tags : [];
+      tags
+        .filter(tag => tag !== "all" && tag !== "recipes")
+        .forEach(tag => {
+          if (!map[tag]) map[tag] = [];
+          map[tag].push(item);
+        });
+    });
+    return map;
+  });
+
+  // ✅ Tag counts (sorted by count desc, then alpha)
+  eleventyConfig.addCollection("tagsWithCounts", function (collectionApi) {
+    const map = {};
+    collectionApi.getAll().forEach(item => {
+      const layout = item.data && item.data.layout;
+      if (!(layout === 'layouts/recipe.njk' || layout === 'layouts/cocktail.njk')) return;
+      const tags = item.data && Array.isArray(item.data.tags) ? item.data.tags : [];
+      tags
+        .filter(tag => tag !== "all" && tag !== "recipes")
+        .forEach(tag => { map[tag] = (map[tag] || 0) + 1; });
+    });
+    return Object.entries(map)
+      .map(([tag, count]) => ({ tag, count }))
+      .sort((a, b) => (b.count - a.count) || a.tag.localeCompare(b.tag));
   });
 
   // ✅ Recipes collection (sorted alphabetically by title)

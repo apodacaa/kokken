@@ -1,9 +1,6 @@
 ---
 title: "Fish, Whole"
 slug: fish-whole-2
-tags:
-  - grill
-  - fish
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "3 lb"

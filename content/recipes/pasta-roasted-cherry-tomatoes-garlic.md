@@ -1,10 +1,6 @@
 ---
 title: Pasta with Roasted Cherry Tomatoes & Garlic
 slug: pasta-roasted-cherry-tomatoes-garlic
-tags:
-  - main
-  - pasta
-  - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

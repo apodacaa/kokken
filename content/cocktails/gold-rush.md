@@ -1,9 +1,6 @@
 ---
 title: Gold Rush
 slug: gold-rush
-tags:
-  - whiskey
-  - honey
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

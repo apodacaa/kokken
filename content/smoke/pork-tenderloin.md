@@ -1,9 +1,6 @@
 ---
 title: "Pork Tenderloin"
 slug: pork-tenderloin
-tags:
-  - smoke
-  - pork
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

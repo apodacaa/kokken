@@ -1,9 +1,6 @@
 ---
 title: Roasted Salmon with Herb Yogurt Sauce
 slug: roasted-salmon-with-herb-yogurt-sauce
-tags:
-  - main
-  - fish
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

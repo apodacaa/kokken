@@ -1,11 +1,6 @@
 ---
 title: Martinez
 slug: martinez
-tags:
-  - gin
-  - vermouth
-  - maraschino
-  - bitters
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

@@ -1,9 +1,6 @@
 ---
 title: "Shrimp"
 slug: shrimp
-tags:
-  - grill
-  - shrimp
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "1 1/2 oz"

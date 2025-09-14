@@ -1,10 +1,6 @@
 ---
 title: Rob Roy
 slug: rob-roy
-tags:
-  - whiskey
-  - vermouth
-  - bitters
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

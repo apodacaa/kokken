@@ -1,9 +1,6 @@
 ---
 title: "Beef Brisket (whole packer)"
 slug: beef-brisket-whole-packer
-tags:
-  - smoke
-  - beef
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 amount: "10–14 lb (4.5–6.4 kg)"

@@ -1,9 +1,6 @@
 ---
 title: Creamy Potato Soup with Leeks
 slug: creamy-potato-soup-with-leeks
-tags:
-  - soup
-  - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

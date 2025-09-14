@@ -1,9 +1,6 @@
 ---
 title: "Pork Loin Roast"
 slug: pork-loin-roast
-tags:
-  - smoke
-  - pork
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

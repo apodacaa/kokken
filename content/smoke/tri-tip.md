@@ -1,9 +1,6 @@
 ---
 title: "Tri-Tip"
 slug: tri-tip
-tags:
-  - smoke
-  - beef
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

@@ -1,10 +1,6 @@
 ---
 title: "Red Hot Chicken Wings"
 slug: "red-hot-chicken-wings"
-tags:
-  - appetizer
-  - chicken
-  - smoke
 layout: "layouts/recipe.njk"
 permalink: "/recipes/{{ slug }}/"
 pairings:

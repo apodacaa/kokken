@@ -1,11 +1,6 @@
 ---
 title: Red Thai Curry with Shrimp
 slug: red-thai-curry-shrimp
-tags:
-  - main
-  - seafood
-  - shrimp
-  - curry
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,9 +1,6 @@
 ---
 title: "Pork Ribs (Baby Back)"
 slug: pork-ribs-baby-back
-tags:
-  - smoke
-  - pork
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

@@ -1,9 +1,6 @@
 ---
 title: "Prime Rib Roast"
 slug: prime-rib-roast
-tags:
-  - smoke
-  - beef
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

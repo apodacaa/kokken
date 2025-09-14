@@ -1,9 +1,6 @@
 ---
 title: Thai Coconut Soup (Tom Kha Gai)
 slug: thai-coconut-soup-tom-kha-gai
-tags:
-  - soup
-  - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

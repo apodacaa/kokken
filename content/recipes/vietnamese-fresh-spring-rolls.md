@@ -1,11 +1,6 @@
 ---
 title: Vietnamese Fresh Spring Rolls
 slug: vietnamese-fresh-spring-rolls
-tags:
-  - main
-  - snack
-  - seafood
-  - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

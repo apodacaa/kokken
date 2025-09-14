@@ -1,9 +1,6 @@
 ---
 title: Bolognese
 slug: bolognese
-tags:
-  - main
-  - beef
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,9 +1,6 @@
 ---
 title: "Chicken Breast (boneless)"
 slug: chicken-breast-boneless
-tags:
-  - grill
-  - chicken
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "6–8 oz"

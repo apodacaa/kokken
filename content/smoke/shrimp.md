@@ -1,9 +1,6 @@
 ---
 title: "Shrimp"
 slug: shrimp
-tags:
-  - smoke
-  - shrimp
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

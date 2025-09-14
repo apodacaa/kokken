@@ -1,10 +1,6 @@
 ---
 title: Spicy Thai Ground Pork with Basil
 slug: spicy-thai-ground-pork-basil
-tags:
-  - main
-  - pork
-  - spicy
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

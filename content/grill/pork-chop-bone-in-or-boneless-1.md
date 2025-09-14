@@ -1,9 +1,6 @@
 ---
 title: "Pork Chop (bone-in or boneless)"
 slug: pork-chop-bone-in-or-boneless-1
-tags:
-  - grill
-  - pork
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "1 1/4–1 1/2 in"

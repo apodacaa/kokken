@@ -1,9 +1,6 @@
 ---
 title: "Beef Tenderloin"
 slug: beef-tenderloin-2
-tags:
-  - grill
-  - beef
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "3–4 lb"

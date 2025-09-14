@@ -1,12 +1,6 @@
 ---
 title: Irish Coffee
 slug: irish-coffee
-tags:
-  - whiskey
-  - coffee
-  - cream
-  - brown sugar
-  - irish whiskey
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

@@ -1,9 +1,6 @@
 ---
 title: Butter Chicken (Murgh Makhani)
 slug: butter-chicken
-tags:
-  - main
-  - chicken
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

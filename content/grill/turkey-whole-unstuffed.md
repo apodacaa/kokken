@@ -1,9 +1,6 @@
 ---
 title: "Turkey (whole, unstuffed)"
 slug: turkey-whole-unstuffed
-tags:
-  - grill
-  - turkey
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "10–12 lb"

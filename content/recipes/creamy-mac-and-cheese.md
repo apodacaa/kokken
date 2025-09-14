@@ -1,10 +1,6 @@
 ---
 title: Creamy Mac & Cheese
 slug: creamy-mac-and-cheese
-tags:
-  - main
-  - pasta
-  - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

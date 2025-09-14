@@ -1,9 +1,6 @@
 ---
 title: "Beef Short Ribs"
 slug: beef-short-ribs
-tags:
-  - smoke
-  - beef
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

@@ -1,10 +1,6 @@
 ---
 title: Manhattan
 slug: manhattan
-tags:
-  - whiskey
-  - vermouth
-  - bitters
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

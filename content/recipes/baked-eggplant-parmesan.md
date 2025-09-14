@@ -1,9 +1,6 @@
 ---
 title: Baked Eggplant Parmesan
 slug: baked-eggplant-parmesan
-tags:
-  - main
-  - vegetarian
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

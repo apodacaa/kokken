@@ -1,9 +1,6 @@
 ---
 title: "Turkey (whole)"
 slug: turkey-whole
-tags:
-  - smoke
-  - turkey
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 amount: "12–14 lb"

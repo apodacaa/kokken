@@ -1,10 +1,6 @@
 ---
 title: Shakshuka (Eggs in Spiced Tomato Sauce)
 slug: shakshuka
-tags:
-  - main
-  - vegetarian
-  - eggs
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,8 +1,6 @@
 ---
 title: Prik Nam Pla
 slug: prik-nam-pla
-tags:
-  - sauce
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,9 +1,6 @@
 ---
 title: "Mushrooms (portobello)"
 slug: mushrooms-portobello
-tags:
-  - grill
-  - mushrooms
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 gas: "10–15 min direct medium heat"

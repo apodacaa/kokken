@@ -1,10 +1,6 @@
 ---
 title: "Monster Pork Chops"
 slug: "monster-pork-chops"
-tags:
-  - main
-  - pork
-  - smoke
 layout: "layouts/recipe.njk"
 permalink: "/recipes/{{ slug }}/"
 pairings:

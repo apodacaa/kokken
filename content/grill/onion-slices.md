@@ -1,9 +1,6 @@
 ---
 title: "Onion (slices)"
 slug: onion-slices
-tags:
-  - grill
-  - onion
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "1/2 in"

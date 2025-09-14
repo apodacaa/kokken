@@ -1,9 +1,6 @@
 ---
 title: "Beef, Ground Patty"
 slug: beef-ground-patty
-tags:
-  - grill
-  - beef
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "3/4 in"

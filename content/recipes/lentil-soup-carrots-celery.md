@@ -1,10 +1,6 @@
 ---
 title: Lentil Soup with Carrots & Celery
 slug: lentil-soup-carrots-celery
-tags:
-  - soup
-  - vegetarian
-  - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

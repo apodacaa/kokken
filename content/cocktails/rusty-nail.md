@@ -1,9 +1,6 @@
 ---
 title: Rusty Nail
 slug: rusty-nail
-tags:
-  - whiskey
-  - drambuie
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

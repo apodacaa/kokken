@@ -1,10 +1,6 @@
 ---
 title: Black Bean Tacos with Avocado Crema
 slug: black-bean-tacos-avocado-crema
-tags:
-  - main
-  - vegetarian
-  - tacos
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

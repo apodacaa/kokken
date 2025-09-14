@@ -1,9 +1,6 @@
 ---
 title: "Steak"
 slug: steak-1
-tags:
-  - grill
-  - beef
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "1 in"

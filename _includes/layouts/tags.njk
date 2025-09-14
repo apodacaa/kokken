@@ -6,70 +6,45 @@
 
 <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-4">Tag: {{ tag }}</h1>
 
+{% set itemsForTag = collections.tagsMap[tag] or [] %}
+{% set recipesCount = 0 %}
+{% set cocktailsCount = 0 %}
+{% for item in itemsForTag %}
+  {% if item.data.layout == 'layouts/recipe.njk' %}{% set recipesCount = recipesCount + 1 %}{% endif %}
+  {% if item.data.layout == 'layouts/cocktail.njk' %}{% set cocktailsCount = cocktailsCount + 1 %}{% endif %}
+{% endfor %}
+
 {# Recipes #}
-{% set found = false %}
-<ul class="list-disc pl-5 space-y-1 mb-6">
-  {% for item in collections[tag] | byTitle %}
-    {% if item.data.layout == "layouts/recipe.njk" %}
-      {% if not found %}
-        {% set found = true %}
-        <h2 class="text-lg font-semibold text-white mb-2">Recipes</h2>
-      {% endif %}
+{% if recipesCount %}
+  <h2 class="text-lg font-semibold text-white mb-2">Recipes</h2>
+  <ul class="list-disc pl-5 space-y-1 mb-6">
+    {% for item in itemsForTag | byTitle %}
+      {% if item.data.layout == 'layouts/recipe.njk' %}
       <li>
         <a href="{{ item.url }}" class="text-white hover:underline">{{ item.data.title }}</a>
       </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}
 
 {# Cocktails #}
-{% set found = false %}
-<ul class="list-disc pl-5 space-y-1 mb-6">
-  {% for item in collections[tag] | byTitle %}
-    {% if item.data.layout == "layouts/cocktail.njk" %}
-      {% if not found %}
-        {% set found = true %}
-        <h2 class="text-lg font-semibold text-white mb-2">Cocktails</h2>
-      {% endif %}
+{% if cocktailsCount %}
+  <h2 class="text-lg font-semibold text-white mb-2">Cocktails</h2>
+  <ul class="list-disc pl-5 space-y-1 mb-6">
+    {% for item in itemsForTag | byTitle %}
+      {% if item.data.layout == 'layouts/cocktail.njk' %}
       <li>
         <a href="{{ item.url }}" class="text-white hover:underline">{{ item.data.title }}</a>
       </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}
 
-{# Smoke Guides #}
-{% set found = false %}
-<ul class="list-disc pl-5 space-y-1 mb-6">
-  {% for item in collections[tag] | byTitle %}
-    {% if item.data.layout == "layouts/smoke.njk" %}
-      {% if not found %}
-        {% set found = true %}
-        <h2 class="text-lg font-semibold text-white mb-2">Smoke Guides</h2>
-      {% endif %}
-      <li>
-        <a href="{{ item.url }}" class="text-white hover:underline">{{ item.data.title }}</a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
-
-{# Grill Guides #}
-{% set found = false %}
-<ul class="list-disc pl-5 space-y-1 mb-6">
-  {% for item in collections[tag] | byTitle %}
-    {% if item.data.layout == "layouts/grill.njk" %}
-      {% if not found %}
-        {% set found = true %}
-        <h2 class="text-lg font-semibold text-white mb-2">Grill Guides</h2>
-      {% endif %}
-      <li>
-        <a href="{{ item.url }}" class="text-white hover:underline">{{ item.data.title }}</a>
-      </li>
-    {% endif %}
-  {% endfor %}
-  
-</ul>
+{% if (recipesCount + cocktailsCount) == 0 %}
+  <p class="text-gray-400">No items found for this tag.</p>
+{% endif %}
 
 <p><a href="/tags/" class="text-ladybug hover:underline">← Back to all tags</a></p>
 

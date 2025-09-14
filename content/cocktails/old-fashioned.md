@@ -1,10 +1,6 @@
 ---
 title: Old Fashioned
 slug: old-fashioned
-tags:
-  - whiskey
-  - bitters
-  - sugar
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

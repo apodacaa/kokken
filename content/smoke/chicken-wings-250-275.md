@@ -1,9 +1,6 @@
 ---
 title: "Chicken Wings"
 slug: chicken-wings-250-275
-tags:
-  - smoke
-  - chicken
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

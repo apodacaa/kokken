@@ -1,9 +1,6 @@
 ---
 title: "Lobster Tails"
 slug: lobster-tails
-tags:
-  - smoke
-  - lobster
 layout: "layouts/smoke.njk"
 permalink: "/smoke/{{ slug }}/"
 phases:

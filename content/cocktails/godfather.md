@@ -1,9 +1,6 @@
 ---
 title: Godfather
 slug: godfather
-tags:
-  - whiskey
-  - amaretto
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:

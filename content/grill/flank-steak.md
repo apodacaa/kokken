@@ -1,9 +1,6 @@
 ---
 title: "Flank Steak"
 slug: flank-steak
-tags:
-  - grill
-  - beef
 layout: "layouts/grill.njk"
 permalink: "/grill/{{ slug }}/"
 amount: "1 1/2–2 lb; 3/4 in"

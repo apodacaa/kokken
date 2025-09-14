@@ -1,10 +1,6 @@
 ---
 title: Chana Masala
 slug: chana-masala
-tags:
-  - main
-  - vegetarian
-  - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

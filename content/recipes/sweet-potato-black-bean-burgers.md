@@ -1,10 +1,6 @@
 ---
 title: Sweet Potato & Black Bean Burgers
 slug: sweet-potato-black-bean-burgers
-tags:
-  - main
-  - vegetarian
-  - burgers
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

@@ -1,10 +1,6 @@
 ---
 title: Beef Stew with Red Wine & Carrots
 slug: beef-stew-red-wine-carrots
-tags:
-  - main
-  - beef
-  - stew
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

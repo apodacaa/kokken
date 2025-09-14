@@ -1,10 +1,6 @@
 ---
 title: Chickpea & Spinach Stew
 slug: chickpea-spinach-stew
-tags:
-  - main
-  - vegetarian
-  - vegan
 layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:

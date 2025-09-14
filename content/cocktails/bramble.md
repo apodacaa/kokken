@@ -1,9 +1,6 @@
 ---
 title: Bramble
 slug: bramble
-tags:
-  - gin
-  - blackberry
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
