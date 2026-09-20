@@ -93,11 +93,25 @@ Cloudflare's Node does not satisfy, and the deploy of f42f0f9 failed while the s
 locally on Node 26. The pin is `npm-run-all2@^7.0.2` (`^18.17.0 || >=20.5.0`) to stay well inside
 whatever Cloudflare provides.
 
-**Local Node is much newer than Cloudflare's, and nothing pins either.** There is no
-`.node-version` in the repo, so Cloudflare picks its own default while mise gives you Node 26
-locally. A clean local build therefore does **not** prove a deploy will succeed — check the
-commit's check run, above. Before adding a dependency, check its `engines` against Node 20, not
-against what you are running.
+**`.node-version` pins Cloudflare's Node to 22.22.3 — do not delete it.** Without it Cloudflare
+defaults to Node 18, which is EOL and too old for the current toolchain. This file is read by
+Cloudflare only: mise has `idiomatic_version_file_enable_tools = []`, so it is ignored locally and
+your shell stays on whatever mise gives you (Node 26 as of writing).
+
+**A clean local build does not prove a deploy will succeed.** Local Node is far newer than the
+build environment, so engine mismatches are invisible here. Two deploys (f42f0f9, a8f83a2) failed
+this way while building perfectly on Node 26. Before adding or upgrading a dependency, check its
+`engines` against the pinned version above, and confirm the deploy with the commit's check run.
+
+The failure mode is nastier than a normal version error, because native optional dependencies do
+not error — npm **skips** them with only an `EBADENGINE` *warning*, and the crash arrives later as
+a confusing `Cannot find module '@tailwindcss/oxide-linux-x64-gnu'`. Tailwind's `oxide` binary
+raised its floor to `node >= 20` in 4.2.0; `@tailwindcss/oxide@4.0.17` had accepted `>= 10`, which
+is why older deploys passed on Node 18. To reproduce a suspected build-env failure locally:
+
+```
+mise exec node@18.20.8 -- npm ci && mise exec node@18.20.8 -- npm run build
+```
 
 ## Content model
 
