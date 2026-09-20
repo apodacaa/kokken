@@ -81,10 +81,23 @@ regression — the live site never served it.
 
 **`build:tailwind` must run before `build:eleventy`.** `.eleventy.js` passthrough-copies the whole
 `assets` directory, so the stylesheet has to exist on disk before Eleventy runs or `_site` ships
-without CSS. The build script names the two steps in order for this reason — do not collapse it
+without CSS. The build script chains the two steps with `&&` for this reason — do not collapse it
 back to `npm-run-all build:*`, which runs them alphabetically (eleventy first) and silently
 produces an unstyled site. This became load-bearing when `assets/styles.css` was untracked: a
 fresh clone no longer has a stale copy lying around to mask the ordering bug.
+
+**Keep `npm-run-all` out of the `build` script.** It is only used by `dev`, for parallel watchers.
+Cloudflare runs `build`, so leaving it out means a deploy cannot break on that dependency. It has
+already broken one: `npm-run-all2@9` requires Node `^22.22.2 || ^24.15.0 || >=26.0.0`, which
+Cloudflare's Node does not satisfy, and the deploy of f42f0f9 failed while the same build passed
+locally on Node 26. The pin is `npm-run-all2@^7.0.2` (`^18.17.0 || >=20.5.0`) to stay well inside
+whatever Cloudflare provides.
+
+**Local Node is much newer than Cloudflare's, and nothing pins either.** There is no
+`.node-version` in the repo, so Cloudflare picks its own default while mise gives you Node 26
+locally. A clean local build therefore does **not** prove a deploy will succeed — check the
+commit's check run, above. Before adding a dependency, check its `engines` against Node 20, not
+against what you are running.
 
 ## Content model
 
