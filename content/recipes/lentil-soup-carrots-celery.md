@@ -19,7 +19,7 @@ ingredients:
       - 2 celery stalks, diced
       - 2 cloves garlic, minced
       - 1 1/4 cups (250 g) brown or green lentils, rinsed
-      - 1.2 L (5 cups) vegetable stock
+      - 5 cups (1.2 L) vegetable stock
       - 1 tsp (5 ml) cumin
       - Salt, pepper, lemon
 steps:

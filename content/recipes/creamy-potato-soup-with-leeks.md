@@ -17,7 +17,7 @@ ingredients:
       - 2 leeks, sliced
       - 1 onion, chopped
       - 2 lb (900 g) potatoes, diced
-      - 1 L (4 cups) stock
+      - 4 cups (1 L) stock
       - 1 cup (250 ml) cream or milk
 steps:
   - Sauté leeks and onion in butter until soft.

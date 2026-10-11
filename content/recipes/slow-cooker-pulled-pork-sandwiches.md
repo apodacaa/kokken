@@ -13,7 +13,7 @@ pairings:
 ingredients:
   - section: _main_
     items:
-      - 1.8–2.3 kg (4–5 lb) pork shoulder
+      - 4–5 lb (1.8–2.3 kg) pork shoulder
       - 1 onion, sliced
       - 2 tsp (10 ml) paprika
       - 1 tsp (5 ml) cumin

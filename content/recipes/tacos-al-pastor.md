@@ -26,7 +26,7 @@ ingredients:
     items:
       - 1 pineapple
       - 1 onion
-      - 1/2 chopped Cilantro
+      - 1/2 cup (15 g) chopped cilantro
       - Lime wedges
 steps:
   - Toast chiles until fragrant in Dutch oven.

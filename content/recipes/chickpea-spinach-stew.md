@@ -17,7 +17,7 @@ ingredients:
       - 1 onion, chopped
       - 2 cloves garlic, minced
       - 14 oz (400 g) canned tomatoes
-      - 2 cans (800 g / 28 oz) chickpeas, drained
+      - 2 cans (28 oz / 800 g) chickpeas, drained
       - 5 oz (150 g) spinach
       - 1 tsp (5 ml) smoked paprika
       - Salt, pepper, lemon

@@ -11,5 +11,5 @@ phases:
     doneness: "150–160°F (66–71°C)"
   - name: "Sear"
     temperature: "direct high heat"
-    duration: "4-6 minutes"
+    duration: "4–6 minutes"
 ---

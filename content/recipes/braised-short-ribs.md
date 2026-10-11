@@ -13,7 +13,7 @@ pairings:
 ingredients:
   - section: _main_
     items:
-      - 1.5 kg (3 lb) beef short ribs
+      - 3 lb (1.5 kg) beef short ribs
       - 2 tbsp (30 ml) oil
       - 2 onions, chopped
       - 2 carrots, chopped

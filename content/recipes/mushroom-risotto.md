@@ -16,7 +16,7 @@ ingredients:
       - 1 1/2 cups (300 g) arborio rice
       - 7 oz (200 g) mushrooms, sliced
       - 1 onion, chopped
-      - 1 L (4 cups) stock, warmed
+      - 4 cups (1 L) stock, warmed
       - 1/2 cup (100 ml) white wine
       - 1/2 cup (50 g) Parmesan, grated
 steps:

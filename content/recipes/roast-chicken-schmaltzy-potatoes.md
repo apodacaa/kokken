@@ -13,8 +13,8 @@ pairings:
 ingredients:
   - section: _main_
     items:
-      - 1 whole chicken (1.5 kg / 3–3 1/2 lb)
-      - 1 kg (2 lb) potatoes, chunks
+      - 1 whole chicken (3–3 1/2 lb / 1.5 kg)
+      - 2 lb (1 kg) potatoes, chunks
       - 3 tbsp (45 ml) olive oil or schmaltz
       - 4 cloves garlic, smashed
       - 2 sprigs rosemary

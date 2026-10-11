@@ -37,9 +37,9 @@ ingredients:
       - Chopped fresh cilantro, for serving
 steps:
   - Combine yogurt, cumin, paprika, garam masala, lime juice, salt, ginger, and garlic. Stir in shrimp. Cover and refrigerate 15 to 60 minutes.
-  - Melt 2 tbsp (30 ml) butter in a large pot over medium heat. Add shallots and a pinch of salt; cook until golden, 5-7 minutes. Add garlic, ginger, red pepper flakes, and 1/4 tsp (1.25 ml) salt; cook 1-2 minutes.
-  - Stir in tomatoes with their juices. Simmer uncovered over medium-low, stirring occasionally, until thickened, 20-25 minutes.
-  - Add cream and simmer 5-7 minutes more until sauce is silky. Season with salt.
-  - Add marinated shrimp with marinade, remaining 2 tbsp (30 ml) butter, and lime zest. Cook over medium heat until shrimp are pink, 3-5 minutes.
+  - Melt 2 tbsp (30 ml) butter in a large pot over medium heat. Add shallots and a pinch of salt; cook until golden, 5–7 minutes. Add garlic, ginger, red pepper flakes, and 1/4 tsp (1.25 ml) salt; cook 1–2 minutes.
+  - Stir in tomatoes with their juices. Simmer uncovered over medium-low, stirring occasionally, until thickened, 20–25 minutes.
+  - Add cream and simmer 5–7 minutes more until sauce is silky. Season with salt.
+  - Add marinated shrimp with marinade, remaining 2 tbsp (30 ml) butter, and lime zest. Cook over medium heat until shrimp are pink, 3–5 minutes.
   - Serve over basmati rice and top with cilantro.
 ---
