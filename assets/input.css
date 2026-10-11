@@ -1,20 +1,17 @@
 @import "tailwindcss";
 
-/* ARCADE MODE — neon on black, CRT scanlines, pixel fonts.
-   The palette lives in @theme so existing utility classes (text-ladybug,
-   hover:text-ladybug, text-gray-400, border-gray-700…) re-color for free.
-   Everything below @theme is plain unlayered CSS, which beats Tailwind's
-   layered utilities without needing !important. */
+/* Two themes. "Classic" is the default and lives in @theme + the body rule.
+   "Arcade" (neon on black, CRT scanlines, pixel fonts) is everything under
+   html[data-theme="arcade"]; the toggle in the nav sets that attribute.
+   Arcade overrides the palette variables, so existing utility classes
+   (text-ladybug, text-gray-400, border-gray-700…) re-color for free, and its
+   rules are unlayered, which beats Tailwind's layered utilities. */
 @theme {
-  --color-background: #05010f;
-  --color-ladybug: #ff2bd6;   /* hot magenta: the old accent, now neon */
-  --color-paper: #0b0220;
-  --color-border: #00f0ff;
-  --color-text: #e8fbff;
-  --color-gray-300: #b8f8ff;
-  --color-gray-400: #6fd6e6;
-  --color-gray-500: #4aa6b5;
-  --color-gray-700: #0a8a99;
+  --color-background: #121212;
+  --color-ladybug: #ff1a1a;
+  --color-paper: #1a1a1a;
+  --color-border: #2c2c2c;
+  --color-text: #f5f5f5;
   --color-neon-cyan: #00f0ff;
   --color-neon-yellow: #ffe600;
   --color-neon-green: #39ff14;
@@ -22,13 +19,36 @@
   --font-crt: "VT323", ui-monospace, monospace;
 }
 
-/* ---------- screen ---------- */
-html {
-  background: var(--color-background);
-  scrollbar-color: var(--color-ladybug) #000;
+/* arcade palette: swaps the same variables the classic theme uses */
+html[data-theme="arcade"] {
+  --color-background: #05010f;
+  --color-ladybug: #ff2bd6;
+  --color-paper: #0b0220;
+  --color-border: #00f0ff;
+  --color-text: #e8fbff;
+  --color-gray-300: #b8f8ff;
+  --color-gray-400: #6fd6e6;
+  --color-gray-500: #4aa6b5;
+  --color-gray-700: #0a8a99;
 }
 
 body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: system-ui, sans-serif;
+  line-height: 1.5;
+}
+
+/* theme toggle + HUD strip: the HUD only exists in arcade */
+.hud { display: none; }
+#theme-toggle { cursor: pointer; }
+
+/* ---------- screen ---------- */
+html[data-theme="arcade"] {
+  background: var(--color-background);
+  scrollbar-color: var(--color-ladybug) #000;
+}
+html[data-theme="arcade"] body {
   background-color: var(--color-paper);
   background-image:
     radial-gradient(ellipse at center, transparent 55%, rgba(0, 0, 0, 0.65) 100%);
@@ -45,11 +65,10 @@ body {
   text-shadow: 0 0 6px rgba(0, 240, 255, 0.35);
 }
 @media (max-width: 40rem) {
-  body { margin: 0.5rem; }
+html[data-theme="arcade"] body { margin: 0.5rem; }
 }
-
 /* CRT scanlines + faint flicker, laid over everything, never blocks clicks */
-body::after {
+html[data-theme="arcade"] body::after {
   content: "";
   position: fixed;
   inset: 0;
@@ -67,51 +86,48 @@ body::after {
   0%, 94%, 100% { opacity: 1; }
   95% { opacity: 0.92; }
 }
-
-::selection { background: var(--color-neon-yellow); color: #000; text-shadow: none; }
-
-* { border-radius: 0; }
-
+html[data-theme="arcade"] ::selection { background: var(--color-neon-yellow); color: #000; text-shadow: none; }
+html[data-theme="arcade"] * { border-radius: 0; }
 /* ---------- type ---------- */
-h1, h2 {
+html[data-theme="arcade"] h1,
+html[data-theme="arcade"] h2 {
   font-family: var(--font-pixel);
   text-transform: uppercase;
   letter-spacing: 0;
   line-height: 1.5;
 }
-
 /* page titles: magenta with a cyan "misregistered" ghost */
-main h1, article h1 {
+html[data-theme="arcade"] main h1,
+html[data-theme="arcade"] article h1 {
   font-size: 1.1rem;
   color: var(--color-ladybug);
   text-shadow: 3px 3px 0 var(--color-neon-cyan);
   margin-bottom: 1.25rem;
 }
-
 /* section headings read like stage banners */
-main h2, article h2 {
+html[data-theme="arcade"] main h2,
+html[data-theme="arcade"] article h2 {
   font-size: 0.8rem;
   color: var(--color-neon-yellow);
   text-shadow: 2px 2px 0 #7a5c00;
   border-bottom: 3px dashed var(--color-gray-700);
   padding-bottom: 0.4rem;
 }
-main h2::before, article h2::before {
+html[data-theme="arcade"] main h2::before,
+html[data-theme="arcade"] article h2::before {
   content: "▶ ";
   color: var(--color-neon-green);
 }
-
 /* ingredient sub-sections ("Marinade", "Sauce") */
-article p.uppercase {
+html[data-theme="arcade"] article p.uppercase {
   font-family: var(--font-pixel);
   font-size: 0.6rem !important;
   color: var(--color-neon-green);
   text-shadow: none;
 }
-
 /* ---------- lists ---------- */
-ul li::marker { content: "■ "; color: var(--color-neon-cyan); }
-ol li::marker {
+html[data-theme="arcade"] ul li::marker { content: "■ "; color: var(--color-neon-cyan); }
+html[data-theme="arcade"] ol li::marker {
   content: counter(list-item, decimal-leading-zero) " ";
   font-family: var(--font-pixel);
   font-size: 0.7rem;
@@ -119,26 +135,26 @@ ol li::marker {
 }
 /* every left edge (HUD, logo, nav, headings, list markers) sits on one line;
    list text is indented by the marker's width instead */
-main ul, main ol { padding-left: 2.1rem; }
-main ol li::marker { font-size: 0.6rem; }
-#site-primary-nav { padding-left: 0; padding-right: 4px; }
+html[data-theme="arcade"] main ul,
+html[data-theme="arcade"] main ol { padding-left: 2.1rem; }
+html[data-theme="arcade"] main ol li::marker { font-size: 0.6rem; }
+html[data-theme="arcade"] #site-primary-nav { padding-left: 0; padding-right: 4px; }
 /* search keeps to the row instead of spilling past the bezel */
-#site-search-form { flex: 1 1 auto; min-width: 0; padding-right: 4px; }
-#site-search-form .relative { flex: 1 1 auto; min-width: 0; }
-#site-search-form input[type="search"] { width: 100%; }
-#site-primary-nav li::marker { content: none; }
-
+html[data-theme="arcade"] #site-search-form { flex: 1 1 auto; min-width: 0; padding-right: 4px; }
+html[data-theme="arcade"] #site-search-form .relative { flex: 1 1 auto; min-width: 0; }
+html[data-theme="arcade"] #site-search-form input[type="search"] { width: 100%; }
+html[data-theme="arcade"] #site-primary-nav li::marker { content: none; }
 /* ---------- links ---------- */
-a { text-decoration: none; }
-main a:hover, article a:hover {
+html[data-theme="arcade"] a { text-decoration: none; }
+html[data-theme="arcade"] main a:hover,
+html[data-theme="arcade"] article a:hover {
   background: var(--color-neon-yellow);
   color: #000;
   text-shadow: none;
 }
-main li > a:hover::before { content: "▶ "; }
-
+html[data-theme="arcade"] main li > a:hover::before { content: "▶ "; }
 /* ---------- header + nav ---------- */
-.hud {
+html[data-theme="arcade"] .hud {
   display: flex;
   justify-content: space-between;
   gap: 0.5rem;
@@ -149,18 +165,18 @@ main li > a:hover::before { content: "▶ "; }
   margin-bottom: 1rem;
   text-shadow: none;
 }
-.hud .hi { color: var(--color-neon-yellow); }
-.blink { animation: blink 1s steps(1) infinite; color: var(--color-ladybug); }
+html[data-theme="arcade"] .hud .hi { color: var(--color-neon-yellow); }
+html[data-theme="arcade"] .blink { animation: blink 1s steps(1) infinite; color: var(--color-ladybug); }
 @keyframes blink { 50% { opacity: 0; } }
-
-body > div:not(.hud) h1 a { color: inherit; }
-body > div:not(.hud) h1 a:hover { background: none; color: var(--color-neon-yellow); }
-body > div:not(.hud) h1 {
+html[data-theme="arcade"] body > div:not(.hud) h1 a { color: inherit; }
+html[data-theme="arcade"] body > div:not(.hud) h1 a:hover { background: none; color: var(--color-neon-yellow); }
+html[data-theme="arcade"] body > div:not(.hud) h1 {
   font-size: 1.3rem;
   letter-spacing: 0.05em;
 }
-
-#site-primary-nav a, #nav-toggle {
+html[data-theme="arcade"] #site-primary-nav a,
+html[data-theme="arcade"] #theme-toggle,
+html[data-theme="arcade"] #nav-toggle {
   font-family: var(--font-pixel);
   font-size: 0.6rem;
   text-transform: uppercase;
@@ -171,20 +187,24 @@ body > div:not(.hud) h1 {
   box-shadow: 4px 4px 0 var(--color-gray-700);
   transition: none;
 }
-#site-primary-nav a { display: block; }
-#nav-toggle { display: inline-block; }
-@media (min-width: 48rem) { #nav-toggle { display: none; } }
-#site-primary-nav a:hover {
+html[data-theme="arcade"] #site-primary-nav a,
+html[data-theme="arcade"] #theme-toggle { display: block; }
+html[data-theme="arcade"] #nav-toggle { display: inline-block; }
+@media (min-width: 48rem) {
+html[data-theme="arcade"] #nav-toggle { display: none; }
+}
+html[data-theme="arcade"] #site-primary-nav a:hover,
+html[data-theme="arcade"] #theme-toggle:hover {
   background: var(--color-ladybug);
   border-color: var(--color-ladybug);
   color: #000;
   box-shadow: 4px 4px 0 var(--color-neon-cyan);
 }
-#site-primary-nav a:active { transform: translate(4px, 4px); box-shadow: none; }
-nav { margin-bottom: 2rem; }
-
+html[data-theme="arcade"] #site-primary-nav a:active,
+html[data-theme="arcade"] #theme-toggle:active { transform: translate(4px, 4px); box-shadow: none; }
+html[data-theme="arcade"] nav { margin-bottom: 2rem; }
 /* ---------- search ---------- */
-input[type="search"] {
+html[data-theme="arcade"] input[type="search"] {
   font-family: var(--font-crt);
   font-size: 1.3rem;
   background: #000;
@@ -192,11 +212,11 @@ input[type="search"] {
   caret-color: var(--color-neon-green);
   border: 3px solid var(--color-gray-700);
 }
-input[type="search"]:focus {
+html[data-theme="arcade"] input[type="search"]:focus {
   border-color: var(--color-neon-cyan);
   box-shadow: 4px 4px 0 var(--color-ladybug);
 }
-button[type="submit"] {
+html[data-theme="arcade"] button[type="submit"] {
   font-family: var(--font-pixel);
   font-size: 0.6rem;
   text-transform: uppercase;
@@ -206,29 +226,26 @@ button[type="submit"] {
   box-shadow: 4px 4px 0 var(--color-neon-cyan);
   cursor: pointer;
 }
-button[type="submit"]:active { transform: translate(4px, 4px); box-shadow: none; }
-
-#search-suggestions-overlay {
+html[data-theme="arcade"] button[type="submit"]:active { transform: translate(4px, 4px); box-shadow: none; }
+html[data-theme="arcade"] #search-suggestions-overlay {
   background: #000;
   border: 3px solid var(--color-neon-cyan);
   box-shadow: 4px 4px 0 var(--color-ladybug);
 }
-mark { background: var(--color-neon-yellow) !important; color: #000; }
-
+html[data-theme="arcade"] mark { background: var(--color-neon-yellow) !important; color: #000; }
 /* ---------- prev / next ---------- */
-nav[aria-label="Pagination"] {
+html[data-theme="arcade"] nav[aria-label="Pagination"] {
   border-top: 3px dashed var(--color-gray-700);
   font-family: var(--font-pixel);
   font-size: 0.6rem;
 }
-
 /* ---------- animations ----------
    All motion lives here, behind no-preference, so reduced-motion users get
    the static skin. Steps() timing keeps everything snapping like sprites
    instead of easing like a modern UI. */
 @media (prefers-reduced-motion: no-preference) {
-  /* drifting starfield behind the bezel */
-  html {
+/* drifting starfield behind the bezel */
+html[data-theme="arcade"] {
     background-image:
       radial-gradient(2px 2px at 20px 30px, #fff, transparent),
       radial-gradient(2px 2px at 90px 120px, var(--color-neon-cyan), transparent),
@@ -236,46 +253,49 @@ nav[aria-label="Pagination"] {
     background-size: 200px 200px;
     animation: stars 30s linear infinite;
   }
-  @keyframes stars { to { background-position: 0 200px; } }
-
-  /* logo glitch: calm for most of the loop, then a quick RGB-split twitch */
-  body > div:not(.hud) h1 a {
+@keyframes stars { to { background-position: 0 200px; } }
+/* logo glitch: calm for most of the loop, then a quick RGB-split twitch */
+html[data-theme="arcade"] body > div:not(.hud) h1 a {
     display: inline-block;
     animation: glitch 8s steps(1) infinite;
   }
-  @keyframes glitch {
+@keyframes glitch {
     0%, 90%, 100% { transform: none; text-shadow: 3px 3px 0 var(--color-neon-cyan); }
     91% { transform: translate(-3px, 1px); text-shadow: 5px 0 0 var(--color-neon-cyan), -5px 0 0 var(--color-neon-yellow); }
     93% { transform: translate(3px, -1px) skewX(-8deg); text-shadow: -4px 0 0 var(--color-neon-cyan), 4px 0 0 var(--color-neon-green); }
     95% { transform: translate(0, 2px); text-shadow: 3px 3px 0 var(--color-neon-cyan); }
   }
-
-  /* list rows slide in one after another (text only; frame and headings stay put) */
-  main li { animation: slide-in 0.3s steps(4) backwards; }
-  main li:nth-child(1)  { animation-delay: 0.05s; }
-  main li:nth-child(2)  { animation-delay: 0.10s; }
-  main li:nth-child(3)  { animation-delay: 0.15s; }
-  main li:nth-child(4)  { animation-delay: 0.20s; }
-  main li:nth-child(5)  { animation-delay: 0.25s; }
-  main li:nth-child(6)  { animation-delay: 0.30s; }
-  main li:nth-child(7)  { animation-delay: 0.35s; }
-  main li:nth-child(8)  { animation-delay: 0.40s; }
-  main li:nth-child(n+9) { animation-delay: 0.45s; }
-  @keyframes slide-in {
+/* list rows slide in one after another (text only; frame and headings stay put) */
+html[data-theme="arcade"] main li { animation: slide-in 0.3s steps(4) backwards; }
+html[data-theme="arcade"] main li:nth-child(1) { animation-delay: 0.05s; }
+html[data-theme="arcade"] main li:nth-child(2) { animation-delay: 0.10s; }
+html[data-theme="arcade"] main li:nth-child(3) { animation-delay: 0.15s; }
+html[data-theme="arcade"] main li:nth-child(4) { animation-delay: 0.20s; }
+html[data-theme="arcade"] main li:nth-child(5) { animation-delay: 0.25s; }
+html[data-theme="arcade"] main li:nth-child(6) { animation-delay: 0.30s; }
+html[data-theme="arcade"] main li:nth-child(7) { animation-delay: 0.35s; }
+html[data-theme="arcade"] main li:nth-child(8) { animation-delay: 0.40s; }
+html[data-theme="arcade"] main li:nth-child(n+9) { animation-delay: 0.45s; }
+@keyframes slide-in {
     from { opacity: 0; transform: translateX(-24px); }
     to   { opacity: 1; transform: none; }
   }
-
-  /* nav buttons hop when hovered; the ▶ on list links blinks */
-  #site-primary-nav a:hover { animation: hop 0.4s steps(4) infinite alternate; }
-  @keyframes hop { to { transform: translateY(-4px); } }
-  main li > a:hover::before { animation: blink 0.5s steps(1) infinite; }
-
-  /* the HUD's coin prompt pulses harder than a plain blink */
-  .hud .blink { animation: blink 0.8s steps(1) infinite; }
-
+/* nav buttons hop when hovered; the ▶ on list links blinks */
+html[data-theme="arcade"] #site-primary-nav a:hover,
+html[data-theme="arcade"] #theme-toggle:hover { animation: hop 0.4s steps(4) infinite alternate; }
+@keyframes hop { to { transform: translateY(-4px); } }
+html[data-theme="arcade"] main li > a:hover::before { animation: blink 0.5s steps(1) infinite; }
+/* the HUD's coin prompt pulses harder than a plain blink */
+html[data-theme="arcade"] .hud .blink { animation: blink 0.8s steps(1) infinite; }
+}
+@media (prefers-reduced-motion: reduce) {
+html[data-theme="arcade"] body::after,
+html[data-theme="arcade"] .blink { animation: none; }
 }
 
-@media (prefers-reduced-motion: reduce) {
-  body::after, .blink { animation: none; }
+/* six arcade buttons don't fit one row inside the bezel: wrap instead of spilling */
+html[data-theme="arcade"] #site-primary-nav {
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: flex-start;
 }

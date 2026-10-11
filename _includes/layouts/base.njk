@@ -4,9 +4,33 @@
   <meta charset="UTF-8" />
   <title>{% block title %}{{ title }}{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" />
+  <script>
+    /* Theme: "classic" (default) or "arcade". Runs before the stylesheet so
+       the saved choice paints on first frame. The arcade fonts are fetched
+       only when arcade is active. */
+    window.setTheme = function (theme) {
+      var root = document.documentElement;
+      if (theme === 'arcade') {
+        root.setAttribute('data-theme', 'arcade');
+        if (!document.getElementById('arcade-fonts')) {
+          var l = document.createElement('link');
+          l.id = 'arcade-fonts';
+          l.rel = 'stylesheet';
+          l.href = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap';
+          document.head.appendChild(l);
+        }
+      } else {
+        root.removeAttribute('data-theme');
+      }
+      try { localStorage.setItem('theme', theme); } catch (_) {}
+      var btn = document.getElementById('theme-toggle');
+      if (btn) {
+        btn.textContent = theme === 'arcade' ? 'Classic mode' : 'Arcade mode';
+        btn.setAttribute('aria-pressed', theme === 'arcade' ? 'true' : 'false');
+      }
+    };
+    try { window.setTheme(localStorage.getItem('theme') === 'arcade' ? 'arcade' : 'classic'); } catch (_) {}
+  </script>
   <link rel="stylesheet" href="/assets/styles.css" />
   {% block head %}{% endblock %}
 </head>
