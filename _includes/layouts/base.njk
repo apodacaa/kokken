@@ -4,15 +4,6 @@
   <meta charset="UTF-8" />
   <title>{% block title %}{{ title }}{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script>
-    /* Entrance animations play once per tab session, not on every page load. */
-    try {
-      if (!sessionStorage.getItem('booted')) {
-        sessionStorage.setItem('booted', '1');
-        document.documentElement.classList.add('boot');
-      }
-    } catch (_) {}
-  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" />
