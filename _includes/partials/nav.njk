@@ -37,7 +37,13 @@
     <li><a href="/cocktails/" class="hover:text-ladybug transition">Cocktails</a></li>
     <li><a href="/grill/" class="hover:text-ladybug transition">Grill</a></li>
     <li><a href="/smoke/" class="hover:text-ladybug transition">Smoke</a></li>
-    <li><button type="button" id="theme-toggle" class="hover:text-ladybug transition" aria-pressed="false">Arcade mode</button></li>
+    <li>
+      <label for="theme-select" class="sr-only">Theme</label>
+      <select id="theme-select" aria-label="Theme">
+        <option value="classic">Classic</option>
+        <option value="arcade">Arcade</option>
+      </select>
+    </li>
     {% if site.features.tags %}
       <li><a href="/tags/" class="hover:text-ladybug transition">Tags</a></li>
     {% endif %}
@@ -46,13 +52,10 @@
 
 <script>
   (function(){
-    var themeBtn = document.getElementById('theme-toggle');
-    if (themeBtn && window.setTheme) {
-      var current = document.documentElement.getAttribute('data-theme') === 'arcade' ? 'arcade' : 'classic';
-      window.setTheme(current);
-      themeBtn.addEventListener('click', function(){
-        window.setTheme(document.documentElement.getAttribute('data-theme') === 'arcade' ? 'classic' : 'arcade');
-      });
+    var themeSel = document.getElementById('theme-select');
+    if (themeSel && window.setTheme) {
+      themeSel.value = document.documentElement.getAttribute('data-theme') || 'classic';
+      themeSel.addEventListener('change', function(){ window.setTheme(themeSel.value); });
     }
     var btn = document.getElementById('nav-toggle');
     var list = document.getElementById('site-primary-nav');
