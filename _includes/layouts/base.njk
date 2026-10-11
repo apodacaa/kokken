@@ -4,6 +4,31 @@
   <meta charset="UTF-8" />
   <title>{% block title %}{{ title }}{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script>
+    /* Themes: "classic" (default, no attribute) plus any named theme, which
+       sets data-theme on <html>. Runs before the stylesheet so the saved
+       choice paints on first frame. To add a theme: add its CSS scoped under
+       html[data-theme="name"], an <option> in nav.njk, and its name to THEMES.
+       Arcade's fonts are fetched only when it is active. */
+    var THEMES = ['classic', 'arcade'];
+    window.setTheme = function (theme) {
+      if (THEMES.indexOf(theme) < 0) theme = 'classic';
+      var root = document.documentElement;
+      if (theme === 'classic') root.removeAttribute('data-theme');
+      else root.setAttribute('data-theme', theme);
+      if (theme === 'arcade' && !document.getElementById('arcade-fonts')) {
+        var l = document.createElement('link');
+        l.id = 'arcade-fonts';
+        l.rel = 'stylesheet';
+        l.href = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap';
+        document.head.appendChild(l);
+      }
+      try { localStorage.setItem('theme', theme); } catch (_) {}
+      var sel = document.getElementById('theme-select');
+      if (sel) sel.value = theme;
+    };
+    try { window.setTheme(localStorage.getItem('theme')); } catch (_) {}
+  </script>
   <link rel="stylesheet" href="/assets/styles.css" />
   {% block head %}{% endblock %}
 </head>

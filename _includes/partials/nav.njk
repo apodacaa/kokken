@@ -1,3 +1,9 @@
+<div class="hud" aria-hidden="true">
+  <span>1UP</span>
+  <span class="hi">Recipes {{ collections.recipes | length }} · Drinks {{ collections.cocktails | length }}</span>
+  <span class="blink">Insert coin</span>
+</div>
+
 <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3 sm:gap-4 mb-4">
   <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight">
     <a href="/" class="hover:underline">Køkken</a>
@@ -29,8 +35,15 @@
     <li><a href="/" class="hover:text-ladybug transition">Home</a></li>
     <li><a href="/recipes/" class="hover:text-ladybug transition">Recipes</a></li>
     <li><a href="/cocktails/" class="hover:text-ladybug transition">Cocktails</a></li>
-    <li><a href="/grill/" class="hover:text-ladybug transition">Grill Guides</a></li>
-    <li><a href="/smoke/" class="hover:text-ladybug transition">Smoke Guides</a></li>
+    <li><a href="/grill/" class="hover:text-ladybug transition">Grill</a></li>
+    <li><a href="/smoke/" class="hover:text-ladybug transition">Smoke</a></li>
+    <li>
+      <label for="theme-select" class="sr-only">Theme</label>
+      <select id="theme-select" aria-label="Theme">
+        <option value="classic">Classic</option>
+        <option value="arcade">Arcade</option>
+      </select>
+    </li>
     {% if site.features.tags %}
       <li><a href="/tags/" class="hover:text-ladybug transition">Tags</a></li>
     {% endif %}
@@ -39,6 +52,11 @@
 
 <script>
   (function(){
+    var themeSel = document.getElementById('theme-select');
+    if (themeSel && window.setTheme) {
+      themeSel.value = document.documentElement.getAttribute('data-theme') || 'classic';
+      themeSel.addEventListener('change', function(){ window.setTheme(themeSel.value); });
+    }
     var btn = document.getElementById('nav-toggle');
     var list = document.getElementById('site-primary-nav');
     if (!btn || !list) return;
