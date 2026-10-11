@@ -110,17 +110,22 @@ article p.uppercase {
 }
 
 /* ---------- lists ---------- */
-ul li::marker { content: "■  "; color: var(--color-neon-cyan); }
+ul li::marker { content: "■ "; color: var(--color-neon-cyan); }
 ol li::marker {
-  content: counter(list-item, decimal-leading-zero) "  ";
+  content: counter(list-item, decimal-leading-zero) " ";
   font-family: var(--font-pixel);
   font-size: 0.7rem;
   color: var(--color-neon-yellow);
 }
-li { padding-left: 0.25rem; }
-/* wide markers ("01", "■") must stay inside the bezel */
-main ul, main ol { padding-left: 2.75rem; }
-#site-primary-nav { padding-left: 0; }
+/* every left edge (HUD, logo, nav, headings, list markers) sits on one line;
+   list text is indented by the marker's width instead */
+main ul, main ol { padding-left: 2.1rem; }
+main ol li::marker { font-size: 0.6rem; }
+#site-primary-nav { padding-left: 0; padding-right: 4px; }
+/* search keeps to the row instead of spilling past the bezel */
+#site-search-form { flex: 1 1 auto; min-width: 0; padding-right: 4px; }
+#site-search-form .relative { flex: 1 1 auto; min-width: 0; }
+#site-search-form input[type="search"] { width: 100%; }
 #site-primary-nav li::marker { content: none; }
 
 /* ---------- links ---------- */
