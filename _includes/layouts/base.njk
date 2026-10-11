@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-background text-white text-base leading-normal antialiased">
+<html lang="en" data-theme="arcade" class="bg-background text-white text-base leading-normal antialiased">
 <head>
   <meta charset="UTF-8" />
   <title>{% block title %}{{ title }}{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script>
-    /* Themes: "classic" (default, no attribute) plus any named theme, which
-       sets data-theme on <html>. Runs before the stylesheet so the saved
-       choice paints on first frame. To add a theme: add its CSS scoped under
+    /* Themes. Arcade is the default: it is set on <html> in the markup, so
+       it shows without JavaScript too. "classic" is the base CSS and means no
+       data-theme attribute; any other theme sets data-theme to its name. This
+       runs before the stylesheet so a saved choice paints on first frame.
+       Only an explicit pick from the dropdown is saved (saveTheme), never the
+       default. To add a theme: add its CSS scoped under
        html[data-theme="name"], an <option> in nav.njk, and its name to THEMES.
        Arcade's fonts are fetched only when it is active. */
     var THEMES = ['classic', 'arcade'];
+    var DEFAULT_THEME = 'arcade';
+    var THEME_KEY = 'kokken-theme';
     window.setTheme = function (theme) {
-      if (THEMES.indexOf(theme) < 0) theme = 'classic';
+      if (THEMES.indexOf(theme) < 0) theme = DEFAULT_THEME;
       var root = document.documentElement;
       if (theme === 'classic') root.removeAttribute('data-theme');
       else root.setAttribute('data-theme', theme);
@@ -23,11 +28,16 @@
         l.href = 'https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap';
         document.head.appendChild(l);
       }
-      try { localStorage.setItem('theme', theme); } catch (_) {}
       var sel = document.getElementById('theme-select');
       if (sel) sel.value = theme;
     };
-    try { window.setTheme(localStorage.getItem('theme')); } catch (_) {}
+    window.saveTheme = function (theme) {
+      window.setTheme(theme);
+      try { localStorage.setItem(THEME_KEY, theme); } catch (_) {}
+    };
+    var savedTheme = null;
+    try { savedTheme = localStorage.getItem(THEME_KEY); } catch (_) {}
+    window.setTheme(savedTheme);
   </script>
   <link rel="stylesheet" href="/assets/styles.css" />
   {% block head %}{% endblock %}

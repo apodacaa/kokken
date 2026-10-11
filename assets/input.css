@@ -1,8 +1,9 @@
 @import "tailwindcss";
 
-/* Two themes. "Classic" is the default and lives in @theme + the body rule.
+/* Two themes. "Classic" is the base CSS and lives in @theme + the body rule.
    "Arcade" (neon on black, CRT scanlines, pixel fonts) is everything under
-   html[data-theme="arcade"]; the toggle in the nav sets that attribute.
+   html[data-theme="arcade"]. Arcade is the default selection: base.njk sets
+   that attribute on <html>, and the dropdown in the nav changes it.
    Arcade overrides the palette variables, so existing utility classes
    (text-ladybug, text-gray-400, border-gray-700…) re-color for free, and its
    rules are unlayered, which beats Tailwind's layered utilities. */

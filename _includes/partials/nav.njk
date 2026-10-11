@@ -40,8 +40,8 @@
     <li>
       <label for="theme-select" class="sr-only">Theme</label>
       <select id="theme-select" aria-label="Theme">
+        <option value="arcade" selected>Arcade</option>
         <option value="classic">Classic</option>
-        <option value="arcade">Arcade</option>
       </select>
     </li>
     {% if site.features.tags %}
@@ -55,7 +55,7 @@
     var themeSel = document.getElementById('theme-select');
     if (themeSel && window.setTheme) {
       themeSel.value = document.documentElement.getAttribute('data-theme') || 'classic';
-      themeSel.addEventListener('change', function(){ window.setTheme(themeSel.value); });
+      themeSel.addEventListener('change', function(){ window.saveTheme(themeSel.value); });
     }
     var btn = document.getElementById('nav-toggle');
     var list = document.getElementById('site-primary-nav');
