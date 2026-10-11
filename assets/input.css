@@ -149,10 +149,10 @@ main li > a:hover::before { content: "▶ "; }
 .blink { animation: blink 1s steps(1) infinite; color: var(--color-ladybug); }
 @keyframes blink { 50% { opacity: 0; } }
 
-body > div:first-of-type h1 a { color: inherit; }
-body > div:first-of-type h1 a:hover { background: none; color: var(--color-neon-yellow); }
-body > div:first-of-type h1 {
-  font-size: 1.6rem;
+body > div:not(.hud) h1 a { color: inherit; }
+body > div:not(.hud) h1 a:hover { background: none; color: var(--color-neon-yellow); }
+body > div:not(.hud) h1 {
+  font-size: 1.3rem;
   letter-spacing: 0.05em;
 }
 
@@ -216,6 +216,99 @@ nav[aria-label="Pagination"] {
   border-top: 3px dashed var(--color-gray-700);
   font-family: var(--font-pixel);
   font-size: 0.6rem;
+}
+
+/* ---------- animations ----------
+   All motion lives here, behind no-preference, so reduced-motion users get
+   the static skin. Steps() timing keeps everything snapping like sprites
+   instead of easing like a modern UI. */
+@media (prefers-reduced-motion: no-preference) {
+  /* CRT power-on: the screen opens from a bright horizontal line */
+  body { animation: power-on 0.6s steps(8) backwards; }
+  @keyframes power-on {
+    0%   { clip-path: inset(49.5% 0 49.5% 0); filter: brightness(3); }
+    60%  { clip-path: inset(0 0 0 0); filter: brightness(1.8); }
+    100% { clip-path: inset(0 0 0 0); filter: brightness(1); }
+  }
+
+  /* drifting starfield behind the bezel */
+  html {
+    background-image:
+      radial-gradient(2px 2px at 20px 30px, #fff, transparent),
+      radial-gradient(2px 2px at 90px 120px, var(--color-neon-cyan), transparent),
+      radial-gradient(1px 1px at 160px 60px, var(--color-neon-yellow), transparent);
+    background-size: 200px 200px;
+    animation: stars 30s linear infinite;
+  }
+  @keyframes stars { to { background-position: 0 200px; } }
+
+  /* a slow bright band rolling down the screen, like a bad vertical hold */
+  body::before {
+    content: "";
+    position: fixed;
+    left: 0; right: 0; top: 0;
+    height: 14vh;
+    pointer-events: none;
+    z-index: 99;
+    background: linear-gradient(to bottom, transparent, rgba(0, 240, 255, 0.07), transparent);
+    animation: roll 9s linear infinite;
+  }
+  @keyframes roll { from { transform: translateY(-20vh); } to { transform: translateY(110vh); } }
+
+  /* logo glitch: calm for most of the loop, then a quick RGB-split twitch */
+  body > div:not(.hud) h1 a {
+    display: inline-block;
+    animation: glitch 5s steps(1) infinite;
+  }
+  @keyframes glitch {
+    0%, 90%, 100% { transform: none; text-shadow: 3px 3px 0 var(--color-neon-cyan); }
+    91% { transform: translate(-3px, 1px); text-shadow: 5px 0 0 var(--color-neon-cyan), -5px 0 0 var(--color-neon-yellow); }
+    93% { transform: translate(3px, -1px) skewX(-8deg); text-shadow: -4px 0 0 var(--color-neon-cyan), 4px 0 0 var(--color-neon-green); }
+    95% { transform: translate(0, 2px); text-shadow: 3px 3px 0 var(--color-neon-cyan); }
+  }
+
+  /* page title types in, then leaves a blinking block cursor */
+  main h1, article h1 {
+    width: fit-content;
+    animation: type-in 0.8s steps(14) backwards;
+  }
+  @keyframes type-in { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0 0 0 0); } }
+  main h1::after, article h1::after {
+    content: "█";
+    margin-left: 0.3em;
+    color: var(--color-neon-green);
+    text-shadow: none;
+    animation: blink 1s steps(1) infinite;
+  }
+
+  /* section headings and list rows slide in one after another */
+  main h2, article h2 { animation: slide-in 0.3s steps(4) 0.3s backwards; }
+  main li { animation: slide-in 0.3s steps(4) backwards; }
+  main li:nth-child(1)  { animation-delay: 0.30s; }
+  main li:nth-child(2)  { animation-delay: 0.36s; }
+  main li:nth-child(3)  { animation-delay: 0.42s; }
+  main li:nth-child(4)  { animation-delay: 0.48s; }
+  main li:nth-child(5)  { animation-delay: 0.54s; }
+  main li:nth-child(6)  { animation-delay: 0.60s; }
+  main li:nth-child(7)  { animation-delay: 0.66s; }
+  main li:nth-child(8)  { animation-delay: 0.72s; }
+  main li:nth-child(n+9) { animation-delay: 0.78s; }
+  @keyframes slide-in {
+    from { opacity: 0; transform: translateX(-24px); }
+    to   { opacity: 1; transform: none; }
+  }
+
+  /* nav buttons hop when hovered; the ▶ on list links blinks */
+  #site-primary-nav a:hover { animation: hop 0.4s steps(4) infinite alternate; }
+  @keyframes hop { to { transform: translateY(-4px); } }
+  main li > a:hover::before { animation: blink 0.5s steps(1) infinite; }
+
+  /* the HUD's coin prompt pulses harder than a plain blink */
+  .hud .blink { animation: blink 0.8s steps(1) infinite; }
+
+  /* search button throbs until you use it */
+  button[type="submit"]:not(:hover):not(:active) { animation: throb 2s steps(2) infinite; }
+  @keyframes throb { 50% { box-shadow: 4px 4px 0 var(--color-neon-yellow); } }
 }
 
 @media (prefers-reduced-motion: reduce) {
