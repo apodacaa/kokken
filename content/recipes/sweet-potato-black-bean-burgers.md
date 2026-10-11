@@ -14,7 +14,7 @@ ingredients:
   - section: Patties
     items:
       - 14 oz (400 g) sweet potato, roasted & mashed
-      - 1 can (400 g / 14 oz) black beans, rinsed
+      - 1 can (14 oz / 400 g) black beans, rinsed
       - 1 cup (80 g) breadcrumbs or oats
       - 1 tsp (5 ml) cumin
       - 1 tsp (5 ml) chili powder

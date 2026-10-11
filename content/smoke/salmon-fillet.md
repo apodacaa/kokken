@@ -7,7 +7,7 @@ amount: "2–3 lb"
 phases:
   - name: "Smoke"
     temperature: "180–200°F (82–93°C)"
-    duration: "1½–3 hr"
+    duration: "1 1/2–3 hr"
     doneness: "140°F (60°C)"
     wood: "Alder, Apple, Cherry"
 ---

@@ -15,7 +15,7 @@ ingredients:
     items:
       - 1 tbsp (15 ml) oil
       - 1 onion, chopped
-      - 1 kg (2.2 lb) butternut squash, cubed
+      - 2.2 lb (1 kg) butternut squash, cubed
       - 1 tsp (5 ml) curry powder
       - 3 1/3 cups (800 ml) vegetable stock
       - 14 oz (400 ml) coconut milk

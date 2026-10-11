@@ -4,11 +4,11 @@ slug: corpse_reviver_no_2
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 1 oz London dry gin
-  - 1 oz Lillet Blanc
-  - 3/4 oz orange liqueur
-  - 3/4 oz lemon juice
-  - 1/4 oz Simple Syrup
+  - 1 oz (3 cl) London dry gin
+  - 1 oz (3 cl) Lillet Blanc
+  - 3/4 oz (2.25 cl) orange liqueur
+  - 3/4 oz (2.25 cl) lemon juice
+  - 1/4 oz (0.75 cl) Simple Syrup
   - 1/8 teaspoon absinthe
   - Orange twist
 steps:

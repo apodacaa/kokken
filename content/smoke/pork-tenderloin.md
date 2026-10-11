@@ -6,7 +6,7 @@ permalink: "/smoke/{{ slug }}/"
 phases:
   - name: "Smoke"
     temperature: "225–250°F (107–121°C)"
-    duration: "1½–2 hr"
+    duration: "1 1/2–2 hr"
     doneness: "145°F (63°C) + rest"
     wood: "Apple, Cherry, Maple"
 ---

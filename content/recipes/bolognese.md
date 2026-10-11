@@ -21,7 +21,7 @@ ingredients:
       - 1 cup (240 ml) beef broth
       - 12 oz (340 g) canned tomatoes or whole tomatoes
 steps:
-  - Saute onions, carrots, celery.
+  - Sauté onions, carrots, celery.
   - Add beef until cooked.
   - Add wine, broth, tomatoes.
   - Simmer until thick (1.5 to 2 hours).

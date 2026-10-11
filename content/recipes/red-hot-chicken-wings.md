@@ -20,17 +20,17 @@ ingredients:
       - "2 tsp (10 ml) ground coriander (optional)"
       - "2 tsp (10 ml) dark sesame oil"
       - "6 tbsp (90 ml) butter"
-      - "4 thinly spliced jalapeño peppers"
+      - "4 thinly sliced jalapeño peppers"
       - "6 tbsp (90 ml) sriracha (or other hot sauce)"
       - "1/4 cup (60 ml) chopped dry roasted peanuts"
 steps:
   - "Marinate for 60 minutes in half of cilantro, salt, pepper and coriander."
   - "Smoke."
-  - "Saute jalapeño in butter and add hot sauce."
+  - "Sauté jalapeño in butter and add hot sauce."
   - "Pour sauce over chicken."
   - "Top with peanuts and remaining cilantro."
 references:
-  - slug: "chicken-wings"
+  - slug: "chicken-wings-250-275"
     title: "Chicken Wings Smoke Guide"
     type: smoke
 ---

@@ -13,7 +13,7 @@ pairings:
 ingredients:
   - section: _main_
     items:
-      - 1 kg (2.2 lb) beef chuck, cubes
+      - 2.2 lb (1 kg) beef chuck, cubes
       - 2 tbsp (30 ml) flour
       - 2 tbsp (30 ml) oil
       - 1 onion, chopped

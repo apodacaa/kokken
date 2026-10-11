@@ -5,7 +5,7 @@ layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
   - 1 3/4 oz (5 cl) gin
-  - 3/4 oz (2.5 cl) lemon juice
+  - 3/4 oz (2.25 cl) lemon juice
   - 1/2 oz (1.5 cl) simple syrup
   - 1/2 oz (1.5 cl) crème de mûre
 steps:

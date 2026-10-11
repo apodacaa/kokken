@@ -23,7 +23,7 @@ ingredients:
       - 1 tsp (5 ml) garam masala
       - 1/2 tsp (2.5 ml) turmeric
       - 14 oz (400 g) canned tomatoes
-      - 2 cans (800 g / 28 oz) chickpeas, drained
+      - 2 cans (28 oz / 800 g) chickpeas, drained
       - Salt, cilantro
 steps:
   - Heat oil; sauté onion, garlic, ginger, and chili until golden.

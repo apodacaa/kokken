@@ -19,7 +19,7 @@ ingredients:
 steps:
   - Pat steak dry.
   - Sprinkle salt and cumin.
-  - Leave uncovered in fridge on wire rack for 24 hours
-  - Grill 3-4 minutes on each side until medium done (135)
-  - Tent and let rest for 5 minutes
+  - Leave uncovered in fridge on wire rack for 24 hours.
+  - Grill 3–4 minutes on each side until medium, 135°F (57°C).
+  - Tent and let rest for 5 minutes.
 ---

@@ -16,7 +16,7 @@ ingredients:
       - 1 tbsp (15 ml) oil
       - 1 onion, chopped
       - 2 cloves garlic, minced
-      - 2 cans (800 g / 28 oz) black beans, drained
+      - 2 cans (28 oz / 800 g) black beans, drained
       - 1 tsp (5 ml) cumin
   - section: Crema
     items:

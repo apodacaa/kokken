@@ -4,9 +4,9 @@ slug: southside
 layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
-  - 2 oz London dry gin
-  - 3/4 oz lime juice
-  - 3/4 oz Simple Syrup
+  - 2 oz (6 cl) London dry gin
+  - 3/4 oz (2.25 cl) lime juice
+  - 3/4 oz (2.25 cl) Simple Syrup
   - 8 fresh mint leaves
   - 1 mint sprig for garnish
 steps:

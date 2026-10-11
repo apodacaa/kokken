@@ -23,12 +23,12 @@ ingredients:
     items:
       - "1/4 cup (60 ml) pure chili powder"
       - "1/4 cup (60 ml) dark or light brown sugar"
-      - "3 tbsp (45 ml) coars salt"
+      - "3 tbsp (45 ml) coarse salt"
       - "1/4 cup (60 ml) extra virgin olive oil"
 steps:
   - "Brine for 12 hours."
   - "Smoke."
-  - "Sear"
+  - "Sear."
 references:
   - slug: "pork-chops"
     title: "Pork Chop Smoke Guide"
