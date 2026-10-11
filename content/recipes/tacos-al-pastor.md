@@ -38,7 +38,7 @@ steps:
   - Remove pork.
   - Discard all but 1/2 cup (120 ml) sauce. Add lime wedges and salt to taste.
   - Salt pork, brush with 1/4 cup (60 ml) sauce, and sear on both sides.
-  - Cut up pork, toss with 1/2 cup (120 ml) sauce.
+  - Cut up pork, toss with remaining 1/4 cup (60 ml) sauce.
   - Serve with lime, onions, cilantro, and grilled pineapple.
   - (Optional) Cut pineapple in rounds. Brush with salt and oil and grill.
 ---
