@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Cabernet Sauvignon – bold tannins
-    - Malbec – smoky & rich
+    - Malbec – smoky and rich for char
+    - Syrah – peppery with the chili and lime
   beer:
-    - Dark Lager – roasted malt
-    - IPA – hoppy bitterness
+    - Amber Lager – caramelized malt echoes the sugar marinade
+    - Dark Lager – roasted malt without bitterness
 ingredients:
   - section: _main_
     items:

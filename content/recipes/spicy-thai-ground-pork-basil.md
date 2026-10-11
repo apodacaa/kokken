@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Dry Riesling – acidity vs heat
-    - Grüner Veltliner – peppery, herbal
+    - Off-dry Riesling – tames chili heat
+    - Grüner Veltliner – peppery and herbal with Thai basil
   beer:
-    - Pilsner – crisp
-    - IPA – hops cut spice
+    - Pilsner – clean relief; avoid heavy hops with this heat
+    - Lager with lime – cold and cooling
 ingredients:
   - section: _main_
     items:

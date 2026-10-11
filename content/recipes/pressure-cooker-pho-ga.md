@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Grüner Veltliner – peppery freshness
-    - Riesling – crisp & aromatic
+    - Dry Riesling – aromatic acidity for star anise and ginger
+    - Grüner Veltliner – peppery and clean
   beer:
-    - Pilsner – refreshing
-    - Saison – herbal
+    - Pilsner – the clean, crisp default for noodle soup
+    - Witbier – coriander and citrus echo the herbs
 ingredients:
   - section: Broth
     items:

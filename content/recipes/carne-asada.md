@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Tempranillo – smoky, rustic red
-    - Zinfandel – jammy fruit balances char
+    - Zinfandel – ripe fruit and spice for the char and cumin
+    - Tempranillo (Crianza) – savory, medium tannin for flank steak
   beer:
-    - Mexican Amber Lager – toasty, crisp
-    - IPA – hoppy bitterness contrasts marinade
+    - Mexican Lager with lime – classic, cold relief against the grill
+    - Amber Lager – caramelized malt echoes the sear
 ingredients:
   - section: _main_
     items: 

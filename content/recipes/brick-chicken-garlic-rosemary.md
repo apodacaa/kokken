@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Chardonnay (oak-aged) – buttery notes with roasted chicken
-    - White Rhône Blend – herbal & round
+    - Chardonnay (lightly oaked) – weight for crisp skin and roasted garlic
+    - White Rhône blend (Marsanne/Roussanne) – round, herbal, holds up to rosemary
   beer:
-    - Belgian Saison – peppery & herbal
-    - Pale Ale – bright bitterness to cut fat
+    - Saison – peppery and dry against the herbs
+    - Helles – clean and malty; lets the chicken lead
 ingredients:
   - section: _main_
     items:

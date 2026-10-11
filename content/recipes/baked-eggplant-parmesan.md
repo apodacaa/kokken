@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Chianti Classico – acidity balances tomato & cheese
-    - Barbera d’Asti – juicy, food-friendly red
+    - Barbera d’Asti – high acid and soft tannin match the tomato without fighting the cheese
+    - Chianti Classico – savory cherry and acidity cut through baked mozzarella
   beer:
-    - Amber Ale – malty sweetness pairs with tomato
-    - Belgian Dubbel – dried fruit & spice echo herbs
+    - Vienna Lager – toasty malt echoes the breadcrumb crust
+    - Dunkel – soft roasted malt suits caramelized eggplant
 ingredients:
   - section: _main_
     items:

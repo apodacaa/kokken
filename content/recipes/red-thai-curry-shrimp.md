@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Albariño – saline & citrus
-    - Riesling – off-dry, balances spice
+    - Off-dry Riesling – sweet-acid balance for chili and coconut
+    - Albariño – saline and citrus for the shrimp
   beer:
-    - Belgian Witbier – citrus & spice
-    - Pale Ale – hops cut richness
+    - Witbier – coriander and citrus
+    - Lager – crisp, low-bitter relief
 ingredients:
   - section: _main_
     items:

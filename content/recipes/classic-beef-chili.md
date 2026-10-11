@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Zinfandel – ripe fruit & spice
-    - Syrah – smoky, peppery
+    - Zinfandel – jammy fruit softens chili heat
+    - Syrah – smoke and pepper echo the cumin and paprika
   beer:
-    - American Stout – roasted notes
-    - IPA – bitterness balances spice
+    - Amber Lager – malty and easy; hop bitterness would amplify the heat
+    - Brown Ale – nutty roast for the beef and beans
 ingredients:
   - section: _main_
     items:

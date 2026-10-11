@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Riesling (off-dry) – acidity balances lemongrass
-    - Grüner Veltliner – peppery freshness
+    - Off-dry Riesling – balances lemongrass and fish sauce
+    - Grüner Veltliner – peppery and fresh
   beer:
     - Pilsner – crisp
-    - Saison – herbal, dry
+    - Saison – dry and herbal
 ingredients:
   - section: _main_
     items:

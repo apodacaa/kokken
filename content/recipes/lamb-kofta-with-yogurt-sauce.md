@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Syrah – smoky, savory
-    - Grenache – fruity, spicy red
+    - Syrah – smoky and savory; echoes the grill and cumin
+    - Grenache – fruity and spicy against the cinnamon
   beer:
-    - Brown Ale – nutty
-    - Belgian Dubbel – dried fruit complexity
+    - Brown Ale – nutty roast with the lamb
+    - Amber Lager – clean malt, cool against the yogurt sauce
 ingredients:
   - section: Kofta
     items:

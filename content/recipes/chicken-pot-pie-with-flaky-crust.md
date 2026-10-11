@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Chardonnay (unoaked) – bright acidity
-    - Pinot Noir – light red with earthy tones
+    - Chardonnay (unoaked or lightly oaked) – acid to cut the buttery crust and gravy
+    - Pinot Noir – earthy and light; won't overpower the chicken and peas
   beer:
-    - Golden Ale – malty backbone
-    - Brown Ale – nutty, warming
+    - Golden Ale – gentle malt for the creamy filling
+    - Belgian Blonde – soft fruit and a dry finish
 ingredients:
   - section: _main_
     items:

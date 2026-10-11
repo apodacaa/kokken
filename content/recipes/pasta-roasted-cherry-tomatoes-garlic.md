@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Sangiovese – acidity lifts tomato
-    - Grenache – juicy & fruity
+    - Vermentino – crisp and herbal for the garlic and basil
+    - Sangiovese – bright acidity for roasted tomatoes
   beer:
-    - Pale Ale – citrus hops
-    - Amber Ale – caramel depth
+    - Italian Pilsner – crisp and slightly bitter against olive oil
+    - Blonde Ale – light and easy
 ingredients:
   - section: _main_
     items:

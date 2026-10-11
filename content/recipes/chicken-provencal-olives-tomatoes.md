@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Côtes du Rhône – peppery Grenache/Syrah
-    - Provence Rosé – dry & herbal
+    - Bandol Rosé – structured and herbal; the Provençal answer
+    - Côtes du Rhône – peppery Grenache for the olives and thyme
   beer:
-    - Biere de Garde – rustic French style
-    - Belgian Blonde – light spice & fruit
+    - Bière de Garde – earthy, rustic French farmhouse malt
+    - Saison – herbal and dry
 ingredients:
   - section: _main_
     items:

@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Pinot Gris – texture, citrus
-    - Albariño – fresh, saline
+    - Dry Riesling – lime-like acidity for soy and sesame
+    - Pinot Gris – round and slightly aromatic
   beer:
-    - Pilsner – crisp
-    - Hazy IPA – tropical hops
+    - Pilsner – crisp against sesame and soy
+    - Japanese-style Lager – clean and dry
 ingredients:
   - section: _main_
     items:

@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Sparkling Rosé – bubbles cut richness
-    - Riesling (off-dry) – sweetness tempers spice
+    - Off-dry Riesling – sweet-acid balance for the cream and spice
+    - Rosé – chilled and fruity, handles the tomato
   beer:
-    - IPA – bitterness cuts cream
-    - Hefeweizen – fruity & light
+    - Pilsner – cold, clean, doesn't amplify the heat the way hops do
+    - Hefeweizen – soft and fruity against the cream
 ingredients:
   - section: _main_
     items:

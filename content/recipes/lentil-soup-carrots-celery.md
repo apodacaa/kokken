@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Merlot – soft, smooth
-    - Gamay – fruity, light red
+    - Gamay – bright and earthy
+    - Barbera – acidity for the vegetables and lemon
   beer:
-    - Amber Ale – caramel malt
-    - Kölsch – delicate & clean
+    - Amber Ale – caramel malt for the earthy lentils
+    - Kölsch – clean and light against a rustic soup
 ingredients:
   - section: _main_
     items:

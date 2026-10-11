@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Gewürztraminer – spice match
-    - Chenin Blanc – acidity balances lentils
+    - Dry Riesling – acid and lime-like freshness for earthy lentils
+    - Chenin Blanc (dry) – waxy, fruity, handles ginger
   beer:
-    - Pilsner – crisp counterpoint
-    - Wheat Beer – soft citrus with spice
+    - Pilsner – clean and crisp
+    - Witbier – soft citrus and spice
 ingredients:
   - section: _main_
     items:

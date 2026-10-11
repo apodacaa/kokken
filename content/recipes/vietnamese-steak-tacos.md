@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Malbec – smoky, bold
-    - Syrah – peppery, rich
+    - Syrah – peppery and smoky with grilled steak
+    - Malbec – dark fruit for the char and chili
   beer:
-    - Mexican Amber Lager – toasty malt
-    - Pale Ale – hoppy freshness
+    - Mexican Lager – cold relief against Prik Nam Pla
+    - Amber Lager – toasty malt for the steak
 ingredients:
   - section: _main_
     items:

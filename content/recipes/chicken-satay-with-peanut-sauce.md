@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Gewürztraminer – aromatic, slightly sweet
-    - Pinot Gris – texture + spice-friendly
+    - Off-dry Riesling – acidity and a touch of sweetness for peanut and char
+    - Pinot Gris (Alsace) – round body for the rich sauce
   beer:
-    - Belgian Witbier – citrus & spice
-    - Amber Ale – caramel malt with peanuts
+    - Lager – clean refresher against the sweet-salty peanut sauce
+    - Amber Ale – caramel malt echoes the grilled edges
 ingredients:
   - section: Satay
     items:

@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Off-dry Riesling – sweetness tames spice
-    - Viognier – floral, stone fruit complements creaminess
+    - Off-dry Riesling – a little sweetness soothes the spice and cuts the cream
+    - Viognier – floral and soft, matches the tomato-butter richness
   beer:
-    - Creamy Hefeweizen – banana/clove balance spice
-    - Pale Ale – crisp bitterness refreshes palate
+    - Hefeweizen – soft, low bitterness, banana and clove play with garam masala
+    - Amber Lager – malt sweetness rounds off the sauce
 ingredients:
   - section: _main_
     items:

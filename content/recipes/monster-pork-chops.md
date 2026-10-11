@@ -5,11 +5,11 @@ layout: "layouts/recipe.njk"
 permalink: "/recipes/{{ slug }}/"
 pairings:
   wine:
-    - Zinfandel – big & bold
-    - Syrah – smoky & peppery
+    - Zinfandel – ripe fruit and a little smoke for the brined, smoked chops
+    - Syrah – peppery and savory with pork
   beer:
-    - IPA – hops cut fat
-    - Doppelbock – malty richness
+    - Doppelbock – malty richness suits cured, smoked pork
+    - Amber Lager – clean caramel against the cure and smoke
 ingredients:
   - section: "Pork and Brine"
     items:

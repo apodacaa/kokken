@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Zinfandel – bold fruit
-    - Malbec – smoky, rich
+    - Zinfandel – ripe fruit and a little sweetness for the BBQ sauce
+    - Lambrusco (dry) – chilled, fruity and fizzy against rich pork
   beer:
-    - Pale Ale – crisp bitterness
-    - Brown Ale – caramel depth
+    - Amber Lager – caramel malt echoes the BBQ sauce
+    - Brown Ale – roasty sweetness for slow-cooked pork
 ingredients:
   - section: _main_
     items:

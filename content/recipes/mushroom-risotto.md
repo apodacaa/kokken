@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Pinot Noir – earthy, light
-    - Chardonnay (unoaked) – crisp & balanced
+    - Pinot Noir – earthy, light, the classic for mushrooms
+    - Chardonnay (lightly oaked) – butter and weight for the creamy rice
   beer:
-    - Brown Ale – nutty
-    - Porter – roasted depth with mushrooms
+    - Dubbel – earthy dark fruit with mushrooms
+    - Brown Ale – nutty malt echoes the Parmesan
 ingredients:
   - section: _main_
     items:

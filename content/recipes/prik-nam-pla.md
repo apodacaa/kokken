@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Riesling – acidity & sweetness
-    - Sauvignon Blanc – citrusy
+    - Dry Riesling – acidity and a fruity edge for fish sauce and chili
+    - Albariño – saline and citrusy, like a squeeze of lime
   beer:
-    - Pilsner – crisp
-    - Wheat Beer – soft citrus
+    - Pilsner – cold and clean against salt and heat
+    - Lager with lime – cooling
 ingredients:
   - section: _main_
     items:

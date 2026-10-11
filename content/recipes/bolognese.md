@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Sangiovese (Chianti) – acidity balances tomato
-    - Dolcetto – fruity red without heavy tannins
+    - Sangiovese (Chianti Classico) – acidity cuts the fat and meets the tomato
+    - Lambrusco di Sorbara (dry) – the traditional Emilian partner; bubbles reset the palate between bites
   beer:
-    - Brown Ale – nutty, malty depth
-    - Märzen – toasty, balanced backbone
+    - Märzen – toasty malt for the meat and the carrot sweetness
+    - Amber Lager – clean, soft, doesn't compete with the ragù
 ingredients:
   - section: _main_
     items:

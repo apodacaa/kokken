@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Dry Rosé – refreshing with spices
-    - Riesling – off-dry, balances heat
+    - Dry Rosé – chilled and fruity for the layered spices
+    - Off-dry Riesling – tames heat, lifts the saffron and rice
   beer:
-    - Pilsner – crisp, palate-cleansing
-    - Belgian Saison – herbal & effervescent
+    - Pilsner – clean and crisp against rich, fragrant rice
+    - Witbier – citrus and coriander echo the garam masala
 ingredients:
   - section: _main_
     items:

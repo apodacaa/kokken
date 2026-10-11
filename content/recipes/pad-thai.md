@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Riesling Kabinett – sweet/acid balance
-    - Chenin Blanc – acidity & fruit
+    - Off-dry Riesling – balances tamarind, sugar and fish sauce
+    - Grüner Veltliner – peppery and fresh against peanuts
   beer:
-    - Wheat Beer – soft, citrusy
-    - Pale Ale – hops balance tamarind
+    - Pilsner – crisp against sweet-sour-salty
+    - Witbier – soft citrus with lime and shrimp
 ingredients:
   - section: _main_
     items:

@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Grenache – fruity, spicy
-    - Syrah – peppery depth
+    - Grenache Rosé – fruity and spicy against cumin and tomato
+    - Dry Riesling – acid for the egg yolk and tomato
   beer:
-    - Wheat Beer – citrus & light
-    - Saison – herbal, dry
+    - Witbier – soft and citrusy
+    - Saison – dry and peppery for the cumin
 ingredients:
   - section: _main_
     items:

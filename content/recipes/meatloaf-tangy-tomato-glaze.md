@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Cabernet Franc – earthy, herbal
-    - Zinfandel – bold & fruity
+    - Zinfandel – ripe fruit meets the sweet-tangy glaze
+    - Cabernet Franc – herbal, soft tannin for beef
   beer:
-    - Porter – caramelized notes
-    - Amber Ale – malty depth
+    - Amber Lager – caramel malt echoes the glaze
+    - Brown Ale – roasty depth, a diner-style fit
 ingredients:
   - section: Meatloaf
     items:
