@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Cabernet Sauvignon – tannins stand up to beef
-    - Syrah – smoky, peppery depth complements stew
+    - Côtes du Rhône – peppery and savory; won't out-tannin a long braise
+    - Syrah (Northern Rhône) – smoked-meat and black pepper notes mirror the browned beef
   beer:
-    - Robust Porter – roasted malt complements seared beef
-    - Doppelbock – malty sweetness balances savory broth
+    - Dubbel – dark fruit and caramel pick up the wine-braised sauce
+    - English Porter – gentle roast and sweetness without bitterness
 ingredients:
   - section: _main_
     items:

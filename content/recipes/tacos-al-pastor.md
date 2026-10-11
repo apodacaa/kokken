@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Tempranillo – smoky, rustic
-    - Garnacha – juicy, fruity
+    - Dry Rosé – chilled, fruity, cuts pineapple and pork fat
+    - Garnacha – juicy red for guajillo and spice
   beer:
-    - Mexican Amber Lager – toasty
-    - IPA – hops balance spice
+    - Mexican Lager – cold and light against chili and pineapple
+    - Vienna Lager – toasty malt for the pork
 ingredients:
   - section: Pork and Sauce
     items:

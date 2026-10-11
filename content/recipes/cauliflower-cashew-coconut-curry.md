@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Gewürztraminer – aromatic spice-friendly
-    - Dry Riesling – acidity cuts richness
+    - Off-dry Riesling – sweetness and acidity for curry heat
+    - Gewürztraminer – lychee and spice mirror the aromatics
   beer:
-    - Hazy IPA – tropical hops match coconut
-    - Belgian Tripel – fruity, spicy complexity
+    - Witbier – coriander and citrus, low bitterness
+    - Belgian Blonde – soft fruit calms the heat
 ingredients:
   - section: _main_
     items:

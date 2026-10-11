@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Viognier – aromatic stone fruit matches sweetness
-    - Chenin Blanc – versatile, with good acidity
+    - Viognier – stone fruit and body match the sweet squash and coconut
+    - Chenin Blanc (off-dry Vouvray) – honeyed and acidic enough for the lime
   beer:
-    - Belgian Witbier – citrusy & spiced
-    - Hazy IPA – tropical notes complement coconut
+    - Witbier – orange peel and coriander suit the curry powder
+    - Saison – dry and peppery against the sweet, creamy soup
 ingredients:
   - section: _main_
     items:

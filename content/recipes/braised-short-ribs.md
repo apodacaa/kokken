@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Malbec – bold fruit and body match richness
-    - Bordeaux Blend – structure for slow-braised meat
+    - Cabernet Sauvignon – tannin and structure for rich, gelatinous beef
+    - Malbec (Mendoza) – plush dark fruit for the wine-reduced sauce
   beer:
-    - Imperial Stout – roasted, bold
-    - Barleywine – sweet malt backbone balances richness
+    - Belgian Quadrupel – raisin and caramel stand up to the richness
+    - Imperial Stout – roast and chocolate if you want it bold
 ingredients:
   - section: _main_
     items:

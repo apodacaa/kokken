@@ -5,11 +5,11 @@ layout: "layouts/recipe.njk"
 permalink: "/recipes/{{ slug }}/"
 pairings:
   wine:
-    - Off-dry Riesling – tames spice
-    - Sparkling Rosé – refreshing bubbles
+    - Off-dry Riesling – sweetness quiets the heat
+    - Sparkling Rosé – bubbles and chill against rich butter and spice
   beer:
-    - IPA – hops match heat
-    - Wheat Beer – cooling citrus
+    - Pilsner – cold, crisp; avoids hop-amplified heat
+    - Hefeweizen – soft and cooling
 ingredients:
   - section: _main_
     items: 

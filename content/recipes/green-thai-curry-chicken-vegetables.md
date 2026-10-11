@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Off-dry Riesling – sweetness balances heat
-    - Grüner Veltliner – peppery & herbal
+    - Off-dry Riesling – the standard answer to coconut and heat
+    - Grüner Veltliner – peppery and herbal like the Thai basil
   beer:
-    - Belgian Witbier – coriander & citrus
-    - Pale Ale – hops match green curry
+    - Witbier – coriander and citrus, gentle bitterness
+    - Lager – crisp and cold; avoids hop-amplified heat
 ingredients:
   - section: _main_
     items:

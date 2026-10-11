@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Pinot Grigio – crisp & fresh
-    - Verdicchio – herbal, light-bodied
+    - Verdicchio – almond and herbal; stands up to the vinegar dressing
+    - Vermentino – crisp and savory for peppers and provolone
   beer:
-    - Pilsner – refreshing
-    - Saison – peppery lift
+    - Pilsner – crisp against the vinegar and salt
+    - Italian-style Pale Lager – light, bitter finish for pepperoncini
 ingredients:
   - section: Salad
     items:

@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Sauvignon Blanc – crisp & herbal
-    - Chenin Blanc – fruity, acidic
+    - Grüner Veltliner – peppery and herbal with tahini
+    - Chenin Blanc (dry) – waxy texture for roasted cauliflower
   beer:
-    - Pale Ale – citrusy hops
-    - Amber Lager – toasty
+    - Pale Lager – crisp against nutty tahini
+    - Saison – herbal and dry
 ingredients:
   - section: _main_
     items:

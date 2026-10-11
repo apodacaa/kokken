@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Chenin Blanc – acidity + slight fruitiness balance spice
-    - Gamay – light red, earthy & juicy
+    - Dry Riesling – acidity matches the tomato and chilies
+    - Gamay (Beaujolais) – juicy, low tannin; chickpeas make tannic reds taste hard
   beer:
-    - Pale Ale – hops complement spice
-    - Amber Lager – malty depth with chickpeas
+    - Amber Lager – malt cushions the spice
+    - Pilsner – crisp, clean refresher between bites
 ingredients:
   - section: _main_
     items:

@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Chenin Blanc – versatile
-    - Sauvignon Blanc – herbal freshness
+    - Dry Chenin Blanc – versatile with roasted vegetables
+    - Grüner Veltliner – peppery and herbal
   beer:
-    - Amber Lager – malt depth
-    - Saison – herbal, dry
+    - Pale Lager – clean and easy
+    - Saison – herbal and dry
 ingredients:
   - section: Components
     items:

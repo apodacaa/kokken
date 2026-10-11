@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Sparkling Rosé – refreshing
-    - Chenin Blanc – fruity & acidic
+    - Off-dry Riesling – a little sweetness cools the spice
+    - Sparkling Rosé – bubbles cut the fried pastry
   beer:
-    - Pale Ale – citrus hops
-    - Amber Lager – malt sweetness
+    - Pilsner – crisp, cuts fried pastry
+    - Pale Lager – clean against mint chutney
 ingredients:
   - section: Filling
     items:

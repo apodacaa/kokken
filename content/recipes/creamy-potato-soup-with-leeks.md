@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Pinot Grigio – crisp & neutral
-    - Muscadet – minerally, refreshing
+    - Muscadet sur Lie – mineral and saline against creamy potato
+    - Chablis – steely acidity for the leeks and cream
   beer:
-    - Kölsch – light & clean
-    - Wheat Beer – citrusy lift
+    - Kölsch – delicate and clean
+    - Helles – soft malt lets the leek flavor through
 ingredients:
   - section: _main_
     items:

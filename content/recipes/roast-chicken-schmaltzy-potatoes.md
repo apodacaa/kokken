@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - White Burgundy – complex Chardonnay
-    - Pinot Noir – light, earthy
+    - White Burgundy – the classic roast-chicken white
+    - Pinot Noir – earthy, light, flatters crisp skin and potatoes
   beer:
-    - Belgian Tripel – fruity, strong
-    - Saison – herbal
+    - Belgian Blonde – soft fruit and dry finish
+    - Saison – peppery against rosemary and schmaltz
 ingredients:
   - section: _main_
     items:

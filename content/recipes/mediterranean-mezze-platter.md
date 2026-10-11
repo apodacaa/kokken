@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Assyrtiko – Greek white with briny freshness
-    - Rosé – versatile & refreshing
+    - Assyrtiko – briny and bright against olives, feta and lemon
+    - Dry Rosé – versatile across hummus, tzatziki and falafel
   beer:
-    - Blonde Ale – easy-drinking
-    - Saison – herbal & dry
+    - Pilsner – crisp against olives and creamy dips
+    - Saison – herbal and dry
 ingredients:
   - section: Components
     items:

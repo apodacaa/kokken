@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Sauvignon Blanc – herbal freshness
-    - Riesling – citrus, crisp
+    - Dry Riesling – acid for herbs and nuoc cham
+    - Sauvignon Blanc – herbal lift for mint and cilantro
   beer:
-    - Pilsner – crisp
-    - Wheat Beer – soft citrus
+    - Pilsner – crisp and clean
+    - Witbier – soft citrus for the fresh herbs
 ingredients:
   - section: _main_
     items:

@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Pinot Noir – light red
-    - Dry Rosé – refreshing
+    - Pinot Noir – light red that suits salmon
+    - Chablis – steely acidity against the yogurt-dill sauce
   beer:
-    - Kölsch – clean
-    - Belgian Blonde – fruity & smooth
+    - Kölsch – clean and delicate
+    - Pilsner – crisp against the fatty fish
 ingredients:
   - section: _main_
     items:

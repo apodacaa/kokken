@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Gewürztraminer – aromatic
-    - Riesling – off-dry
+    - Off-dry Riesling – sweetness for spice and cream
+    - Gewürztraminer – aromatic against ginger and garam masala
   beer:
-    - Pale Ale – bitterness cuts cream
-    - Hefeweizen – fruity
+    - Lager – clean against creamy spinach
+    - Hefeweizen – soft and fruity
 ingredients:
   - section: _main_
     items:

@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Chenin Blanc – tropical acidity
-    - Riesling – balances spice & coconut
+    - Off-dry Riesling – sweetness and acidity for the chili and coconut
+    - Gewürztraminer – lychee and spice suit the laksa paste
   beer:
-    - Belgian Witbier – citrus & spice
-    - Hazy IPA – tropical hops
+    - Witbier – citrus and coriander with shrimp and lime
+    - Lager – crisp relief; avoid heavy hops with the heat
 ingredients:
   - section: _main_
     items:

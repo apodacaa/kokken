@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Shiraz – peppery, bold
-    - Tempranillo – earthy & rustic
+    - Grenache – juicy, spicy fruit; low tannin for ground lamb
+    - Rioja Crianza – savory and earthy with lamb
   beer:
-    - Amber Ale – balances spice
-    - Brown Ale – nutty with lamb
+    - Amber Ale – caramel malt balances the spice
+    - Brown Ale – nutty and soft, good with lamb
 ingredients:
   - section: _main_
     items:

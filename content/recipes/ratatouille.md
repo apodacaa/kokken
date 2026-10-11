@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Provence Rosé – herbal & dry
-    - Côtes du Rhône – peppery blend
+    - Provence Rosé – herbal, dry and made for this
+    - Côtes du Rhône – peppery fruit for the roasted vegetables
   beer:
-    - Saison – rustic & herbal
-    - Amber Ale – caramel malt
+    - Saison – rustic and herbal
+    - Amber Lager – gentle malt with tomato and eggplant
 ingredients:
   - section: _main_
     items:

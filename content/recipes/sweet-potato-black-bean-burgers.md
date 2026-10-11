@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Garnacha – fruity & earthy
-    - Zinfandel – bold & juicy
+    - Zinfandel – fruit for sweet potato and smoky chili powder
+    - Garnacha – juicy and easygoing
   beer:
-    - Amber Ale – malt sweetness
-    - Brown Ale – nutty depth
+    - Amber Lager – malt sweetness with sweet potato
+    - Brown Ale – nutty and soft
 ingredients:
   - section: Patties
     items:

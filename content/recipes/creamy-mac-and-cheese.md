@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Oaked Chardonnay – richness mirrors cheese
-    - Chenin Blanc – fresh acidity
+    - Chardonnay (lightly oaked) – butter and weight mirror the cheese
+    - Chenin Blanc – acidity cuts the richness
   beer:
-    - Helles Lager – crisp & light
-    - Pale Ale – bitterness offsets creaminess
+    - Helles – clean and malty, refreshes the palate
+    - Belgian Tripel – spicy fruit and high carbonation scrub the richness
 ingredients:
   - section: _main_
     items:

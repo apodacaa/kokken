@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Brut Champagne – dry sparkling
-    - Albariño – saline, citrusy
+    - Dry Riesling – clean acidity for soy and wasabi
+    - Champagne (Brut) – dry bubbles for rice and nori
   beer:
-    - Japanese Lager (dry, clean)
-    - Saison – herbal & dry
+    - Japanese Lager – dry, clean
+    - Rice Lager – light and neutral
 ingredients:
   - section: _main_
     items:

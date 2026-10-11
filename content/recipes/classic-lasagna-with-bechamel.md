@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Barbera – acidity balances layers
-    - Chianti – classic Italian pairing
+    - Barbera – acidity cuts the béchamel and cheese
+    - Sangiovese (Chianti) – the tomato-friendly red
   beer:
-    - Vienna Lager – toasty malt
-    - Brown Ale – depth & nuttiness
+    - Vienna Lager – toasty malt, clean finish for a rich bake
+    - Dunkel – soft roast pairs with browned cheese
 ingredients:
   - section: _main_
     items:

@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Torrontés – floral, aromatic
-    - Riesling – balances cream & spice
+    - Torrontés – floral and aromatic for the garam masala
+    - Off-dry Riesling – balances spice and cream, lifts the shrimp
   beer:
-    - Wheat Beer – soft & citrusy
-    - Amber Ale – caramel malt for depth
+    - Hefeweizen – soft and fruity against cream and spice
+    - Witbier – citrus and coriander
 ingredients:
   - section: Marinade
     items:

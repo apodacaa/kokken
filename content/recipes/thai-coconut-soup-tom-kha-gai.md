@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Gewürztraminer – aromatic
-    - Riesling – off-dry, balances spice
+    - Off-dry Riesling – sweet-acid balance for lemongrass and coconut
+    - Gewürztraminer – aromatic and a touch sweet
   beer:
-    - Belgian Witbier – citrus & spice
-    - Saison – herbal lift
+    - Witbier – citrus and coriander echo the lime leaf
+    - Lager – clean and light
 ingredients:
   - section: _main_
     items:

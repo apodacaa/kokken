@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Chardonnay (unoaked) – crisp
-    - Muscadet – saline, mineral
+    - Chablis – steely and mineral against clams and cream
+    - Muscadet – saline and crisp
   beer:
-    - Kölsch – delicate
-    - Pale Ale – citrusy bitterness
+    - Kölsch – delicate, clean
+    - Pale Lager – crisp with the salty bacon and cream
 ingredients:
   - section: _main_
     items:

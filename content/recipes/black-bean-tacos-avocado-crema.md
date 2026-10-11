@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Sauvignon Blanc – citrus/herbal lift cuts richness
-    - Albariño – saline freshness enhances lime/avocado
+    - Albariño – lime and salinity brighten avocado and beans
+    - Dry Rosé of Grenache – berry fruit and acidity for the cabbage and salsa
   beer:
-    - Mexican Amber Lager – crisp with toasty malt
-    - Hazy IPA – tropical hops brighten avocado & beans
+    - Mexican Lager – clean and cold against creamy avocado
+    - Vienna Lager – toasty malt for the cumin-spiced beans
 ingredients:
   - section: Filling
     items:

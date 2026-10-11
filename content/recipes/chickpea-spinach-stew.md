@@ -5,11 +5,11 @@ layout: layouts/recipe.njk
 permalink: /recipes/{{ slug }}/
 pairings:
   wine:
-    - Garnacha – earthy, juicy red
-    - Tempranillo Joven – fresh, easy-drinking
+    - Garnacha – juicy, low tannin, plays well with smoked paprika
+    - Dry Sherry (Fino) – nutty and saline, a natural fit with chickpeas and spinach
   beer:
-    - Belgian Dubbel – caramel depth
-    - Brown Ale – nutty complement
+    - Amber Lager – malt for the chickpeas and paprika
+    - Saison – dry and earthy against the greens
 ingredients:
   - section: _main_
     items:
