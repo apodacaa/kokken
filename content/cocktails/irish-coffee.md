@@ -9,6 +9,6 @@ ingredients:
   - 1/2 oz (1.5 cl) brown sugar syrup
   - Fresh cream to float
 steps:
-  - whiskey, hot coffee, brown sugar syrup.
+  - Combine whiskey, hot coffee, and brown sugar syrup.
   - Lightly whip cream and float on top.
 ---

@@ -5,7 +5,7 @@ layout: layouts/cocktail.njk
 permalink: /cocktails/{{ slug }}/
 ingredients:
   - 3/4 cup sugar
-  - 5 oz war tap water
+  - 5 oz warm tap water
 steps:
   - Whisk sugar and water.
   - Let cool for at least 10 minutes.

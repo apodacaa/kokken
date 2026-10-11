@@ -14,7 +14,7 @@ ingredients:
   - section: Pork and Sauce
     items:
       - 1 (3-lb/1.36 kg) boneless pork shoulder, fat cap trimmed to 1/4 inch, sliced against the grain into 1/2-inch-thick slabs
-      - 12 dried guajillo chiles, stemmed, seeded and torn into 1/2-inch peices
+      - 12 dried guajillo chiles, stemmed, seeded and torn into 1/2-inch pieces
       - 1 1/2 cups (360 ml) of water
       - 1 1/4 pounds (567 g) plum tomatoes, cored and quartered
       - 8 garlic cloves, peeled
@@ -29,7 +29,7 @@ ingredients:
       - 1/2 chopped Cilantro
       - Lime wedges
 steps:
-  - Toast chilis until fragrent in Dutch oven.
+  - Toast chiles until fragrant in Dutch oven.
   - Add rest of sauce ingredients except pork and lime.
   - Simmer for 20 minutes.
   - Blend into puree and strain with fine mesh strainer.
@@ -40,5 +40,5 @@ steps:
   - Salt pork, brush with 1/4 cup (60 ml) sauce, and sear on both sides.
   - Cut up pork, toss with 1/2 cup (120 ml) sauce.
   - Serve with lime, onions, cilantro, and grilled pineapple.
-  - (Optional) Cut pineapple in rounds. Bush with salt and oil and grill.
+  - (Optional) Cut pineapple in rounds. Brush with salt and oil and grill.
 ---

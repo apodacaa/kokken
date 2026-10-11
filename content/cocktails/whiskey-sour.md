@@ -10,6 +10,6 @@ ingredients:
   - Optional: 1 egg white
 steps:
   - Shake all ingredients with ice.
-  - Strain into a rocks or coupe.
+  - Strain into a rocks glass or coupe.
   - Garnish with cherry or lemon.
 ---
