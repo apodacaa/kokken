@@ -48,14 +48,17 @@
     {% block content %}{% endblock %}
   </main>
   <script>
-    /* Keep screen on: Screen Wake Lock API, opt-in. The button in nav.njk stays
-       hidden where the API is missing. The choice is saved per device, so it
+    /* Keep screen on: Screen Wake Lock API, opt-in, touch devices only. The
+       button in nav.njk stays hidden on desktops (pointer: coarse is true for
+       phones and tablets, so a narrow desktop window doesn't count) and where
+       the API is missing. The choice is saved per device, so it
        carries across pages. The browser drops the lock whenever the tab is
        hidden or the page changes, so it is requested again on load and
        whenever the tab becomes visible. */
     (function () {
       var btn = document.getElementById('wake-toggle');
       if (!btn || !('wakeLock' in navigator)) return;
+      if (!window.matchMedia || !window.matchMedia('(pointer: coarse)').matches) return;
       var KEY = 'kokken-wake';
       var want = false;
       var lock = null;
