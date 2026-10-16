@@ -48,6 +48,45 @@
     {% block content %}{% endblock %}
   </main>
   <script>
+    /* Keep screen on: Screen Wake Lock API, opt-in. The button in nav.njk stays
+       hidden where the API is missing. The choice is saved per device, so it
+       carries across pages. The browser drops the lock whenever the tab is
+       hidden or the page changes, so it is requested again on load and
+       whenever the tab becomes visible. */
+    (function () {
+      var btn = document.getElementById('wake-toggle');
+      if (!btn || !('wakeLock' in navigator)) return;
+      var KEY = 'kokken-wake';
+      var want = false;
+      var lock = null;
+      try { want = localStorage.getItem(KEY) === '1'; } catch (_) {}
+      function render() {
+        btn.setAttribute('aria-pressed', want ? 'true' : 'false');
+        btn.textContent = want ? 'Screen stays on' : 'Keep screen on';
+      }
+      function acquire() {
+        if (!want || lock || document.visibilityState !== 'visible') return;
+        navigator.wakeLock.request('screen').then(function (l) {
+          lock = l;
+          l.addEventListener('release', function () { lock = null; });
+        }).catch(function () {});
+      }
+      function release() {
+        if (lock) { lock.release().catch(function () {}); lock = null; }
+      }
+      btn.hidden = false;
+      btn.addEventListener('click', function () {
+        want = !want;
+        try { localStorage.setItem(KEY, want ? '1' : '0'); } catch (_) {}
+        render();
+        if (want) acquire(); else release();
+      });
+      document.addEventListener('visibilitychange', acquire);
+      render();
+      acquire();
+    })();
+  </script>
+  <script>
     (function () {
       var resultsEl = document.getElementById('search-results');
       var form = document.getElementById('site-search-form');

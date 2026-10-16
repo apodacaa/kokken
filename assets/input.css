@@ -316,3 +316,6 @@ html[data-theme="arcade"] #theme-select {
 }
 
 html[data-theme="arcade"] #theme-select { padding-left: 0; }
+
+/* keep-screen-on toggle (nav.njk): lit while the wake lock is requested */
+#wake-toggle[aria-pressed="true"] { border-color: var(--color-ladybug); color: var(--color-ladybug); }
