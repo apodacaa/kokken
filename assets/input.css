@@ -319,3 +319,8 @@ html[data-theme="arcade"] #theme-select { padding-left: 0; }
 
 /* keep-screen-on toggle (nav.njk): lit while the wake lock is requested */
 #wake-toggle[aria-pressed="true"] { border-color: var(--color-ladybug); color: var(--color-ladybug); }
+
+/* ingredient checkoff (partials/entry.njk): tap an item to cross it off */
+#ingredients li[role="checkbox"] { cursor: pointer; -webkit-tap-highlight-color: transparent; }
+#ingredients li[role="checkbox"]:focus-visible { outline: 1px solid var(--color-ladybug); outline-offset: 2px; }
+#ingredients li.ingredient-done { text-decoration: line-through; opacity: 0.45; }

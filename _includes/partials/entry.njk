@@ -2,7 +2,7 @@
   <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">{{ title }}</h1>
 
   {% if ingredients %}
-  <div>
+  <div id="ingredients">
     <h2 class="text-lg font-semibold text-white mb-4">Ingredients</h2>
     <ul class="list-disc pl-5 space-y-1">
       {% for entry in ingredients %}
@@ -130,3 +130,40 @@
     {% endif %}
   {% endif %}
 </article>
+
+{# Tap an ingredient to cross it off while prepping. Progressive enhancement:
+   without JavaScript the list is plain. Checks last for the browser session
+   (sessionStorage, keyed by page) so a reload mid-prep keeps them; they are
+   never saved beyond that. Styles: .ingredient-done in assets/input.css. #}
+<script>
+  (function () {
+    var items = document.querySelectorAll('#ingredients li');
+    if (!items.length) return;
+    var key = 'kokken-checked:' + location.pathname;
+    var done = [];
+    try { done = JSON.parse(sessionStorage.getItem(key)) || []; } catch (_) {}
+    function save() {
+      var on = [];
+      items.forEach(function (li, i) { if (li.classList.contains('ingredient-done')) on.push(i); });
+      try { sessionStorage.setItem(key, JSON.stringify(on)); } catch (_) {}
+    }
+    function toggle(li) {
+      var on = li.classList.toggle('ingredient-done');
+      li.setAttribute('aria-checked', on ? 'true' : 'false');
+      save();
+    }
+    items.forEach(function (li, i) {
+      li.setAttribute('role', 'checkbox');
+      li.setAttribute('tabindex', '0');
+      li.setAttribute('aria-checked', 'false');
+      if (done.indexOf(i) > -1) {
+        li.classList.add('ingredient-done');
+        li.setAttribute('aria-checked', 'true');
+      }
+      li.addEventListener('click', function () { toggle(li); });
+      li.addEventListener('keydown', function (e) {
+        if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(li); }
+      });
+    });
+  })();
+</script>
