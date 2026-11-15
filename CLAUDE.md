@@ -181,6 +181,13 @@ structured fields there too so guides stay scannable.
 **Prev/next navigation only exists for recipes and cocktails** (`entry.njk` looks up
 `collections.recipes` / `collections.cocktails` by layout). Smoke and grill pages have none.
 
+**Cook mode pairs steps with ingredients automatically.** Recipe and cocktail pages have a "Cook
+mode" button: a full-screen, one-step-at-a-time view that keeps the screen on (Screen Wake Lock)
+while open. It replaced the old site-wide "Keep screen on" button. Each step lists the ingredients
+it mentions, matched at build time by `_includes/cook-steps.js` (word heuristic, no front matter
+field). To make a step pick up an ingredient, name it in the step text. Quote any step containing
+`: ` — unquoted, YAML parses it as an object.
+
 **`references` renders under the heading "Related Recipes"** whatever the target type, so a
 reference to a smoke guide still appears under that heading.
 

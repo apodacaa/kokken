@@ -1,27 +1,25 @@
 <article class="space-y-8">
   <h1 class="text-ladybug text-2xl font-bold uppercase tracking-tight mb-2">{{ title }}</h1>
 
-  {% if ingredients %}
+  {% if steps %}
+    {# Hidden until the cook-mode script runs; see the script at the bottom. #}
+    <button type="button" id="cook-open" class="cook-btn" hidden>Cook mode</button>
+  {% endif %}
+
+  {% set groups = ingredients | ingredientGroups %}
+  {% if groups | length %}
   <div id="ingredients">
     <h2 class="text-lg font-semibold text-white mb-4">Ingredients</h2>
-    <ul class="list-disc pl-5 space-y-1">
-      {% for entry in ingredients %}
-        {% if entry is string %}
-          <li>{{ entry }}</li>
-        {% elif entry.items %}
-          </ul>
-          {% if entry.section and entry.section != "_main_" %}
-            <p class="text-sm font-semibold text-gray-400 mt-4 mb-2 uppercase tracking-wide">{{ entry.section }}</p>
-          {% endif %}
-          <ul class="list-disc pl-5 space-y-1">
-            {% for item in entry.items %}
-              <li>{{ item }}</li>
-            {% endfor %}
-        {% endif %}
-      {% endfor %}
-    </ul>
+    {% for g in groups %}
+      {% if g.section %}
+        <p class="text-sm font-semibold text-gray-400 mt-4 mb-2 uppercase tracking-wide">{{ g.section }}</p>
+      {% endif %}
+      <ul class="list-disc pl-5 space-y-1">
+        {% for it in g.items %}<li data-ing="{{ it.i }}">{{ it.text }}</li>{% endfor %}
+      </ul>
+    {% endfor %}
   </div>
-{% endif %}
+  {% endif %}
 
   {% include "partials/recipe-steps.njk" %}
 
@@ -131,39 +129,147 @@
   {% endif %}
 </article>
 
-{# Tap an ingredient to cross it off while prepping. Progressive enhancement:
-   without JavaScript the list is plain. Checks last for the browser session
-   (sessionStorage, keyed by page) so a reload mid-prep keeps them; they are
-   never saved beyond that. Styles: .ingredient-done in assets/input.css. #}
+{# Cook mode: one step at a time, full screen, with the ingredients that step
+   uses beside it (matched at build time by _includes/cook-steps.js). Card 0
+   gathers everything. The screen stays on while it is open (Screen Wake
+   Lock API, where supported). Styles: .cook in assets/input.css. #}
+{% if steps %}
+  {% set cs = steps | cookSteps(ingredients) %}
+  <div id="cook" class="cook" hidden role="dialog" aria-modal="true" aria-label="Cook mode: {{ title }}">
+    <div class="cook-bar">
+      <span id="cook-count" aria-live="polite"></span>
+      <button type="button" id="cook-exit" class="cook-btn">Exit</button>
+    </div>
+    <div class="cook-body">
+      <section class="cook-card">
+        <h2 class="cook-title">{{ title }}</h2>
+        {% for g in groups %}
+          {% if g.section %}<p class="cook-section">{{ g.section }}</p>{% endif %}
+          <ul class="cook-ings">
+            {% for it in g.items %}<li data-ing="{{ it.i }}">{{ it.text }}</li>{% endfor %}
+          </ul>
+        {% endfor %}
+      </section>
+      {% for s in cs %}
+        <section class="cook-card" hidden>
+          <p class="cook-step">{{ s.text }}</p>
+          {% if s.items | length %}
+            <ul class="cook-ings">
+              {% for it in s.items %}<li data-ing="{{ it.i }}">{{ it.text }}{% if it.section %} <span class="cook-from">{{ it.section }}</span>{% endif %}</li>{% endfor %}
+            </ul>
+          {% endif %}
+        </section>
+      {% endfor %}
+    </div>
+    <div class="cook-nav">
+      <button type="button" id="cook-prev" class="cook-btn">Back</button>
+      <button type="button" id="cook-next" class="cook-btn cook-btn-primary">Next</button>
+    </div>
+  </div>
+{% endif %}
+
+{# Tap an ingredient to cross it off while prepping, in the list or in cook
+   mode; both copies of an item ([data-ing] index) toggle together.
+   Progressive enhancement: without JavaScript the list is plain. Checks last
+   for the browser session (sessionStorage, keyed by page) so a reload
+   mid-prep keeps them; they are never saved beyond that.
+   Styles: .ingredient-done in assets/input.css. #}
 <script>
   (function () {
-    var items = document.querySelectorAll('#ingredients li');
+    var items = document.querySelectorAll('[data-ing]');
     if (!items.length) return;
     var key = 'kokken-checked:' + location.pathname;
     var done = [];
-    try { done = JSON.parse(sessionStorage.getItem(key)) || []; } catch (_) {}
-    function save() {
-      var on = [];
-      items.forEach(function (li, i) { if (li.classList.contains('ingredient-done')) on.push(i); });
-      try { sessionStorage.setItem(key, JSON.stringify(on)); } catch (_) {}
+    try { done = (JSON.parse(sessionStorage.getItem(key)) || []).map(String); } catch (_) {}
+    function set(i, on) {
+      document.querySelectorAll('[data-ing="' + i + '"]').forEach(function (li) {
+        li.classList.toggle('ingredient-done', on);
+        li.setAttribute('aria-checked', on ? 'true' : 'false');
+      });
     }
     function toggle(li) {
-      var on = li.classList.toggle('ingredient-done');
-      li.setAttribute('aria-checked', on ? 'true' : 'false');
-      save();
+      var i = li.getAttribute('data-ing');
+      var at = done.indexOf(i);
+      if (at > -1) done.splice(at, 1); else done.push(i);
+      set(i, at < 0);
+      try { sessionStorage.setItem(key, JSON.stringify(done)); } catch (_) {}
     }
-    items.forEach(function (li, i) {
+    items.forEach(function (li) {
       li.setAttribute('role', 'checkbox');
       li.setAttribute('tabindex', '0');
       li.setAttribute('aria-checked', 'false');
-      if (done.indexOf(i) > -1) {
-        li.classList.add('ingredient-done');
-        li.setAttribute('aria-checked', 'true');
-      }
       li.addEventListener('click', function () { toggle(li); });
       li.addEventListener('keydown', function (e) {
         if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); toggle(li); }
       });
     });
+    done.forEach(function (i) { set(i, true); });
+  })();
+</script>
+
+{# Cook mode controls. The step shown is remembered for the browser session.
+   The browser drops a wake lock whenever the tab is hidden, so it is
+   requested again when the tab comes back while cook mode is open. #}
+<script>
+  (function () {
+    var cook = document.getElementById('cook');
+    var open = document.getElementById('cook-open');
+    if (!cook || !open) return;
+    var cards = cook.querySelectorAll('.cook-card');
+    var count = document.getElementById('cook-count');
+    var prev = document.getElementById('cook-prev');
+    var next = document.getElementById('cook-next');
+    var key = 'kokken-cook:' + location.pathname;
+    var at = 0;
+    var lock = null;
+    try { at = Math.min(parseInt(sessionStorage.getItem(key), 10) || 0, cards.length - 1); } catch (_) {}
+
+    function wake() {
+      if (!('wakeLock' in navigator) || cook.hidden || lock || document.visibilityState !== 'visible') return;
+      navigator.wakeLock.request('screen').then(function (l) {
+        lock = l;
+        l.addEventListener('release', function () { lock = null; });
+      }).catch(function () {});
+    }
+    function sleep() {
+      if (lock) { lock.release().catch(function () {}); lock = null; }
+    }
+    function show(n) {
+      at = Math.max(0, Math.min(n, cards.length - 1));
+      cards.forEach(function (c, i) { c.hidden = i !== at; });
+      count.textContent = at === 0 ? 'Gather' : 'Step ' + at + ' / ' + (cards.length - 1);
+      prev.disabled = at === 0;
+      next.textContent = at === 0 ? 'Start' : at === cards.length - 1 ? 'Done' : 'Next';
+      cook.querySelector('.cook-body').scrollTop = 0;
+      try { sessionStorage.setItem(key, String(at)); } catch (_) {}
+    }
+    function enter() {
+      cook.hidden = false;
+      document.documentElement.classList.add('cook-on');
+      show(at);
+      wake();
+      next.focus();
+    }
+    function exit() {
+      cook.hidden = true;
+      document.documentElement.classList.remove('cook-on');
+      sleep();
+      open.focus();
+    }
+
+    open.hidden = false;
+    open.addEventListener('click', enter);
+    document.getElementById('cook-exit').addEventListener('click', exit);
+    prev.addEventListener('click', function () { show(at - 1); });
+    next.addEventListener('click', function () {
+      if (at === cards.length - 1) { show(0); exit(); } else show(at + 1);
+    });
+    document.addEventListener('keydown', function (e) {
+      if (cook.hidden) return;
+      if (e.key === 'Escape') exit();
+      else if (e.key === 'ArrowRight') show(at + 1);
+      else if (e.key === 'ArrowLeft') show(at - 1);
+    });
+    document.addEventListener('visibilitychange', wake);
   })();
 </script>
