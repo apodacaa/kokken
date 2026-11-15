@@ -222,6 +222,7 @@
     var key = 'kokken-cook:' + location.pathname;
     var at = 0;
     var lock = null;
+    var scrollY = 0;
     try { at = Math.min(parseInt(sessionStorage.getItem(key), 10) || 0, cards.length - 1); } catch (_) {}
 
     function wake() {
@@ -244,6 +245,7 @@
       try { sessionStorage.setItem(key, String(at)); } catch (_) {}
     }
     function enter() {
+      scrollY = window.scrollY;
       cook.hidden = false;
       document.documentElement.classList.add('cook-on');
       show(at);
@@ -253,10 +255,15 @@
     function exit() {
       cook.hidden = true;
       document.documentElement.classList.remove('cook-on');
+      window.scrollTo(0, scrollY);
       sleep();
-      open.focus();
+      open.focus({ preventScroll: true });
     }
 
+    // A direct child of <body>, so the rest of the page can be hidden while it
+    // is open (see html.cook-on in input.css). Otherwise iOS Safari shows the
+    // page through its translucent bottom toolbar.
+    document.body.appendChild(cook);
     open.hidden = false;
     open.addEventListener('click', enter);
     document.getElementById('cook-exit').addEventListener('click', exit);
