@@ -98,6 +98,12 @@ module.exports = function (eleventyConfig) {
     try { return JSON.stringify(value); } catch (e) { return 'null'; }
   });
 
+  // ✅ Cook mode: ingredient groups with a running index, and steps paired
+  // with the ingredients they mention (see _includes/cook-steps.js)
+  const { ingredientGroups, cookSteps } = require("./_includes/cook-steps.js");
+  eleventyConfig.addFilter("ingredientGroups", ingredientGroups);
+  eleventyConfig.addFilter("cookSteps", cookSteps);
+
   // ✅ Only one return — move to bottom
   return {
     dir: {

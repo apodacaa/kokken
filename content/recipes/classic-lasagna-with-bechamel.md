@@ -23,7 +23,7 @@ ingredients:
       - 2 cups (200 g) mozzarella, shredded
 steps:
   - Cook beef with onion; stir in marinara and simmer briefly.
-  - Make béchamel: melt butter, whisk in flour, then gradually whisk in milk until smooth and thickened.
+  - "Make béchamel: melt butter, whisk in flour, then gradually whisk in milk until smooth and thickened."
   - Layer noodles, meat sauce, béchamel, and mozzarella; repeat layers.
   - Bake at 375°F (190°C) for 40 minutes until bubbly and golden.
 ---
