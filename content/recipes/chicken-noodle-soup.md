@@ -23,13 +23,15 @@ ingredients:
       - 2 celery stalks, cut into 1/2-inch (1 cm) pieces
       - 6 oz (170 g) dried noodles, such as egg noodles or short pasta
       - 3 cups (420 g) shredded cooked chicken (from 1 rotisserie chicken)
+      - 1/2 lemon
 steps:
   - In a large pot or Dutch oven, melt the butter over medium heat.
   - Add the onion, season with salt and pepper, and cook until softened but not browned, 5–7 minutes.
-  - Add the stock, bay leaves and parsley stems and bring to a boil over high heat.
-  - Add the carrots, celery and noodles and cook, uncovered, over medium-high heat until the noodles are al dente according to the package, 7–10 minutes.
-  - Add the chicken and simmer just until warmed, 1–2 minutes. Pluck out the bay leaves and parsley stems, stir in the chopped parsley, and season with salt and pepper.
-notes: Serves 4–6. Noodles keep absorbing broth as the soup sits; for leftovers, cook them separately and add to each bowl. Rice and ground chicken versions are linked below. Adapted from NYT Cooking.
+  - Add the stock, bay leaves or thyme, and the parsley or dill stems and bring to a boil over high heat.
+  - Add the carrots and celery and simmer, uncovered, over medium-high heat for 4 minutes.
+  - Add the noodles and cook until al dente according to the package, 7–10 minutes.
+  - Add the chicken and simmer just until warmed, 1–2 minutes. Pluck out the bay leaves or thyme sprigs and the herb stems, stir in the chopped parsley or dill, and season with salt, pepper and a squeeze of lemon juice. Serve garnished with more herbs.
+notes: Serves 4–6. Noodles keep absorbing broth as the soup sits; for leftovers, cook them separately and add to each bowl. Refrigerate within 2 hours and eat within 3–4 days. Rice and ground chicken versions are linked below. Adapted from NYT Cooking, with the carrots and celery given a head start so they're tender when the noodles are.
 references:
   - slug: chicken-and-rice-soup
     title: Chicken and Rice Soup
