@@ -29,7 +29,7 @@ steps:
   - Add the stock, bay leaves and parsley stems and bring to a boil over high heat.
   - Add the carrots, celery and noodles and cook, uncovered, over medium-high heat until the noodles are al dente according to the package, 7–10 minutes.
   - Add the chicken and simmer just until warmed, 1–2 minutes. Pluck out the bay leaves and parsley stems, stir in the chopped parsley, and season with salt and pepper.
-notes: Serves 4–6. Noodles keep absorbing broth as the soup sits; for leftovers, cook them separately and add to each bowl. See Chicken and Rice Soup for the rice version. Adapted from NYT Cooking.
+notes: Serves 4–6. Noodles keep absorbing broth as the soup sits; for leftovers, cook them separately and add to each bowl. Rice and ground chicken versions are linked below. Adapted from NYT Cooking.
 references:
   - slug: chicken-and-rice-soup
     title: Chicken and Rice Soup
