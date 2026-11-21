@@ -35,4 +35,7 @@ references:
   - slug: chicken-noodle-soup
     title: Chicken Noodle Soup
     type: recipe
+  - slug: ground-chicken-noodle-soup
+    title: Ground Chicken Noodle Soup
+    type: recipe
 ---
