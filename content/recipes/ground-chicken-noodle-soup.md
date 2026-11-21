@@ -31,7 +31,7 @@ steps:
   - Add the stock, bay leaves and parsley stems and bring to a boil over high heat.
   - Add the carrots, celery and noodles and cook, uncovered, over medium-high heat until the noodles are al dente according to the package, 7–10 minutes.
   - Pluck out the bay leaves and parsley stems, stir in the chopped parsley, and season with salt and pepper.
-notes: Serves 4–6. Browning the chicken in one flat layer before breaking it up gives the broth the roasted depth a rotisserie chicken would, and keeps the pieces from turning grainy. Ground chicken is lean, so the oil stops it sticking; ground thigh stays juicier than breast. A variation of Chicken Noodle Soup.
+notes: Serves 4–6. Browning the chicken in one flat layer before breaking it up gives the broth a browned, savory depth and keeps the pieces from turning grainy. Ground chicken is lean, so the oil stops it sticking; ground thigh stays juicier than breast. A variation of Chicken Noodle Soup.
 references:
   - slug: chicken-noodle-soup
     title: Chicken Noodle Soup

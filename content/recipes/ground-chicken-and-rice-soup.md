@@ -29,10 +29,9 @@ steps:
   - Break the chicken into bite-size pieces and cook, stirring, until no longer pink, 2–3 minutes more.
   - Lower the heat to medium and add the butter and onion. Season with salt and pepper and cook, scraping up the browned bits, until the onion is softened but not browned, 5–7 minutes.
   - Add the stock, bay leaves and parsley stems and bring to a boil over high heat.
-  - Rinse the rice in a sieve until the water runs mostly clear, so its surface starch doesn't cloud the broth.
   - Add the rice, carrots and celery. Lower to a steady simmer, partly cover so the stock doesn't reduce too far, and cook until the rice is tender, 15–18 minutes.
   - Pluck out the bay leaves and parsley stems, stir in the chopped parsley, and season with salt and pepper.
-notes: Serves 4–6. Browning the chicken in one flat layer before breaking it up gives the broth the roasted depth a rotisserie chicken would, and keeps the pieces from turning grainy. Ground thigh stays juicier than breast. Rice keeps drinking broth as the soup sits, so loosen leftovers with the extra stock when reheating, or cook the rice separately and spoon it into each bowl. Brown rice works too but needs 35–40 minutes, so add the carrots and celery halfway through.
+notes: Serves 4–6. Browning the chicken in one flat layer before breaking it up gives the broth a browned, savory depth and keeps the pieces from turning grainy. Ground thigh stays juicier than breast. Rinse the rice until the water runs mostly clear, so its surface starch doesn't cloud the broth. Rice keeps drinking broth as the soup sits, so loosen leftovers with the extra stock when reheating, or cook the rice separately and spoon it into each bowl. Brown rice works too but needs 35–40 minutes, so add the carrots and celery halfway through.
 references:
   - slug: chicken-noodle-soup
     title: Chicken Noodle Soup

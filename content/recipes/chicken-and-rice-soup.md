@@ -27,10 +27,9 @@ steps:
   - In a large pot or Dutch oven, melt the butter over medium heat.
   - Add the onion, season with salt and pepper, and cook until softened but not browned, 5–7 minutes.
   - Add the stock, bay leaves and parsley stems and bring to a boil over high heat.
-  - Rinse the rice in a sieve until the water runs mostly clear, so its surface starch doesn't cloud the broth.
   - Add the rice, carrots and celery. Lower to a steady simmer, partly cover so the stock doesn't reduce too far, and cook until the rice is tender, 15–18 minutes.
   - Add the chicken and simmer just until warmed, 1–2 minutes. Pluck out the bay leaves and parsley stems, stir in the chopped parsley, and season with salt and pepper.
-notes: Serves 4–6. Rice swells to about three times its size and keeps drinking broth as the soup sits, so leftovers thicken into something close to porridge; loosen them with the extra stock when reheating. If you plan on leftovers, cook the rice separately and spoon it into each bowl. Brown rice works too but needs 35–40 minutes, so add the carrots and celery halfway through. The rice version of Chicken Noodle Soup.
+notes: Serves 4–6. Rinse the rice until the water runs mostly clear, so its surface starch doesn't cloud the broth. Rice swells to about three times its size and keeps drinking broth as the soup sits, so leftovers thicken into something close to porridge; loosen them with the extra stock when reheating. If you plan on leftovers, cook the rice separately and spoon it into each bowl. Brown rice works too but needs 35–40 minutes, so add the carrots and celery halfway through. The rice version of Chicken Noodle Soup.
 references:
   - slug: chicken-noodle-soup
     title: Chicken Noodle Soup
