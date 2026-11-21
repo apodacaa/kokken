@@ -6,7 +6,8 @@
 // "juice") only match when the step doesn't name a different ingredient
 // sharing that word, so "lemon juice" doesn't pull in the lime juice.
 // Every ingredient also appears on cook mode's opening "gather" card, so a
-// miss costs nothing but convenience. Fallbacks are at the end of cookSteps.
+// miss costs nothing but convenience. An ingredient is listed on its first
+// step only. Fallbacks are at the end of cookSteps.
 
 const SKIP = new Set(`
   a an and or of the to for with into from in on as at about plus each per
@@ -93,10 +94,16 @@ function cookSteps(steps, ingredients) {
     ing.distinct = ing.specific.filter(t => !flat.some(o => o !== ing &&
       (o.specific.includes(t) || o.generic.includes(t))));
   }
+  const allTokens = new Set(flat.flatMap(ing => [...ing.specific, ...ing.generic]));
+  const toks = ing => [...ing.specific, ...ing.generic];
+  // Each ingredient shows on the first step that uses it only. Later mentions
+  // ("break up the chicken", "pluck out the bay leaves") are about what's
+  // already in the pot, and listing it again reads as "add more".
+  const shown = new Set();
   const out = steps.map(text => {
     const inStep = new Set(words(String(text)));
     const seen = new Set();
-    const items = flat.filter(ing => {
+    let items = flat.filter(ing => {
       if (ing.distinct.some(t => inStep.has(t))) return true;
       const spec = ing.specific.some(t => inStep.has(t));
       const gen = ing.generic.filter(t => inStep.has(t));
@@ -104,11 +111,25 @@ function cookSteps(steps, ingredients) {
       // Generic word alone: only if no other ingredient sharing it is named.
       return gen.some(g => !flat.some(o => o !== ing && o.generic.includes(g) &&
         o.specific.some(t => inStep.has(t) && !ing.specific.includes(t))));
-    })
+    });
+    // A step that names a section ("Make the sauce") is about that section.
+    // When an ingredient from elsewhere matched only on a word it shares with
+    // an unused ingredient of that section ("olive oil"), the section's wins.
+    // Section names that are also ingredient words ("Eggs") don't count.
+    const named = new Set(items.filter(ing => inSection(ing, inStep) &&
+      !words(ing.section).some(w => allTokens.has(w))).map(ing => ing.section));
+    if (named.size) {
+      const fresh = items.filter(o => !shown.has(o.i) && named.has(o.section));
+      items = items.filter(ing => named.has(ing.section) || !ing.section ||
+        ing.distinct.some(t => inStep.has(t)) ||
+        !fresh.some(o => toks(o).some(t => inStep.has(t) && toks(ing).includes(t))));
+    }
+    items = items
       // Same text twice (salt in two sections): keep the copy whose section
       // the step names, else the first. Sort is stable, so order otherwise holds.
       .sort((a, b) => inSection(b, inStep) - inSection(a, inStep))
       .filter(ing => !seen.has(ing.text) && seen.add(ing.text))
+      .filter(ing => !shown.has(ing.i) && shown.add(ing.i))
       .sort((a, b) => a.i - b.i)
       .map(({ i, text, section }) => ({ i, text, section }));
     return { text, inStep, items };

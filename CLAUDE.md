@@ -185,7 +185,8 @@ structured fields there too so guides stay scannable.
 mode" button: a full-screen, one-step-at-a-time view that keeps the screen on (Screen Wake Lock)
 while open. It replaced the old site-wide "Keep screen on" button. Each step lists the ingredients
 it mentions, matched at build time by `_includes/cook-steps.js` (word heuristic, no front matter
-field). To make a step pick up an ingredient, name it in the step text. Quote any step containing
+field). An ingredient shows on the first step that names it, never again. To make a step pick up an
+ingredient, name it in that step's text. Quote any step containing
 `: ` — unquoted, YAML parses it as an object.
 
 **`references` renders under the heading "Related Recipes"** whatever the target type, so a
