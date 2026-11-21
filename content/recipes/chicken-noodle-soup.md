@@ -34,4 +34,7 @@ references:
   - slug: chicken-and-rice-soup
     title: Chicken and Rice Soup
     type: recipe
+  - slug: ground-chicken-noodle-soup
+    title: Ground Chicken Noodle Soup
+    type: recipe
 ---
