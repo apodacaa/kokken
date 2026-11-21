@@ -19,17 +19,18 @@ ingredients:
       - 8 cups (2 L) chicken stock, plus 1–2 cups (250–500 ml) for reheating
       - 2 bay leaves or thyme sprigs, or 1 tsp (1 g) dried thyme
       - 1/4 cup (15 g) finely chopped parsley or dill, stems reserved, plus more for garnish
-      - 3/4 cup (150 g) long-grain white rice, rinsed
+      - 3/4 cup (140 g) long-grain white rice, rinsed
       - 2 medium carrots, cut into 1/2-inch (1 cm) pieces
       - 2 celery stalks, cut into 1/2-inch (1 cm) pieces
       - 3 cups (420 g) shredded cooked chicken (from 1 rotisserie chicken)
+      - 1/2 lemon
 steps:
   - In a large pot or Dutch oven, melt the butter over medium heat.
   - Add the onion, season with salt and pepper, and cook until softened but not browned, 5–7 minutes.
-  - Add the stock, bay leaves and parsley stems and bring to a boil over high heat.
-  - Add the rice, carrots and celery. Lower to a steady simmer, partly cover so the stock doesn't reduce too far, and cook until the rice is tender, 15–18 minutes.
-  - Add the chicken and simmer just until warmed, 1–2 minutes. Pluck out the bay leaves and parsley stems, stir in the chopped parsley, and season with salt and pepper.
-notes: Serves 4–6. Rinse the rice until the water runs mostly clear, so its surface starch doesn't cloud the broth. Rice swells to about three times its size and keeps drinking broth as the soup sits, so leftovers thicken into something close to porridge; loosen them with the extra stock when reheating. If you plan on leftovers, cook the rice separately and spoon it into each bowl. Brown rice works too but needs 35–40 minutes, so add the carrots and celery halfway through. The rice version of Chicken Noodle Soup.
+  - Add the stock, bay leaves or thyme, and the parsley or dill stems and bring to a boil over high heat.
+  - Add the rice, carrots and celery. Lower to a steady simmer and set the lid ajar so the stock doesn't reduce too far. Cook, stirring occasionally so the rice doesn't stick, until the rice is tender, 15–18 minutes.
+  - Add the chicken and simmer just until warmed, 1–2 minutes. Pluck out the bay leaves or thyme sprigs and the herb stems, stir in the chopped parsley or dill, and season with salt, pepper and a squeeze of lemon juice. Serve garnished with more herbs.
+notes: Serves 4–6. Rinse the rice until the water runs mostly clear so the broth stays clearer and less gummy. Rice swells to about three times its size and keeps drinking broth as the soup sits, so leftovers thicken into something like a stew; loosen them with the extra stock when reheating. If you plan on leftovers, cook the rice separately and spoon it into each bowl. Refrigerate soup and rice within 2 hours, eat within 3–4 days, and reheat to a boil. Brown rice works too but needs 35–40 minutes, so add the carrots and celery halfway through. The rice version of Chicken Noodle Soup.
 references:
   - slug: chicken-noodle-soup
     title: Chicken Noodle Soup
